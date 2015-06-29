@@ -27,27 +27,128 @@ As we mentioned the new Service Key feature is added as a new resource which ess
 
 ## Create
 
-Creating a new Service Key means calling an HTTP POST operation on the new service_key endpoint using an already created service instance. So for example:
+Creating a new Service Key means calling an HTTP POST operation on the new service_keys endpoint using an already created service instance. So for example:
 
-POST /v2/cloud_controller/service_instance/:guid/service_key
+```
+POST /v2/service_keys
+
+{
+  "service_instance_guid": "4c0025a1-46b7-4843-97a9-1a406e4ae950", 
+  "name": "key-1",
+  "parameters": {}
+}
+```
+In the HTTP body, the `service_instance_guid` and `name` is required, the optional `parameters` is an arbitrary JSON object to pass along to the service broker.
 
 Assuming the current user agent is properly authenticated and the service instance GUID is valid then the result can be a new Service Key such as:
 
+```
+201 Created
+
 {
-  # TODO: show example of Service Key response
+  "metadata": {
+    "guid": "d323f959-73bb-4fd8-b2b7-164677a4650c",    
+    "url": "/v2/service_keys/d323f959-73bb-4fd8-b2b7-164677a4650c",    
+    "created_at": "2015-06-25T10:06:45Z",
+    "updated_at": null
+  },
+  "entity": {
+    "name": "key-1",
+    "service_instance_guid": "4c0025a1-46b7-4843-97a9-1a406e4ae950",
+    "credentials": {
+      "user": "admin",
+      "password": "mysecret"
+    },
+    "service_instance_url": "/v2/service_instances/4c0025a1-46b7-4843-97a9-1a406e4ae950"
+  }
 }
+````
 
 ## Read
+Retrieving a Service Key can be done through an HTTP GET operation on the service_keys endpoint by using an service key GUID or on service_instances endpoint with service_instances GUID and service key name. So for example:
 
-[TODO: follow the same template for Create]
+```
+GET /v2/service_keys/d323f959-73bb-4fd8-b2b7-164677a4650c
+```
+or:
 
-## Update
+```
+GET /v2/service_instances/4c0025a1-46b7-4843-97a9-1a406e4ae950/service_keys?q=name:key-1
+```
 
-[TODO: follow the same template for Create]
+If the request is successfully processed, the response code and body will be like:
+
+```
+200 OK
+
+{
+  "metadata": {
+    "guid": "d323f959-73bb-4fd8-b2b7-164677a4650c",
+    "url": "/v2/service_keys/d323f959-73bb-4fd8-b2b7-164677a4650c",
+    "created_at": "2015-06-25T10:06:45Z",
+    "updated_at": null
+  },
+  "entity": {
+    "name": "key-1",
+    "service_instance_guid": "4c0025a1-46b7-4843-97a9-1a406e4ae950",
+    "credentials": {
+      "user": "admin",
+      "password": "mysecret"    },
+    "service_instance_url": "/v2/service_instances/4c0025a1-46b7-4843-97a9-1a406e4ae950"
+  }
+}
+```
+
+If the current user is Space Manager or Space Auditor, a response code `404 Not Found` will be returned.
+
+## List
+As a developer or admin user, Service Keys can be retrieved by HTTP GET operation on the service_keys endpoint without any parameter. But Space Manager and Auditor user can't retrieve the Service Keys which means 0 results will be returned.
+
+```
+GET /v2/service_keys
+```
+
+If the Service Keys are successfully retuned, the result will be like:
+
+```
+{
+  "total_results": 1,
+  "total_pages": 1,
+  "prev_url": null,
+  "next_url": null,
+  "resources": [
+    {
+      "metadata": {
+        "guid": "d323f959-73bb-4fd8-b2b7-164677a4650c",
+        "url": "/v2/service_keys/d323f959-73bb-4fd8-b2b7-164677a4650c",
+        "created_at": "2015-06-25T10:06:46Z",
+        "updated_at": null
+      },
+      "entity": {
+        "name": "name-52",
+        "service_instance_guid": "4c0025a1-46b7-4843-97a9-1a406e4ae950",
+        "credentials": {
+          "creds-key-19": "creds-val-19"
+        },
+        "service_instance_url": "/v2/service_instances/4c0025a1-46b7-4843-97a9-1a406e4ae950"
+      }
+    }
+  ]
+}
+``` 
 
 ## Delete
 
-[TODO: follow the same template for Create]
+The Service Key can be deleted by using HTTP DELETE opeartion on service_keys endpoint. Currently Space Manager and Auditor are not authorized to perform delete operation. Only Admin and Space Developer have this permission.
+
+```
+DELETE /v2/service_keys/d323f959-73bb-4fd8-b2b7-164677a4650c
+```
+If the delete operation succeeds, The response code will be:
+
+```
+204 No Content
+```
 
 # Example broker
 
