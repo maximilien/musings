@@ -31,7 +31,7 @@ As we mentioned the new Service Key feature is added as a new resource which ess
 
 ## Create
 
-Creating a new Service Key means calling an HTTP POST operation on the new service_keys endpoint using an already created service instance. So for example:
+Creating a new Service Key means calling an HTTP POST operation on the new `/service_keys` endpoint using an already created service instance. So for example:
 
 ```
 POST /v2/service_keys
@@ -68,8 +68,9 @@ Assuming the current user agent is properly authenticated and the service instan
 }
 ````
 
-## Read
-Retrieving a Service Key can be done through an HTTP GET operation on the service_keys endpoint by using an service key GUID or on service_instances endpoint with service_instances GUID and service key name. So for example:
+## Retrieve
+
+Retrieving a Service Key can be done through an HTTP GET operation on the `/service_keys` endpoint by using an service key GUID or on the `/service_instances` endpoint with the service instance's GUID and service key name. So for example:
 
 ```
 GET /v2/service_keys/d323f959-73bb-4fd8-b2b7-164677a4650c
@@ -97,13 +98,14 @@ If the request is successfully processed, the response code and body will be lik
     "service_instance_guid": "4c0025a1-46b7-4843-97a9-1a406e4ae950",
     "credentials": {
       "user": "admin",
-      "password": "mysecret"    },
+      "password": "mysecret" 
+    },
     "service_instance_url": "/v2/service_instances/4c0025a1-46b7-4843-97a9-1a406e4ae950"
   }
 }
 ```
 
-If the current user is Space Manager or Space Auditor, a response code `404 Not Found` will be returned.
+If the current user has [Space Manager or Space Auditor](https://docs.cloudfoundry.org/concepts/roles.html) priviledge, a response code `404 Not Found` will be returned.
 
 ## List
 As a developer or admin user, Service Keys can be retrieved by HTTP GET operation on the service_keys endpoint without any parameter. But Space Manager and Auditor user can't retrieve the Service Keys which means 0 results will be returned.
