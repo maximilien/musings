@@ -27,7 +27,7 @@ Using the credentials any CF API agent (a CF application, CLI, curl, etc) can pe
 
 # Service Keys
 
-As we mentioned the new Service Key feature is added as a new resource which essentially externalizes the old service binding operation, except it does not require an application to be called or manipulated. Like other CF Cloud Controller (CC) resources, this one has the typical CRUD operations which we describe and give example of below.
+As we mentioned the new Service Key feature is added as a new resource which essentially externalizes the old service binding operation, except it does not require an application to be called or manipulated. Like other CF Cloud Controller (CC) resources, this one has the typical CRUD operations (except update, but includes listing) which we describe and give example of below.
 
 ## Create
 
@@ -108,7 +108,8 @@ If the request is successfully processed, the response code and body will be lik
 If the current user has [Space Manager or Space Auditor](https://docs.cloudfoundry.org/concepts/roles.html) priviledge, a response code `404 Not Found` will be returned.
 
 ## List
-As a developer or admin user, Service Keys can be retrieved by HTTP GET operation on the service_keys endpoint without any parameter. But Space Manager and Auditor user can't retrieve the Service Keys which means 0 results will be returned.
+
+As a developer or admin user, Service Keys can be retrieved by HTTP GET operation on the `/service_keys` endpoint without any parameter. But Space Manager and Auditor user can't retrieve the Service Keys which means 0 results will be returned.
 
 ```
 GET /v2/service_keys
@@ -138,14 +139,15 @@ If the Service Keys are successfully retuned, the result will be like:
         },
         "service_instance_url": "/v2/service_instances/4c0025a1-46b7-4843-97a9-1a406e4ae950"
       }
-    }
+    },
+    [...],
   ]
 }
 ``` 
 
 ## Delete
 
-The Service Key can be deleted by using HTTP DELETE opeartion on service_keys endpoint. Currently Space Manager and Auditor are not authorized to perform delete operation. Only Admin and Space Developer have this permission.
+A Service Key can be deleted by using HTTP DELETE opeartion on `/service_keys` endpoint. Currently Space Manager and Auditor are not authorized to perform delete operation. Only Admin and Space Developer have this permission.
 
 ```
 DELETE /v2/service_keys/d323f959-73bb-4fd8-b2b7-164677a4650c
@@ -156,15 +158,17 @@ If the delete operation succeeds, The response code will be:
 204 No Content
 ```
 
-# Example broker
+# Example Service Broker
 
-Based on the implementation for service_keys mentioned above, we made a new service broker which supports this new feature. This service broker is written in Go and is designed to provide AWS virtual machine manipulation service. 
+Based on the implementation for `/service_keys` mentioned above, we created a new service broker which supports this new feature. This service broker is written in Golang and is designed to provide AWS virtual machine manipulation service. Future infrastructure-as-a-service, e.g., SoftLayer or OpenStack, may also be supported in the future.
 
-In the CloudFoundry world, this new service broker provides AWS virtual machine service and different type of the virtual machine, like t2.micro or t2.samll, are treat as service plans. By using this service broker, user can create/delete virtual machines in the AWS environment regarding as service instances. In addition, this service broker also support the CRUD of service keys. When creating a service key for a virtual machine, the service broker will generate an SSH key pair, inject the public key into the remote virtual machine and return the private key as the service key.  
+This new service broker essentially provides AWS virtual machine as a service and different types of the virtual machine can be requested. For instance, `t2.micro` or `t2.small`, which are treated as different service plans. By using this service broker, a user can create/delete virtual machines in the AWS environment by treating them as service instances. 
+
+In addition, the service broker also support the CRUD operations of service keys. When creating a service key for a virtual machine, the service broker will generate an SSH key pair, inject the public key into the remote virtual machine and return the private key as the service key.  
 
 We recorded a video demo of how to use this new service broker to manipulate service keys. Readers who is interested in this new feature, please find this video at: <a>https://www.youtube.com/watch?v=V5uzLcPQPmo</a>
 
-We have already contributed this service broker to CloudFoundry community, now the source code is put in the CloudFoundry samples repository, at: <a>https://github.com/cloudfoundry-samples/go_service_broker</a>
+We have contributed this service broker to CloudFoundry community, now the source code is put in the CloudFoundry samples repository, at: <a>https://github.com/cloudfoundry-samples/go_service_broker</a>
 
 # Async and arbitrary parameters
 
