@@ -1,9 +1,11 @@
 # CloudFoundry Services Keys
 
 # Introduction
-The CloudFoundry (CF) platform-as-a-service (PaaS) has an extensible model via CF services wherein new service providers can easily be added and enable their service instance in any CF installation. These services appear into the CF marketplace and can easily be bound to (connected to) by any user running a CF application.
+The CloudFoundry (CF) platform-as-a-service (PaaS) has an extensible model via CF services wherein new service providers can easily be added and enable their service instance in any CF installation. These services appear into the CF marketplace and can then easily be, discovered, bound to (connected to), and used by any user running a CF application.
 
-While powerful, the binding model for CF applications to services is also restrictive. In particular it means that CF services can only be used with CF applications and their lifecycle cannot easily survive the applications they are bound to. In this post we will discuss Services Keys which is a new feature added to CF that resolves this issue. We will describe an example broker that makes use of this new feature as well as two additional new feature to the CF services architecture: async provisioning and arbitraty parameters.
+While powerful, the binding model for CF applications to services was also a bit restrictive. In particular it meant that CF services could only be used with CF applications and a service's lifecycle could not easily survive the applications they were bound to. 
+
+In this post we will introduce and discuss `CF Services Keys` which is a new feature added to CF that resolves this issue. We will describe an example broker that makes use of this new feature as well as two additional new features of the CF services architecture: `Async Service Provisioning` and `Arbitraty Service Parameters`.
 
 # Use cases
 
