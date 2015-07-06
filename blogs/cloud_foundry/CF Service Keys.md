@@ -19,9 +19,11 @@ Finally, another major issue with the current architecture was how to revoke or 
 
 # Overview
 
-To address the issues above and many more, this IBM team worked with Pivotal to create a new service endpoint called: Service Keys which decouples the process of accessing and managing access to a service with the service instance itself and the applications that bind to it.
+To address the issues mentioned above and many more, this IBM team worked with Pivotal to create a new service endpoint called: `/service_keys` which decouples the process of accessing and managing access to a service with the service instance itself and the applications that bind to it.
 
-The new endpoint acts like anything else in CF and CloudCountroller in that it is a REST endpoint giving CRUD (create, read, update, and delete) access to a new resource, this one called: ServiceKey. Think of it as exposing access to credential information for a service instance. Using the credentials any CF API agent (a CF application, CLI, curl, etc) can perform lifecycle operations to access service credentials. Using these credentials or service keys, the agent can then access and use the service (that is bind to it).
+The new endpoint acts like anything else in CF and CloudCountroller in that it is a REST endpoint giving CRUD (create, read, update, and delete) access to a new resource, this one called: ServiceKey. Think of it as exposing access to credential information for a service instance. 
+
+Using the credentials any CF API agent (a CF application, CLI, curl, etc) can perform lifecycle operations to manage service credentials. Using these credentials or service keys, the agent can then access and use the service (that is bind to it).
 
 # Service Keys
 
