@@ -187,7 +187,7 @@ After the immediate response from the CloudFoundry to the end user, CloudFoundry
 
 Since virtual machines on AWS and other infrastructure-as-a-service clouds may take more than 60 seconds to be ready for use, we used this new async feature in the Go service broker mentioned above. We have recorded a video demo using this Go service broker, please find the video on Youtube
 
-![Sample Golang Broker: Async Provisioning](https://www.youtube.com/watch?v=Ij5KSKrAq9Q)
+[![Sample Golang Broker: Async Provisioning](http://img.youtube.com/vi/Ij5KSKrAq9Q/0.jpg)](http://www.youtube.com/watch?v=Ij5KSKrAq9Q)
 
 ## Service Arbitrary Parameters
 
@@ -197,7 +197,7 @@ To resolve this issue, the CF Service APIs team has implemented a new command op
 
 Our Go service broker also make use of this new arbitrary service parameters feature in order to pass the type (size) of the virtual machine to provision. We also have recorded a video demo using this feature in our Go service broker, please find the video on Youtube:
 
-![Sample Golang Broker: Arbitrary Parameters](https://www.youtube.com/watch?v=Qc3bZljGscs)
+[![Sample Golang Broker: Arbitrary Parameters](http://img.youtube.com/vi/Qc3bZljGscs/0.jpg)](http://www.youtube.com/watch?v=Qc3bZljGscs)
 
 # Conclusion
 
