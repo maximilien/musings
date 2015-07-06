@@ -1,5 +1,7 @@
 # CloudFoundry Services Keys and Sample Go Service Broker
 
+![credit: blog.trustmyroot.com](http://blog.trustmyroot.com/wp-content/uploads/2015/06/Cloud-Encryption.jpeg)
+
 # Introduction
 
 The CloudFoundry (CF) platform-as-a-service (PaaS) has an extensible model via CF services wherein new service providers can easily be added and enable their service instance in any CF installation. These services appear into the CF marketplace and can then easily be, discovered, bound to (connected to), and used by any user running a CF application.
@@ -34,7 +36,7 @@ As we mentioned the new Service Key feature is added as a new resource which ess
 
 Creating a new Service Key means calling an HTTP POST operation on the new `/service_keys` endpoint using an already created service instance. So for example:
 
-```
+```json
 POST /v2/service_keys
 
 {
@@ -47,7 +49,7 @@ In the HTTP body, the `service_instance_guid` and `name` is required, the option
 
 Assuming the current user agent is properly authenticated and the service instance GUID is valid then the result can be a new Service Key such as:
 
-```
+```json
 201 Created
 
 {
@@ -84,7 +86,7 @@ GET /v2/service_instances/4c0025a1-46b7-4843-97a9-1a406e4ae950/service_keys?q=na
 
 If the request is successfully processed, the response code and body will be like:
 
-```
+```json
 200 OK
 
 {
@@ -118,7 +120,7 @@ GET /v2/service_keys
 
 If the Service Keys are successfully retuned, the result will be like:
 
-```
+```json
 {
   "total_results": 1,
   "total_pages": 1,
@@ -169,7 +171,7 @@ In addition, the service broker also support the CRUD operations of service keys
 
 We recorded a video demo of how to use this new service broker to manipulate service keys. Readers who is interested in this new feature, please find this video at: <a>https://www.youtube.com/watch?v=V5uzLcPQPmo</a>
 
-We have contributed this service broker to CloudFoundry community, now the source code is put in the CloudFoundry samples repository, at: <a>https://github.com/cloudfoundry-samples/go_service_broker</a>
+We have contributed this service broker to CloudFoundry community, now the source code is put in the CloudFoundry samples repository, at: [https://github.com/cloudfoundry-samples/go_service_broker](https://github.com/cloudfoundry-samples/go_service_broker)
 
 # Async and arbitrary parameters
 
@@ -183,15 +185,19 @@ To resolve this issue, the CF Service APIs team implemented a new mechanism for 
 
 After the immediate response from the CloudFoundry to the end user, CloudFoundry will then launch a backend process to poll the service instance status information from the service broker, until the service broker replies that the service instance is 'created successfully'. During the creation process of a service instance, end user can always use the 'cf service service-instance-name' command to check the creation status of a service instance. 
 
-Since virtual machines on AWS and other infrastructure-as-a-service clouds may take more than 60 seconds to be ready for use, we used this new async feature in the Go service broker mentioned above. We have recorded a video demo using this Go service broker, please find the video at: <a>https://www.youtube.com/watch?v=Ij5KSKrAq9Q</a>
+Since virtual machines on AWS and other infrastructure-as-a-service clouds may take more than 60 seconds to be ready for use, we used this new async feature in the Go service broker mentioned above. We have recorded a video demo using this Go service broker, please find the video on Youtube
+
+![Sample Golang Broker: Async Provisioning](https://www.youtube.com/watch?v=Ij5KSKrAq9Q)
 
 ## Service Arbitrary Parameters
 
 In previous CloudFoundry, when creating a service instance, there was no way to configure the created service instance or pass some launch parameters to the service instance. Some work around to resolve this issue was to provide different service instance configurations, by providing different service plans from the service broker. However, in some of the situations, we would need to write a lot of different service plans in the service catalog for different config options combinations, which poluted the catalog and degraded the experience of end-users.
 
-To resolve this issue, the CF Service APIs team has implemented a new command option to help pass arbitrary parameters when creating service instances. By providing a new command option '-p' with an arbitrary json string in the CloudFoundry cli command 'cf create service', now CF can pass the json string parameter to the service broker and service broker will parse the json string and configure the service instance according to the content of the json parameter.
+To resolve this issue, the CF Service APIs team has implemented a new command option to help pass arbitrary parameters when creating service instances. By providing a new command option '-p' with an arbitrary JSON string in the CloudFoundry cli command `$cf create service`, now CF can pass the JSON string parameter to the service broker and service broker will parse the json string and configure the service instance according to the content of the JSON parameter.
 
-Our Go service broker also make use of this new arbitrary service parameters feature in order to pass the type (size) of the virtual machine to provision. We also have recorded a video demo using this feature in our Go service broker, please find the video at: <a>https://www.youtube.com/watch?v=Qc3bZljGscs</a>
+Our Go service broker also make use of this new arbitrary service parameters feature in order to pass the type (size) of the virtual machine to provision. We also have recorded a video demo using this feature in our Go service broker, please find the video on Youtube:
+
+![Sample Golang Broker: Arbitrary Parameters](https://www.youtube.com/watch?v=Qc3bZljGscs)
 
 # Conclusion
 
