@@ -6,7 +6,7 @@ The CloudFoundry (CF) platform-as-a-service (PaaS) has an extensible model via C
 
 While powerful, the binding model for CF applications to services was also a bit restrictive. In particular it meant that CF services could only be used with CF applications and a service's lifecycle could not easily survive the applications they were bound to. 
 
-In this post we will introduce and discuss `CF Services Keys` which is a new feature added to CF that resolves this issue. We will describe an example broker that makes use of this new feature as well as two additional new features of the CF services architecture: `Async Service Provisioning` and `Arbitraty Service Parameters`. We will also describe a [new sample service broker](https://github.com/cloudfoundry-samples/go_service_broker), written in [Golang](https://golang.org/), that we have implemented that illustrates the use of these new features.
+In this post we will introduce and discuss `CF Services Keys` which is a new feature added to CF that resolves this issue. We will describe an example broker that makes use of this new feature as well as two additional new features of the CF services architecture: `Async Service Provisioning` and `Arbitrary Service Parameters`. We will also describe a [new sample service broker](https://github.com/cloudfoundry-samples/go_service_broker), written in [Golang](https://golang.org/), that we have implemented that illustrates the use of these new features.
 
 # Use cases
 
