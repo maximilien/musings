@@ -1,11 +1,12 @@
-# CloudFoundry Services Keys
+# CloudFoundry Services Keys and Sample Go Service Broker
 
 # Introduction
+
 The CloudFoundry (CF) platform-as-a-service (PaaS) has an extensible model via CF services wherein new service providers can easily be added and enable their service instance in any CF installation. These services appear into the CF marketplace and can then easily be, discovered, bound to (connected to), and used by any user running a CF application.
 
 While powerful, the binding model for CF applications to services was also a bit restrictive. In particular it meant that CF services could only be used with CF applications and a service's lifecycle could not easily survive the applications they were bound to. 
 
-In this post we will introduce and discuss `CF Services Keys` which is a new feature added to CF that resolves this issue. We will describe an example broker that makes use of this new feature as well as two additional new features of the CF services architecture: `Async Service Provisioning` and `Arbitraty Service Parameters`.
+In this post we will introduce and discuss `CF Services Keys` which is a new feature added to CF that resolves this issue. We will describe an example broker that makes use of this new feature as well as two additional new features of the CF services architecture: `Async Service Provisioning` and `Arbitraty Service Parameters`. We will also describe a [new sample service broker](https://github.com/cloudfoundry-samples/go_service_broker), written in [Golang](https://golang.org/), that we have implemented that illustrates the use of these new features.
 
 # Use cases
 
@@ -194,4 +195,6 @@ Our Go service broker also make use of this new arbitrary service parameters fea
 
 # Conclusion
 
-Working closely with Pivotal over the month of March and April we were able to improve the current CF services architecture to externalize the CF service credentials. This new feature opens a series of new use cases in how CF services can be used. The new feature remains backward compatible with existing brokers since they are able to easily implement the ServiceKey broker APIs with their old service binding (just without an app_id). This means that old brokers should be able to quickly support service keys and open the door for a whole new class of CF service users, such as Docker applications.
+Working closely with Pivotal over the month of March and April we were able to improve the current CF services architecture to externalize the CF service credentials. This new feature opens a series of new use cases in how CF services can be used. The new feature remains backward compatible with existing brokers since they are able to easily implement the `/service_keys` broker APIs with their old service binding (just without an 'app_id' parameter). This means that old brokers should be able to quickly support service keys and open the door for a whole new class of CF service users, such as Docker applications. 
+
+And to help accelerate the usage of this new feature, we have also created a new Service Broker in Golang that takes advantage of the new CF services features, including Service Keys, Service Async, and Arbritrary Parameters. The broker essentially exposes the creation and management of infrastructure-as-a-service virtual machines as a CF service. Using this new broker you can easily create new VMs (regarless of how long they take) and access ssh keys for these VMs. The broker is now part of the CF samples and supports creating AWS VMs.
