@@ -169,7 +169,9 @@ This new service broker essentially provides AWS virtual machine as a service an
 
 In addition, the service broker also support the CRUD operations of service keys. When creating a service key for a virtual machine, the service broker will generate an SSH key pair, inject the public key into the remote virtual machine and return the private key as the service key.  
 
-We recorded a video demo of how to use this new service broker to manipulate service keys. Readers who is interested in this new feature, please find this video at: <a>https://www.youtube.com/watch?v=V5uzLcPQPmo</a>
+We recorded a video demo of how to use this new service broker to manipulate service keys. Readers who is interested in this new feature, please find this video on Youtube here: 
+
+[![Sample Golang Broker: Service Keys](http://img.youtube.com/vi/V5uzLcPQPmo/0.jpg)](http://www.youtube.com/watch?v=V5uzLcPQPmo)
 
 We have contributed this service broker to CloudFoundry community, now the source code is put in the CloudFoundry samples repository, at: [https://github.com/cloudfoundry-samples/go_service_broker](https://github.com/cloudfoundry-samples/go_service_broker)
 
