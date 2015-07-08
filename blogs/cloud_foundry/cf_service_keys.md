@@ -206,3 +206,8 @@ Our Go service broker also make use of this new arbitrary service parameters fea
 Working closely with Pivotal over the month of March and April we were able to improve the current CF services architecture to externalize the CF service credentials. This new feature opens a series of new use cases in how CF services can be used. The new feature remains backward compatible with existing brokers since they are able to easily implement the `/service_keys` broker APIs with their old service binding (just without an 'app_id' parameter). This means that old brokers should be able to quickly support service keys and open the door for a whole new class of CF service users, such as Docker applications. 
 
 And to help accelerate the usage of this new feature, we have also created a new Service Broker in Golang that takes advantage of the new CF services features, including Service Keys, Service Async, and Arbritrary Parameters. The broker essentially exposes the creation and management of infrastructure-as-a-service virtual machines as a CF service. Using this new broker you can easily create new VMs (regarless of how long they take) and access ssh keys for these VMs. The broker is now part of the CF samples and supports creating AWS VMs.
+
+------------
+_Date_: July 6th, 2015
+
+_Authors_: @maximilien, @zhang-hua, @xingzhou
