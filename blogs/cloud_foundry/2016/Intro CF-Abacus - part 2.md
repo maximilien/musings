@@ -4,7 +4,7 @@
 
 The CF-Abacus uses a pipeline architecture. The pipeline can be seen as containing six stages where each stage is responsible for processing, manipulating, saving, sorting, and reporting metering information. The following diagram illustrate the six stages which we elaborate on a bit more below.
 
-[CF-Abacus pipelining architecture diagram](pipeline-flow.png)
+![CF-Abacus pipelining architecture diagram](pipeline-flow.png)
 
 The six stages of the CF-Abacus pipeline comprises:
 
