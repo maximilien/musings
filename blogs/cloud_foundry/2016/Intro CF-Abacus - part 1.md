@@ -1,6 +1,6 @@
 # Introduction to CF-Abacus - Part 1 of 3
 
-CF-Abacus team: Jean-Sebastien Delfino (IBM), Benjamin Cheng (IBM), Hirsto Lliev (SAP), Saravanakumar Srinivasan "Assk" (Independent), Georgi Sabev (SAP), Kevin Yudhiswara (IBM), Piotr Przybylski (IBM), and Rajkiran Balasubramanian (IBM)
+CF-Abacus team: [Jean-Sebastien Delfino](https://github.com/jsdelfino) (IBM), [Saravanakumar Srinivasan](https://github.com/sasrin) "Assk" (Independent), [Benjamin Cheng](https://github.com/BetaFood) (IBM), [Hristo Lliev](https://github.com/hsiliev) (SAP), [Georgi Sabev](https://github.com/georgethebeatle) (SAP), [Kevin Yudhiswara](https://github.com/KRuelY) (IBM), [Piotr Przybylski](https://github.com/piotrprzybylski) (IBM), and [Rajkiran Balasubramanian](https://github.com/rajkiranrbala) (IBM)
 
 ## Abstract
 
@@ -36,6 +36,6 @@ In the part 2 of this series we will discuss the CF-Abacus architecture and key 
 
 ## References
 
-CF-Abacus Github project
-CF-Abacus docs: README, FAQs, and API design information
-CF-Abacus Slack and Gitter channels
+CF-Abacus Github [project](https://github.com/cloudfoundry-incubator/cf-abacus)
+CF-Abacus [docs](https://github.com/cloudfoundry-incubator/cf-abacus/tree/master/doc): [README](https://github.com/cloudfoundry-incubator/cf-abacus/blob/master/README.md), [FAQs](https://github.com/cloudfoundry-incubator/cf-abacus/blob/master/doc/faq.md), and [API design](https://github.com/cloudfoundry-incubator/cf-abacus/blob/master/doc/api.md) information
+CF-Abacus [Slack](https://abacusdev-slack.mybluemix.net/) and [Gitter](https://gitter.im/cloudfoundry-incubator/cf-abacus?utm_source=badge) channels
