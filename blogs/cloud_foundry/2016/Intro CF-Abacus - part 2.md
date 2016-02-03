@@ -1,5 +1,11 @@
 # Introduction to CF-Abacus - Part 2 of 3
 
+CF-Abacus team: [Jean-Sebastien Delfino](https://github.com/jsdelfino) (IBM), [Saravanakumar Srinivasan](https://github.com/sasrin) "Assk" (Independent), [Benjamin Cheng](https://github.com/BetaFood) (IBM), [Hristo Lliev](https://github.com/hsiliev) (SAP), [Georgi Sabev](https://github.com/georgethebeatle) (SAP), [Kevin Yudhiswara](https://github.com/KRuelY) (IBM), [Piotr Przybylski](https://github.com/piotrprzybylski) (IBM), and [Rajkiran Balasubramanian](https://github.com/rajkiranrbala) (IBM)
+
+## Introduction
+
+In part 1 of this 3 part series, we motivated the metering problem for a Platform-as-a-Service like Cloud Foundry (CF) and introduced and scope CF-Abacus which we claim provides a turnkey metering engine that can be used in a scalable manner by any CF installation. In part 2, we dive into the architecture of CF-Abacus and also some of the key design points chosen by the team. We also finish with hinting at the implementation choices to realize the architecture.
+
 ## Architecture Overview
 
 The CF-Abacus uses a pipeline architecture. The pipeline can be seen as containing six stages where each stage is responsible for processing, manipulating, saving, sorting, and reporting metering information. The following diagram illustrate the six stages which we elaborate on a bit more below.
@@ -38,3 +44,13 @@ To realize the architecture and design goals the team chose to use Node.js as th
 Since Node.js is also supported as a first class language in Cloud Foundry, with an active build pack release schedule that matches the Node community schedules, this choice is as good as any other language choices for implementation.
 
 The resulting implementation is all contained in the CF-Abacus Github project with each of the six stages for the pipeline modularize into their own Node.js module each exposing their APIs and connecting to the database layer (CouchDB compliant). Each pipeline module can be pushed as an app into CF and thus independently scaled like other CF apps.
+
+---
+
+In the part 3 we will conclude this series with a discussion about future directions and goals for the CF-Abacus project.
+
+## References
+
+CF-Abacus Github [project](https://github.com/cloudfoundry-incubator/cf-abacus)
+CF-Abacus [docs](https://github.com/cloudfoundry-incubator/cf-abacus/tree/master/doc): [README](https://github.com/cloudfoundry-incubator/cf-abacus/blob/master/README.md), [FAQs](https://github.com/cloudfoundry-incubator/cf-abacus/blob/master/doc/faq.md), and [API design](https://github.com/cloudfoundry-incubator/cf-abacus/blob/master/doc/api.md) information
+CF-Abacus [Slack](https://abacusdev-slack.mybluemix.net/) and [Gitter](https://gitter.im/cloudfoundry-incubator/cf-abacus?utm_source=badge) channels
