@@ -1,5 +1,11 @@
 # Introduction to CF-Abacus - Part 3 of 3
 
+CF-Abacus team: [Jean-Sebastien Delfino](https://github.com/jsdelfino) (IBM), [Saravanakumar Srinivasan](https://github.com/sasrin) "Assk" (Independent), [Benjamin Cheng](https://github.com/BetaFood) (IBM), [Hristo Lliev](https://github.com/hsiliev) (SAP), [Georgi Sabev](https://github.com/georgethebeatle) (SAP), [Kevin Yudhiswara](https://github.com/KRuelY) (IBM), [Piotr Przybylski](https://github.com/piotrprzybylski) (IBM), and [Rajkiran Balasubramanian](https://github.com/rajkiranrbala) (IBM)
+
+## Introduction
+
+In part 1 and part 2 of this series we introduced the metering problem that CF-Abacus solves as well as giving a complete overview of its architecture and design. In the last part we discuss future directions and conclude with the next steps. We also provide various references that all parties interested with CF-Abacus can use to become more active in the project.
+
 ## Future Directions
 
 While the current CF-Abacus implementation has come a long way to implement a scalable, reliable, and modular metering pipeline for any Cloud Foundry installation, it’s not without some shortcomings. Three primary areas of improvements are identifiable:
@@ -18,3 +24,9 @@ The team is currently working on solutions to the three problems and limitations
 As we venture into making Cloud Foundry the default open operating system for the cloud, usage information that can help deployers of CF better bill and manage the resource usage of their installation is becoming more and more important. The CF-Abacus project is a solution to proofing an open metering engine for any CF installation. The engine was created with a micro-services architecture designed as a pipeline of six stages. Each  of the pipeline stages can be deployed and scaled as a CF application and exposes its own APIs and talks to its own slice of the database. Since extracting the core CF-Abacus project from IBM’s Bluemix deployment of CloudFoundry we have created a small but active team around the project. With contributors from SAP we were able to add and work on new features such as self-on-boarding as well as expand the realizable DBs that can be used for a real deployment of Abacus. Additionally, we are working to also make Abacus more user friendly and reliable by giving easy means for correcting erroneous usage data and displaying reports.
 
 Join the CF-Abacus team by “kicking the tires” from our Github project page and joining the discussion on our Gitter.im cf-abacus channel.
+
+## References
+
+* CF-Abacus Github [project](https://github.com/cloudfoundry-incubator/cf-abacus)
+* CF-Abacus [docs](https://github.com/cloudfoundry-incubator/cf-abacus/tree/master/doc): [README](https://github.com/cloudfoundry-incubator/cf-abacus/blob/master/README.md), [FAQs](https://github.com/cloudfoundry-incubator/cf-abacus/blob/master/doc/faq.md), and [API design](https://github.com/cloudfoundry-incubator/cf-abacus/blob/master/doc/api.md) information
+* CF-Abacus [Slack](https://abacusdev-slack.mybluemix.net/) and [Gitter](https://gitter.im/cloudfoundry-incubator/cf-abacus?utm_source=badge) channels
