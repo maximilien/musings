@@ -4,7 +4,15 @@ CF-Abacus team: [Jean-Sebastien Delfino](https://github.com/jsdelfino) (IBM), [S
 
 ## Introduction
 
-In part 1 and part 2 of this series we introduced the metering problem that CF-Abacus solves as well as giving a complete overview of its architecture and design. In the last part we discuss future directions and conclude with the next steps. We also provide various references that all parties interested with CF-Abacus can use to become more active in the project.
+In part 1 and part 2 of this series we introduced the metering problem that CF-Abacus solves as well as giving a complete overview of its architecture and design. In the last part we discuss the decisions the team took to realize the architecture and give some hints about future directions and conclude with the next steps. We also provide various references that all parties interested with CF-Abacus can use to become more active in the project.
+
+## Implementation
+
+To realize the architecture and design goals, the team chose to use Node.js as their primary implementation language and application server. This choice makes sense when one considers that Node.js has excellent built-in libraries for creating Web APIs and first class connectors to CouchDB-like databases.
+
+Since Node.js is also supported as a first class language in Cloud Foundry, with an active build pack release updates that matches the Node community schedules, this choice is as good as any other language choices for implementation.
+
+The resulting implementation is all contained in the CF-Abacus Github project with each of the six stages for the pipeline modularize into their own Node.js module (applications) each exposing their APIs and connecting to the database layer (CouchDB compliant). Each pipeline module can be pushed as an app into CF and thus independently managed and scaled like other CF apps.
 
 ## Future Directions
 
