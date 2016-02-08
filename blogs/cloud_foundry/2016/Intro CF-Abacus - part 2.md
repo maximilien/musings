@@ -10,7 +10,7 @@ In part 1 of this 3-part series, we motivated the metering problem for a Platfor
 
 CF-Abacus uses a pipeline architecture. The pipeline can be seen as containing six stages where each stage is responsible for processing, manipulating, saving, sorting, and reporting metering information. The following diagram illustrates the six stages which we elaborate on a bit more below.
 
-![CF-Abacus pipelining architecture diagram](pipeline-flow1.jpg)
+![CF-Abacus pipelining architecture diagram](cf-abacus-pipeline-flow1.jpg)
 
 The six stages of the CF-Abacus pipeline comprises:
 
@@ -37,7 +37,7 @@ The design goal for CF-Abacus to deal with this database problem is two fold. Fi
 
 To deal with the challenges of an ever growing database footprint, the micro services automatically shard the database using time partitions. This makes sense since the data flowing into the Abacus pipeline is always timestamped and more importantly the resulting access of the accumulated and reported data tends to be sensitive to the timespans that it represent. For instance, as a user of Abacus for billing, that would typically be interested in the data for latest time period, a goal would be to make the data for more recent time periods be readily available.
 
-![CF-Abacus pipelining detailed architecture diagram](pipeline-flow.jpg)
+![CF-Abacus pipelining detailed architecture diagram](cf-abacus-pipeline-flow.jpg)
 
 All usage submissions, provider configurations, and reports are done as JSON documents. This of course goes hand in hand with our choice of database, however, it also results in a flow which is both human and machine processable. After on-boarding a service provider (validating and adding their configuration) they are able to submit their usages. The following is an example usage with it's sections highlighted that conforms to the provider whose configuration is shown in the subsequent figure.
 
