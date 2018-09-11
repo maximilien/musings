@@ -40,7 +40,7 @@ Besides various introductions to three tracks led by IBMers, other talks span th
 
 Many of these talks will include live demos and discussions of future directions. I encourage you to come ready to engage the presenting IBMers with your questions and comments.
 
-### Panels
+### Panel
 
 In a redux of the panel they did last summit entitled: [“Cloud Foundry and Kubernentes - Did it blend?”](http://sched.co/FRyD), IBM lead developer for the IBM Application Services, Simon Moser, will again join SAP colleague Bernd Krannich as well as panelists Jeff Hobbs (SUSE), Chris Crall (Google), Ulrich Homann (Microsoft), Cornelia Davis (Pivotal), and Swarna Podila (CFF) will discuss Cloud Foundry’s direction with respect to Kubernetes and how these two worlds are colliding more and more every day.
 
