@@ -30,9 +30,9 @@ Another extenal technology that has increasingly become important in Cloud Found
 
 Besides various introductions to three tracks led by IBMers, other talks span the various technologies used in Cloud Foundry. They include:
 
-1. Surya V Duggirala of IBM will discuss his [deep experience running containers](http://sched.co/FRyE) applications and contributing to various container ecosystems.
-2. Another container-specific talk is by Sandy Cash of IBM and colleague from SUSE Troy Topnik discussing what it takes to get [Cloud Foundry installed and running as a containerized workload](http://sched.co/FRyA).
-3. Lucinio Santos and Car Swanson of IBM will share their [experiences administrating Cloud Foundry in the enterprise](http://sched.co/FRyW). This includes using Design Thinking methodology to plan capacity, scaling, and other obstacles that typically occurs when large enterprises adopt cloud.
+1. Surya Duggirala of IBM will discuss his [deep experience running containers](http://sched.co/FRyE) applications and contributing to various container ecosystems.
+2. Another container-specific talk is by Sandy Cash of IBM and colleague from SUSE, Troy Topnik, discussing what it takes to get [Cloud Foundry installed and running as a containerized workload](http://sched.co/FRyA).
+3. Lucinio Santos and Carl Swanson of IBM will share their [experiences administrating Cloud Foundry in the enterprise](http://sched.co/FRyW). This includes using Design Thinking methodology to plan capacity, scaling, and other obstacles that typically occurs when large enterprises adopt cloud.
 4. Bo Yang of IBM and Rohit Sharma of SAP give an update on the [App AutoScaler project](http://sched.co/FRym) which gives a flexible service broker for scaling your applications in any Cloud Foundry installation.
 5. An update of the [Open Service Broker API specification and direction](http://sched.co/FW1v) by IBM’s Doug Davis.
 6. An update from IBMers Peter Goetz and Norman Sutorius on the [Bits-Service](http://sched.co/FRyP) runtime component which was developed and led by IBM Germany lab.
