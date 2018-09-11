@@ -10,7 +10,7 @@ In this recap I highlights these various talks and give you links to the officia
 
 ## This Year at CF-Summit
 
-At this year’s European summit in Basel we have X talks, one panel, and two keynotes. And we will also be sponsoring the hackathon and help run it again as we have done the past three years.
+At this year’s European summit in Basel we have 10 talks, one panel, and two keynotes. And we will also be sponsoring the hackathon and help run it again as we have done the past three years.
 
 ### [Hackathon](http://sched.co/FY0F)
 
