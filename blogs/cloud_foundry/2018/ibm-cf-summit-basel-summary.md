@@ -2,11 +2,11 @@
 
 ## History of IBM’s contributions
 
-IBM has had one of the longest and sustained set of contributions to previous CF-Summits. And this year, for the one that is coming up in October 10-11 in Basel, Switzerland it will be no different.
+IBM has a long history of contributing to CF-Summits. And this year, the one taking place from October 10-11 in Basel, Switzerland will be no different.
 
-From talks to give updates on incubating projects, to overview updates on existing projects, and to panels, IBMers will be all over the floor on the ground at Basel. This will also include our booth where I invite you to stop by daily to talk to IBMers and get an overview of our recent products and services.
+From talks, and panels to updates on existing & incubating projects, IBMers will be all over the floor at Basel. This will also include our booth where I invite you to stop by daily to talk to IBMers and get an overview of our recent products and services.
 
-In this recap I highlights the various talks and activities and give you links to the official agenda entries so you can plan your time and meet the folks in the trenches who are helping move the platform forward.
+In this recap I highlight the various talks and activities and give you links to the official agenda entries so you can plan your time and meet the folks in the trenches who are helping move the platform forward.
 
 ## This Year at CF-Summit
 
@@ -16,7 +16,7 @@ At this year’s European summit in Basel we have 10 talks, one panel, and two k
 
 Last year we had the winning team for the CF hackathon. A team of four IBMers worked non-stop for 24 hours to create what was a first of a kind service broker for Ethereum smart contracts.
 
-The Blockhead project, now incubating in the [CF-Extensions PMC](https://github.com/cloudfoundry/pmc-notes/tree/master/Extensions/2018), allows smart contracts developers to quickly get their contracts  compiled and up and running on the cloud.
+The Blockhead project, now incubating in the [CF-Extensions PMC](https://github.com/cloudfoundry/pmc-notes/tree/master/Extensions/2018), allows distributed app(dapp) developers to quickly get their smart contracts compiled, deployed and connected to their dapps that are running on the cloud.
 
 The broker is compliant with the Open Service Broker API which means it can be used on Cloud Foundry but also on other compliant platforms, e.g., Kubernetes. 
 
