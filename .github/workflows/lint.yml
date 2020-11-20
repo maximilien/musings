@@ -26,5 +26,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Lint Markdown
-      # uses: tomwhross/write-good-action@4d9b6eeacd2a6e7c8d3ea0c3fd1643b5d033b2ea
-      uses: tomwhross/write-good-action@v1.2
+        uses: tomwhross/write-good-action@v1.2
