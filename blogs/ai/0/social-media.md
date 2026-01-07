@@ -15,7 +15,7 @@ No corporate voice. No sponsored takes. Just a builder's perspective after decad
 
 First up: AI Coding Assistants—the tools that changed how I work, and the ones that didn't live up to the hype.
 
-Subscribe for signal, not noise: [SUBSTACK LINK]
+Subscribe for signal, not noise: https://maximilien.substack.com/p/introducing-ai-musings
 
 Let's go! 🚀
 
@@ -26,7 +26,7 @@ Let's go! 🚀
 
 ### Option 1: Single Tweet (Under 280 characters)
 
-After 30 years at IBM, I left to build an AI Agents startup.
+After 30 years at IBM, I retired and left to build an AI Agents startup.
 
 Now I'm sharing what I'm learning in a new Substack: AI Musings
 
@@ -36,4 +36,4 @@ Now I'm sharing what I'm learning in a new Substack: AI Musings
 
 No hype. Just signal.
 
-[SUBSTACK LINK] 🚀
+https://maximilien.substack.com/p/introducing-ai-musings 🚀
