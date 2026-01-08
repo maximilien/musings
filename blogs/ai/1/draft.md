@@ -38,7 +38,7 @@ The background agent capabilities are particularly compelling. You can spin up t
 
 **My experience (three months of extensive use):**
 
-I especially liked the background agent workflow for parallelizing work. For UI-heavy projects, Cursor worked well, though I often found myself needing to provide browser context manually. Where it struggled was with long sessions—context approaching its limits would cause the agent to "forget" earlier decisions or make suggestions that conflicted with code it had written minutes before.
+I especially liked the background agent workflow for parallelizing work. For UI-heavy projects, Cursor worked well, though I often found myself needing to provide browser context manually--copying browser's JavaScript console and pasting it to the agent. Where it struggled was with long sessions—context approaching its limits would cause the agent to slow down significantly and "forget" earlier decisions or make suggestions that conflicted with code it had written minutes before.
 
 [VERIFY: Current context window limits—search results suggest 200K advertised but 70K-120K effective in practice]
 
@@ -64,7 +64,7 @@ So compelling that I switched from Cursor's GUI to using cursor-agent as well (t
 
 The challenge is review discipline. Speed is addictive. The terminal-based workflow makes it easy to accept suggestions without the same scrutiny you'd apply when visually reviewing diffs. I've found myself accepting too many changes without sufficient review—a feature and a bug of the approach.
 
-**Critical learning:** Establish strong testing practices early. Let the agent run tests after changes. Use agents to create tests too. Without this discipline, the speed advantage becomes a liability.
+**Critical learning:** Establish strong testing practices early. Let the agent run tests after changes. Use agents to create tests too! Without this discipline, the speed advantage becomes a liability.
 
 **Best for:** CLI-native developers, complex refactoring, multi-file operations, those who value speed over visual review.
 
@@ -78,17 +78,17 @@ TRAE (The Real AI Engineer) launched in early 2025 and has grown remarkably fast
 
 The built-in browser is huge for UI work. No more switching between your IDE and a browser to see what you're building—it's integrated directly. The no-interrupt run mode lets you kick off complex tasks without constant prompting. And the multiple agents capability means you can parallelize work within the IDE itself.
 
-TRAE's "SOLO mode" takes this further—full-process automated development from requirements input to deployment. It's ambitious, and early reports suggest it's genuinely useful for rapid prototyping.
+TRAE's "SOLO mode" takes this further—full-process automated development from requirements input to deployment. It's ambitious, has an agent-focused interface, and early reports suggest it's genuinely useful for rapid prototyping.
 
-The price is also hard to argue with: it's free, with access to Claude and GPT-4o models included. [VERIFY: Check current model availability—reports suggest Claude support may have changed]
+The price is also hard to argue with: it's half the price of Cursor (at the time of this writing), with access to many models including GPT-4o models--seems like Claude model was removed.
 
 **The trade-offs:**
 
 TRAE lacks the fast CLI interface that makes Claude Code so compelling. For developers who think in terminal commands, this is a significant gap. The ecosystem is also newer and less mature than Cursor's.
 
-And then there's the elephant in the room: ByteDance ownership. Security researchers have documented extensive telemetry in TRAE, including persistent connections to multiple ByteDance servers even during idle periods. For some developers and organizations, this is a dealbreaker. Others accept it as the cost of free, powerful tooling.
+And then there's the elephant in the room: ByteDance ownership. Security researchers have documented extensive telemetry in TRAE, including persistent connections to multiple ByteDance servers even during idle periods. For some developers and organizations, this is a dealbreaker. Others accept it as the cost of reduced costs, powerful tooling.
 
-**Best for:** Developers wanting best-of-both-worlds IDE experience, those doing heavy UI work, cost-conscious developers willing to accept ByteDance's data practices.
+**Best for:** Developers wanting an agent-focused IDE experience, those doing heavy UI work, cost-conscious developers willing to accept ByteDance's data practices.
 
 ## Other Notable Tools
 
@@ -96,7 +96,7 @@ The landscape is crowded. Here's a quick rundown of other tools worth knowing:
 
 **Amp (Sourcegraph):** Similar to Claude Code in its CLI-focused approach, with a free tier supported by advertising. Beyang Liu, the co-founder and CTO, spoke at our AI Agents Meetup SF #7 on Coding Agents. His thesis: "Code review is dead; long live code review!"—the bottleneck has shifted from writing to reviewing. [LINK: Add link to meetup recording]
 
-**Warp:** CLI-focused with multiple tabs capability. Great for terminal lovers who want AI assistance without leaving their shell. Still depends on underlying LLMs.
+**Warp:** CLI-focused with multiple tabs capability. Great for terminal lovers who want AI assistance without leaving their shell. Still depends on underlying LLMs. My friend Allie Jones introduced me to this tool and swears by it.
 
 **Codex (OpenAI):** OpenAI's entry has re-emerged as a serious agent-first tool. Limited personal experience, but reports suggest it's competitive, particularly for deterministic multi-step tasks.
 
@@ -112,7 +112,8 @@ After a year of testing, I've concluded that the IDE vs CLI distinction is more 
 
 **IDE-based (Cursor, TRAE, Windsurf):**
 
-- Visual code review is built into the workflow
+- Visual view of your code base
+- Visual code review is built into the workflow 
 - Integrated with existing development patterns
 - Better for those who think visually or come from VSCode
 - Trade-off: more overhead, slower interactions—especially deep into a session
@@ -121,8 +122,9 @@ After a year of testing, I've concluded that the IDE vs CLI distinction is more 
 
 - Speed and focus without GUI overhead
 - Natural for terminal-native developers
+- Excellent for parallelization--I typically am working on two or three repos at once using iTerm's tabs
 - Review happens via git and terminal tools rather than visual diffs
-- Trade-off: easier to miss issues, requires discipline
+- Trade-off: easier to miss issues, requires more discipline (testing, diff reviews)
 
 Neither is objectively better. The right choice depends on how you think about code.
 
@@ -144,13 +146,13 @@ All these tools share fundamental limitations:
 
 Whatever tool you choose, these practices make a difference:
 
-**Testing is non-negotiable.** Agents make changes fast—tests catch mistakes. Automate testing early in the project. Let the agent run tests after changes. Use agents to create tests too. This is the single most important discipline for AI-assisted development.
+**Testing is non-negotiable.** Agents make changes fast—tests catch mistakes and regressions. Automate testing early in the project. Let the agent run tests after changes. Use agents to create tests too! This is the single most important discipline for AI-assisted development.
 
-**Context management matters.** I've developed personal conventions: NEXT_STEPS.md, TODOs.md, CHANGELOG.md files that persist context across sessions. A docs/planning/ directory for the agent to reference. Explicit handoff notes when context is getting long. These feel manual, but they dramatically improve agent performance.
+**Context management matters.** I've developed personal conventions: NEXT_STEPS.md, TODOs.md, CHANGELOG.md files that persist context across sessions. A docs/planning/ directory for the agent to reference and create detail plans of features. Explicit handoff notes when context is getting long. These feel manual, but they dramatically improve agent performance.
 
 **Review discipline is essential.** Speed is addictive. Build review into your workflow deliberately. Trust but verify. The 30% code acceptance rate for GitHub Copilot suggestions isn't a bug—it's appropriate skepticism.
 
-**Multiple tools in parallel is normal.** 59% of developers now run three or more AI coding tools simultaneously. This isn't indecision—it's pragmatism. Different tools excel at different tasks.
+**Multiple tools in parallel is normal.** 59% of developers now run three or more AI coding tools simultaneously. This isn't indecision—it's pragmatism. Different tools excel at different tasks. I often use different tools or models to write tests vs code or to plan before writing code.
 
 ## Looking Forward
 
@@ -166,9 +168,9 @@ The space is evolving fast. Here's where I see it heading:
 
 Two leading paradigms: IDE-integrated and terminal-native. All depend on LLM quality and face context window challenges. Choose based on your workflow preference and project needs.
 
-The productivity gains are real—developers report 30-75% time savings on coding, testing, and documentation. But so are the challenges: context limits, review discipline, and the need to maintain your own coding skills even as you delegate more to agents.
+The productivity gains are real—developers report 30-75% time savings on coding, testing, and documentation. For me it's easily in the 50% to 80%. But so are the challenges: context limits, review discipline, and the need to maintain your own coding skills even as you delegate more to agents.
 
-Invest in testing infrastructure early. Develop context management strategies. Embrace the tools thoughtfully, not uncritically.
+Invest in testing infrastructure early--locally and in CI/CD. Develop context management strategies. Embrace the tools thoughtfully, not uncritically.
 
 The dream of dramatically accelerated engineering isn't just a dream anymore. But realizing it requires more than downloading the latest AI IDE. It requires adapting how we work.
 
