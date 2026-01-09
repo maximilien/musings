@@ -199,22 +199,151 @@ The dream of dramatically accelerated engineering isn't just a dream anymore. Bu
 - [METR Study on AI Developer Productivity](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/)
 
 **From AI Agents Meetup SF:**
-- [#7: Coding Agents](https://luma.com/5ry1w1ak) — Talks from Sourcegraph, DevSwarm, TRAE, and Morph
+- [#7: Coding Agents](https://luma.com/5ry1w1ak) — Talks from Sourcegraph, DevSwarm, TRAE, and Morph.
 
 ---
 
 ## Items to Verify/Research Before Publishing
 
-1. [ ] **Cursor context window:** Reports suggest 200K advertised but 70K-120K effective. Verify current state.
-2. [ ] **Cursor pricing:** Confirm current tiers ($20-$200/month range reported)
-3. [ ] **TRAE model availability:** Reports suggest Claude support may have changed recently
-4. [ ] **TRAE privacy concerns:** Consider how deeply to address ByteDance data collection
+1. [x] **Cursor context window:** Reports suggest 200K advertised but 70K-120K effective. Verify current state.
+
+Cursor's context window varies, with standard use around 10k-20k tokens for edits/chat and a powerful 200k token default for larger projects via Max Mode, which can access even larger model contexts (like 1M tokens for some models) for deeper analysis, balancing speed and capability. You can monitor usage in real-time and use features like rules to manage larger context effectively across chats. 
+
+
+2. [x] **Cursor pricing:** Confirm current tiers ($20-$200/month range reported)
+
+In 2026, Cursor uses a hybrid pricing model that combines flat monthly fees with usage-based credit pools. As of January 2026, the primary tiers are: 
+
+Individual Plans
+
+Hobby (Free): Includes 2,000 Tab completions and 50 slow requests per month.
+
+Pro ($20/mo): The standard tier for solo developers. It provides unlimited Tab completions, unlimited usage of the "Auto" model, and a $20 monthly credit pool for advanced/premium models (like Claude 3.5 Sonnet or GPT-4o).
+
+Pro+ ($60/mo): A mid-tier for frequent users, offering the same features as Pro but with a larger $60 (3x) credit pool for premium model usage.
+
+Ultra ($200/mo): Designed for power users, providing a $400 (20x) credit pool and priority access to new features. 
+
+3. [x] **TRAE model availability:** Reports suggest Claude support may have changed recently
+
+Reports that Trae has discontinued Claude support are accurate. As of early November 2025, ByteDance-owned Trae officially removed all Claude models from its platform. 
+
+Reason for Change
+
+The removal was driven by Anthropic's updated policy restricting services for Chinese-controlled entities globally. Because Trae is a ByteDance product, it lost access to the Claude series models (including the popular 3.5 Sonnet and 3.7 Sonnet) due to these geopolitical and service interruptions. 
+
+Current Model Availability (2026)
+
+Trae has shifted to other frontier and specialized models to replace Claude:
+Frontier Models: GPT-5 and Gemini 2.5 Pro.
+
+Specialized Models: Kimi-K2-0905 and DeepSeek V3.1-Terminus.
+Custom Optimizations: Trae states that these new models are optimized for "reasoning quality" and "execution chain" to maintain performance levels similar to when Claude was available. 
+
+Impact on Users
+Pro Member Compensation: To address the loss of Claude, Trae is giving Pro members a 50% increase in "Fast Queue" requests (an extra 300 requests per month) through January 31, 2026.
+
+Third-Party Alternatives: Many users are using tools such as Cursor or Windsurf, which maintain full access to the Claude series models.
+
+Trae CLI: The open-source Trae-CLI core agent still supports bring-your-own-key functionality. This allows users with their own Anthropic API keys to continue using Claude outside of the primary IDE interface. 
+
+While Claude is not available, the fact that new OSS models like Mimi and DeepSeek are is a boom since IMO variety of models is important for better results overall. Since I use Claude primarily, TRAE is a good counterbalance to see results from other models or counterbalance when testing, reviewing, etc.
+
+4. [x] **TRAE privacy concerns:** Consider how deeply to address ByteDance data collection
+
+In 2026, Trae (developed by ByteDance) presents a complex privacy profile characterized by aggressive telemetry and unique regional storage policies. While ByteDance has introduced features like Privacy Mode to address backlash, significant concerns remain regarding data persistence and legal obligations. 
+
+Core Privacy Concerns
+
+Extensive Telemetry: Independent research in 2025 revealed that Trae can generate up to 500 network calls (roughly 26MB of data) in under 10 minutes of active use. This data includes persistent identifiers like machine ID and hardware fingerprints (CPU, RAM, motherboard) that can follow users across different projects and reinstalls.
+Persistent Data Collection: Even with "Privacy Mode" enabled, some telemetry data collection may continue via Trae tools not covered by the standard IDE toggle. While codebase files are stored locally, they are temporarily uploaded to ByteDance servers for embedding/indexing.
+
+Chat Retention: Any information or code snippets manually pasted into the AI chatbot are historically collected and retained, even if the original plaintext codebase is deleted after indexing.
+
+Regional Data Sovereignty: Trae stores information on secure servers located in the United States, Singapore, and Malaysia. However, as a ByteDance product, it remains subject to Chinese data security laws that can compel companies to provide access to user data for national security purposes. 
+
+Available Privacy Controls (2026)
+
+Privacy Mode: A toggle in Account Settings that, when active, prevents Trae from using chat interactions and code snippets for model training or product improvement.
+Local-First Indexing: Trae follows a "local-first" principle where the primary codebase stays on your machine, only leaving for the generation of numerical embeddings.
+
+Ignore Files: Users can use .traeignore or similar "ignore" functions to prevent specific sensitive files from ever being indexed or uploaded. 
+Comparison for Developers
+
+Feature 	Trae (ByteDance)	Cursor
+Data Training	Opt-out via Privacy Mode	Opt-out available (Privacy Mode)
+Telemetry	High (Deep hardware fingerprinting)	Standard usage analytics
+Storage Location	US, Singapore, Malaysia	Primarily US-based
+Trust Model	Subject to PRC data laws	Subject to US data laws
+
+For developers working on proprietary or sensitive government-related code, the deep telemetry and jurisdictional concerns of ByteDance-owned tools typically necessitate a more cautious approach compared to Western-based alternatives like Cursor or Windsurf. 
+
+For more details, you can review the Trae Privacy Policy.
+
+These legal and technical analyses address the privacy risks associated with Trae, focusing on ByteDance's data collection, international storage, and regulatory landscape:
+
+https://studentbriefs.law.gwu.edu/ilpb/2023/10/30/china-bytedance-and-data-privacy-how-the-federal-trade-commission-could-regulate-tiktoks-collection-and-usage-of-american-users-data-at-home-and-abroad/#:~:text=Since%20its%20meteoric%20rise%20in,shares%20with%20its%20governmental%20partner.
+
 5. [ ] **METR study citation:** Get proper citation for the 19% slowdown finding
 6. [ ] **DX Q4 2025 report:** Cite properly (91% adoption, 3.6 hours saved weekly)
-7. [ ] **Add personal anecdotes:** Specific examples of wins/failures with each tool
-8. [ ] **Meetup recording link:** Add link to AI Agents SF #7 recording
+
+7. [x] **Add personal anecdotes:** Specific examples of wins/failures with each tool
+
+The need to cut and paste JavaScript console errors and logs to Cursor has made it hard to use for developing Web-based front end. In summer and fall of last year I could see that the Cursor agent would try different approaches of testing Web UI, including creating test pages etc. However you still need to cut and paste JS console logs. 
+
+TRAE solves this with built-in Web browser. Guessing Cursor and others will follow suit. I have seen TRAE solo and Cursor UI slowdown to a crawl if you issue multiple request as agent is working. Better to have few requests at once.
+
+Claude Code has been most stable and reliable for all coding tasks. Even Web UI but suffers from JavaScript console issue as well.
+
+All agents seem to work better if you plan better and divide work into features you can execute steps by step. The agent typically can help create plan so that's been my modus operandi.
+
+Finally, I've had great results when I use many agents to address issues, testing, plan, debug -- different than one generating code. So while one is generating code I might use other Claude Code instance or Cursor or TRAE to test and or plan. And feed result to Claude Code to fix or implement new feature.
+
+8. [x] **Meetup recording link:** Add link to AI Agents SF #7 recording
+
+AI Alliance LinkedIn live stream: https://www.linkedin.com/posts/the-ai-alliance_ai-agent-meetup-7-in-san-francisco-https-activity-7384387097518018560-UaOQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACwFN8BoX7uhT4LLNqDmA6ESIpzaQN2DJA
+
 9. [ ] **Screenshot/visuals:** Consider adding UI screenshots of each tool
-10. [ ] **Amp details:** Verify current features and pricing model
+
+10. [x] **Amp details:** Verify current features and pricing model
+
+In 2026, Amp (often referred to as AmpCode), an agentic coding tool developed by Sourcegraph, follows an innovative "Free Frontier" pricing model. Unlike traditional seat-based subscriptions, Amp focuses on a daily-replenishing credit system supported by high-tier frontier models. 
+
+Current Pricing Model (2026)
+
+Amp Free ($0/mo): Provides $10 worth of credits per day (approximately $300/mo in value).
+
+Credits replenish hourly.
+
+Includes access to all modes and frontier models (e.g., Opus 4.5).
+
+Privacy Note: While early versions required data sharing for training, the 2026 free version is supported by unobtrusive ads within the IDE and does not require sharing code for training.
+
+Pay-as-you-go: Individual users can purchase additional credits beyond the daily free limit with no markup on underlying API costs.
+
+Enterprise: Tailored for large teams with features like centralized billing, SSO, and shared context. 
+
+Key Features
+
+Agentic Operation: Unlike standard autocomplete, Amp functions as an autonomous agent that can plan multi-step workflows, manage its own context, and execute coordinated changes across dozens of files simultaneously.
+
+Multi-Model Intelligence:
+
+Smart Mode: Currently driven by Opus 4.5 for high-reasoning tasks.
+
+Rush Mode: Optimized for speed and lower cost, powered by Haiku 4.5.
+
+Sub-Agents: Utilizes specialized sub-agents like the "Oracle" and "Librarian" for deep codebase search and analysis.
+
+Editor Flexibility: Not a standalone IDE, but a "layer" that integrates as a VS Code extension, CLI tool, or even as an extension within other AI editors like Cursor and Windsurf.
+
+Efficient Context (MCP): Uses Model Context Protocol (MCP) to load tools and context only when needed, preventing "context bloat" during long sessions.
+
+Agentic Review: A specialized agent for reviewing code generated by other AI agents to ensure production-readiness.
+
+Visual Integration: Supports "Clickable Diagrams" where Mermaid charts generated by the AI link directly back to the relevant code blocks. 
+
+For the most current usage limits, you can check your status in the Amp Dashboard or via the /settings command in the CLI. 
 
 ---
 
