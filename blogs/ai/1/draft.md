@@ -38,11 +38,19 @@ The background agent capabilities are particularly compelling. You can spin up t
 
 **My experience (three months of extensive use):**
 
-I especially liked the background agent workflow for parallelizing work. For UI-heavy projects, Cursor worked well, though I often found myself needing to provide browser context manually--copying browser's JavaScript console and pasting it to the agent. Where it struggled was with long sessions—context approaching its limits would cause the agent to slow down significantly and "forget" earlier decisions or make suggestions that conflicted with code it had written minutes before.
+I especially liked the background agent workflow for parallelizing work. For UI-heavy projects, Cursor worked well, though I often found myself needing to provide browser context manually—copying the browser's JavaScript console output and pasting it to the agent. Where it struggled was with long sessions—context approaching its limits would cause the agent to slow down significantly and "forget" earlier decisions or make suggestions that conflicted with code it had written minutes before.
 
-[VERIFY: Current context window limits—search results suggest 200K advertised but 70K-120K effective in practice]
+Context windows in Cursor vary: standard use runs around 10K-20K tokens for edits and chat, while "Max Mode" provides 200K tokens for larger projects and can access even larger model contexts (up to 1M tokens for some models) for deeper analysis. You can monitor usage in real-time and use features like rules to manage larger context effectively across chats.
 
-The pricing volatility has also been frustrating. Cursor has raised significant funding and is growing rapidly, but the plan changes and usage limits have been inconsistent. [VERIFY: Check current pricing tiers—reports suggest $20-$200/month depending on tier]
+**Pricing (as of January 2026):**
+
+Cursor uses a hybrid model combining flat monthly fees with usage-based credit pools:
+- **Hobby (Free):** 2,000 Tab completions and 50 slow requests per month
+- **Pro ($20/mo):** Unlimited Tab completions, unlimited "Auto" model, $20 credit pool for premium models
+- **Pro+ ($60/mo):** Same as Pro with 3x credit pool ($60)
+- **Ultra ($200/mo):** 20x credit pool ($400) and priority access to new features
+
+The pricing volatility has been frustrating—plan changes and usage limits have shifted as Cursor has grown rapidly.
 
 **Best for:** Developers who prefer GUI workflows, VSCode users, teams wanting visual code review.
 
@@ -60,7 +68,9 @@ The 200K context window actually delivers what it promises. When you're working 
 
 **My experience:**
 
-So compelling that I switched from Cursor's GUI to using cursor-agent as well (the CLI interface for Cursor). At first, I questioned whether my preference was about the CLI interaction or Anthropic's model superiority. The answer is likely both—better models AND a faster interaction paradigm.
+Claude Code has been the most stable and reliable tool for all my coding tasks. So compelling that I switched from Cursor's GUI to using cursor-agent as well (the CLI interface for Cursor). At first, I questioned whether my preference was about the CLI interaction or Anthropic's model superiority. The answer is likely both—better models AND a faster interaction paradigm.
+
+Even for Web UI work, Claude Code excels—though it suffers from the same JavaScript console limitation as Cursor. You still need to manually copy and paste browser console output to provide context about runtime errors.
 
 The challenge is review discipline. Speed is addictive. The terminal-based workflow makes it easy to accept suggestions without the same scrutiny you'd apply when visually reviewing diffs. I've found myself accepting too many changes without sufficient review—a feature and a bug of the approach.
 
@@ -76,17 +86,29 @@ TRAE (The Real AI Engineer) launched in early 2025 and has grown remarkably fast
 
 **What sets it apart:**
 
-The built-in browser is huge for UI work. No more switching between your IDE and a browser to see what you're building—it's integrated directly. The no-interrupt run mode lets you kick off complex tasks without constant prompting. And the multiple agents capability means you can parallelize work within the IDE itself.
+The built-in browser is huge for UI work. No more switching between your IDE and a browser to see what you're building—it's integrated directly. No more copying JavaScript console errors and pasting them to the agent. This alone solves a major friction point that Cursor and Claude Code still have. (I expect others will follow suit.)
+
+The no-interrupt run mode lets you kick off complex tasks without constant prompting. And the multiple agents capability means you can parallelize work within the IDE itself.
 
 TRAE's "SOLO mode" takes this further—full-process automated development from requirements input to deployment. It's ambitious, has an agent-focused interface, and early reports suggest it's genuinely useful for rapid prototyping.
 
-The price is also hard to argue with: it's half the price of Cursor (at the time of this writing), with access to many models including GPT-4o models--seems like Claude model was removed.
+**Pricing and models:**
+
+TRAE is roughly half the price of Cursor (at the time of this writing). However, there's a significant caveat: as of early November 2025, ByteDance removed all Claude models from TRAE due to Anthropic's updated policy restricting services for Chinese-controlled entities globally.
+
+Current model availability includes GPT-5, Gemini 2.5 Pro, Kimi-K2-0905, and DeepSeek V3.1-Terminus. TRAE states these models are optimized for "reasoning quality" and "execution chain" to maintain performance levels similar to when Claude was available. The open-source Trae-CLI still supports bring-your-own-key functionality if you want to use your own Anthropic API key.
+
+For me, this is actually a feature: since I use Claude Code as my primary tool, TRAE provides a useful counterbalance with different models for testing, reviewing, and getting alternative perspectives on code.
 
 **The trade-offs:**
 
-TRAE lacks the fast CLI interface that makes Claude Code so compelling. For developers who think in terminal commands, this is a significant gap. The ecosystem is also newer and less mature than Cursor's.
+TRAE lacks the fast CLI interface that makes Claude Code so compelling. For developers who think in terminal commands, this is a significant gap. The ecosystem is also newer and less mature than Cursor's. I've also seen TRAE SOLO (and Cursor) slow to a crawl if you issue multiple requests while the agent is working—better to queue up requests one at a time.
 
-And then there's the elephant in the room: ByteDance ownership. Security researchers have documented extensive telemetry in TRAE, including persistent connections to multiple ByteDance servers even during idle periods. For some developers and organizations, this is a dealbreaker. Others accept it as the cost of reduced costs, powerful tooling.
+**Privacy concerns:**
+
+And then there's the elephant in the room: ByteDance ownership. Independent research in 2025 revealed that TRAE can generate up to 500 network calls (roughly 26MB of data) in under 10 minutes of active use. This includes persistent identifiers like machine ID and hardware fingerprints that can follow users across different projects and reinstalls.
+
+TRAE offers a "Privacy Mode" toggle that prevents chat interactions and code snippets from being used for model training. The primary codebase stays on your machine, with only numerical embeddings uploaded for indexing. But as a ByteDance product, TRAE remains subject to Chinese data security laws that can compel companies to provide access to user data. For developers working on proprietary or government-related code, this typically necessitates a more cautious approach compared to Western-based alternatives.
 
 **Best for:** Developers wanting an agent-focused IDE experience, those doing heavy UI work, cost-conscious developers willing to accept ByteDance's data practices.
 
@@ -94,7 +116,7 @@ And then there's the elephant in the room: ByteDance ownership. Security researc
 
 The landscape is crowded. Here's a quick rundown of other tools worth knowing:
 
-**Amp (Sourcegraph):** Similar to Claude Code in its CLI-focused approach, with a free tier supported by advertising. Beyang Liu, the co-founder and CTO, spoke at our AI Agents Meetup SF #7 on Coding Agents. His thesis: "Code review is dead; long live code review!"—the bottleneck has shifted from writing to reviewing. [LINK: Add link to meetup recording]
+**Amp (Sourcegraph):** An agentic coding tool following an innovative "Free Frontier" pricing model. The free tier provides $10 worth of credits per day (approximately $300/month in value), replenishing hourly, with access to all modes and frontier models including Opus 4.5. Unlike standard autocomplete, Amp functions as an autonomous agent that can plan multi-step workflows and execute coordinated changes across dozens of files. It uses MCP to load tools and context only when needed, preventing "context bloat" during long sessions. Beyang Liu, the co-founder and CTO, spoke at our [AI Agents Meetup SF #7 on Coding Agents](https://www.linkedin.com/posts/the-ai-alliance_ai-agent-meetup-7-in-san-francisco-https-activity-7384387097518018560-UaOQ). His thesis: "Code review is dead; long live code review!"—the bottleneck has shifted from writing to reviewing.
 
 **Warp:** CLI-focused with multiple tabs capability. Great for terminal lovers who want AI assistance without leaving their shell. Still depends on underlying LLMs. My friend Allie Jones introduced me to this tool and swears by it.
 
@@ -113,7 +135,7 @@ After a year of testing, I've concluded that the IDE vs CLI distinction is more 
 **IDE-based (Cursor, TRAE, Windsurf):**
 
 - Visual view of your code base
-- Visual code review is built into the workflow 
+- Visual code review is built into the workflow
 - Integrated with existing development patterns
 - Better for those who think visually or come from VSCode
 - Trade-off: more overhead, slower interactions—especially deep into a session
@@ -122,7 +144,7 @@ After a year of testing, I've concluded that the IDE vs CLI distinction is more 
 
 - Speed and focus without GUI overhead
 - Natural for terminal-native developers
-- Excellent for parallelization--I typically am working on two or three repos at once using iTerm's tabs
+- Excellent for parallelization—I typically work on two or three repos at once using iTerm's tabs
 - Review happens via git and terminal tools rather than visual diffs
 - Trade-off: easier to miss issues, requires more discipline (testing, diff reviews)
 
@@ -140,7 +162,7 @@ All these tools share fundamental limitations:
 
 **The productivity paradox is real.** A recent METR study found that experienced open-source developers actually took 19% *longer* with AI tools than without in certain contexts. Meanwhile, DX's Q4 2025 report shows 91% adoption and real time savings. The difference? Context matters. AI helps more with unfamiliar codebases and routine tasks; it can slow you down on deeply familiar code where your intuition is faster than explaining to an agent.
 
-[RESEARCH: Cite METR study and DX Q4 2025 report properly]
+[CITE: METR study (metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study) and DX Q4 2025 report (getdx.com)]
 
 ## Best Practices Across Tools
 
@@ -148,17 +170,19 @@ Whatever tool you choose, these practices make a difference:
 
 **Testing is non-negotiable.** Agents make changes fast—tests catch mistakes and regressions. Automate testing early in the project. Let the agent run tests after changes. Use agents to create tests too! This is the single most important discipline for AI-assisted development.
 
-**Context management matters.** I've developed personal conventions: NEXT_STEPS.md, TODOs.md, CHANGELOG.md files that persist context across sessions. A docs/planning/ directory for the agent to reference and create detail plans of features. Explicit handoff notes when context is getting long. These feel manual, but they dramatically improve agent performance.
+**Context management matters.** I've developed personal conventions: NEXT_STEPS.md, TODOs.md, CHANGELOG.md files that persist context across sessions. A docs/planning/ directory for the agent to reference and create detailed plans of features. Explicit handoff notes when context is getting long. These feel manual, but they dramatically improve agent performance.
+
+**Planning before coding pays off.** All agents seem to work better if you plan better and divide work into features you can execute step by step. The agent can help create the plan—so that's become my modus operandi. Describe the goal, have the agent break it down, then execute incrementally.
 
 **Review discipline is essential.** Speed is addictive. Build review into your workflow deliberately. Trust but verify. The 30% code acceptance rate for GitHub Copilot suggestions isn't a bug—it's appropriate skepticism.
 
-**Multiple tools in parallel is normal.** 59% of developers now run three or more AI coding tools simultaneously. This isn't indecision—it's pragmatism. Different tools excel at different tasks. I often use different tools or models to write tests vs code or to plan before writing code.
+**Multiple tools in parallel is normal.** 59% of developers now run three or more AI coding tools simultaneously. This isn't indecision—it's pragmatism. Different tools excel at different tasks. I often use different tools or models to write tests vs code, or to plan before writing code. While one agent is generating code, I might use another Claude Code instance or Cursor or TRAE to test and plan—then feed results back to fix or implement new features.
 
 ## Looking Forward
 
 The space is evolving fast. Here's where I see it heading:
 
-**Near-term:** Context management will improve dramatically. Hybrid approaches combining IDE and CLI will become common. Better integration with the full development lifecycle—not just coding, but testing, deployment, and monitoring.
+**Near-term:** Context management will improve dramatically. Hybrid approaches combining IDE and CLI will become common. Better integration with the full development lifecycle—not just coding, but testing, deployment, and monitoring. And built-in browsers will become standard (TRAE is ahead here).
 
 **Medium-term:** The multi-agent future is coming. You'll describe goals and let agents manage other agents. Orchestration becomes the key skill. Human developers become architects and reviewers rather than primary code writers.
 
@@ -168,9 +192,9 @@ The space is evolving fast. Here's where I see it heading:
 
 Two leading paradigms: IDE-integrated and terminal-native. All depend on LLM quality and face context window challenges. Choose based on your workflow preference and project needs.
 
-The productivity gains are real—developers report 30-75% time savings on coding, testing, and documentation. For me it's easily in the 50% to 80%. But so are the challenges: context limits, review discipline, and the need to maintain your own coding skills even as you delegate more to agents.
+The productivity gains are real—developers report 30-75% time savings on coding, testing, and documentation. For me it's easily in the 50% to 80% range. But so are the challenges: context limits, review discipline, and the need to maintain your own coding skills even as you delegate more to agents.
 
-Invest in testing infrastructure early--locally and in CI/CD. Develop context management strategies. Embrace the tools thoughtfully, not uncritically.
+Invest in testing infrastructure early—locally and in CI/CD. Develop context management strategies. Embrace the tools thoughtfully, not uncritically.
 
 The dream of dramatically accelerated engineering isn't just a dream anymore. But realizing it requires more than downloading the latest AI IDE. It requires adapting how we work.
 
@@ -197,154 +221,48 @@ The dream of dramatically accelerated engineering isn't just a dream anymore. Bu
 - [2025 Stack Overflow Developer Survey](https://survey.stackoverflow.co/2025/) — AI section
 - [JetBrains State of Developer Ecosystem 2025](https://www.jetbrains.com/lp/devecosystem-2025/)
 - [METR Study on AI Developer Productivity](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/)
+- [DX Q4 2025 AI Impact Report](https://getdx.com/blog/ai-assisted-engineering-q4-impact-report-2025/)
 
 **From AI Agents Meetup SF:**
-- [#7: Coding Agents](https://luma.com/5ry1w1ak) — Talks from Sourcegraph, DevSwarm, TRAE, and Morph.
+- [#7: Coding Agents](https://luma.com/5ry1w1ak) — Talks from Sourcegraph, DevSwarm, TRAE, and Morph
+- [AI Alliance LinkedIn Live Stream](https://www.linkedin.com/posts/the-ai-alliance_ai-agent-meetup-7-in-san-francisco-https-activity-7384387097518018560-UaOQ) — Full recording
 
 ---
 
 ## Items to Verify/Research Before Publishing
 
-1. [x] **Cursor context window:** Reports suggest 200K advertised but 70K-120K effective. Verify current state.
-
-Cursor's context window varies, with standard use around 10k-20k tokens for edits/chat and a powerful 200k token default for larger projects via Max Mode, which can access even larger model contexts (like 1M tokens for some models) for deeper analysis, balancing speed and capability. You can monitor usage in real-time and use features like rules to manage larger context effectively across chats. 
-
-
-2. [x] **Cursor pricing:** Confirm current tiers ($20-$200/month range reported)
-
-In 2026, Cursor uses a hybrid pricing model that combines flat monthly fees with usage-based credit pools. As of January 2026, the primary tiers are: 
-
-Individual Plans
-
-Hobby (Free): Includes 2,000 Tab completions and 50 slow requests per month.
-
-Pro ($20/mo): The standard tier for solo developers. It provides unlimited Tab completions, unlimited usage of the "Auto" model, and a $20 monthly credit pool for advanced/premium models (like Claude 3.5 Sonnet or GPT-4o).
-
-Pro+ ($60/mo): A mid-tier for frequent users, offering the same features as Pro but with a larger $60 (3x) credit pool for premium model usage.
-
-Ultra ($200/mo): Designed for power users, providing a $400 (20x) credit pool and priority access to new features. 
-
-3. [x] **TRAE model availability:** Reports suggest Claude support may have changed recently
-
-Reports that Trae has discontinued Claude support are accurate. As of early November 2025, ByteDance-owned Trae officially removed all Claude models from its platform. 
-
-Reason for Change
-
-The removal was driven by Anthropic's updated policy restricting services for Chinese-controlled entities globally. Because Trae is a ByteDance product, it lost access to the Claude series models (including the popular 3.5 Sonnet and 3.7 Sonnet) due to these geopolitical and service interruptions. 
-
-Current Model Availability (2026)
-
-Trae has shifted to other frontier and specialized models to replace Claude:
-Frontier Models: GPT-5 and Gemini 2.5 Pro.
-
-Specialized Models: Kimi-K2-0905 and DeepSeek V3.1-Terminus.
-Custom Optimizations: Trae states that these new models are optimized for "reasoning quality" and "execution chain" to maintain performance levels similar to when Claude was available. 
-
-Impact on Users
-Pro Member Compensation: To address the loss of Claude, Trae is giving Pro members a 50% increase in "Fast Queue" requests (an extra 300 requests per month) through January 31, 2026.
-
-Third-Party Alternatives: Many users are using tools such as Cursor or Windsurf, which maintain full access to the Claude series models.
-
-Trae CLI: The open-source Trae-CLI core agent still supports bring-your-own-key functionality. This allows users with their own Anthropic API keys to continue using Claude outside of the primary IDE interface. 
-
-While Claude is not available, the fact that new OSS models like Mimi and DeepSeek are is a boom since IMO variety of models is important for better results overall. Since I use Claude primarily, TRAE is a good counterbalance to see results from other models or counterbalance when testing, reviewing, etc.
-
-4. [x] **TRAE privacy concerns:** Consider how deeply to address ByteDance data collection
-
-In 2026, Trae (developed by ByteDance) presents a complex privacy profile characterized by aggressive telemetry and unique regional storage policies. While ByteDance has introduced features like Privacy Mode to address backlash, significant concerns remain regarding data persistence and legal obligations. 
-
-Core Privacy Concerns
-
-Extensive Telemetry: Independent research in 2025 revealed that Trae can generate up to 500 network calls (roughly 26MB of data) in under 10 minutes of active use. This data includes persistent identifiers like machine ID and hardware fingerprints (CPU, RAM, motherboard) that can follow users across different projects and reinstalls.
-Persistent Data Collection: Even with "Privacy Mode" enabled, some telemetry data collection may continue via Trae tools not covered by the standard IDE toggle. While codebase files are stored locally, they are temporarily uploaded to ByteDance servers for embedding/indexing.
-
-Chat Retention: Any information or code snippets manually pasted into the AI chatbot are historically collected and retained, even if the original plaintext codebase is deleted after indexing.
-
-Regional Data Sovereignty: Trae stores information on secure servers located in the United States, Singapore, and Malaysia. However, as a ByteDance product, it remains subject to Chinese data security laws that can compel companies to provide access to user data for national security purposes. 
-
-Available Privacy Controls (2026)
-
-Privacy Mode: A toggle in Account Settings that, when active, prevents Trae from using chat interactions and code snippets for model training or product improvement.
-Local-First Indexing: Trae follows a "local-first" principle where the primary codebase stays on your machine, only leaving for the generation of numerical embeddings.
-
-Ignore Files: Users can use .traeignore or similar "ignore" functions to prevent specific sensitive files from ever being indexed or uploaded. 
-Comparison for Developers
-
-Feature 	Trae (ByteDance)	Cursor
-Data Training	Opt-out via Privacy Mode	Opt-out available (Privacy Mode)
-Telemetry	High (Deep hardware fingerprinting)	Standard usage analytics
-Storage Location	US, Singapore, Malaysia	Primarily US-based
-Trust Model	Subject to PRC data laws	Subject to US data laws
-
-For developers working on proprietary or sensitive government-related code, the deep telemetry and jurisdictional concerns of ByteDance-owned tools typically necessitate a more cautious approach compared to Western-based alternatives like Cursor or Windsurf. 
-
-For more details, you can review the Trae Privacy Policy.
-
-These legal and technical analyses address the privacy risks associated with Trae, focusing on ByteDance's data collection, international storage, and regulatory landscape:
-
-https://studentbriefs.law.gwu.edu/ilpb/2023/10/30/china-bytedance-and-data-privacy-how-the-federal-trade-commission-could-regulate-tiktoks-collection-and-usage-of-american-users-data-at-home-and-abroad/#:~:text=Since%20its%20meteoric%20rise%20in,shares%20with%20its%20governmental%20partner.
-
-5. [ ] **METR study citation:** Get proper citation for the 19% slowdown finding
-6. [ ] **DX Q4 2025 report:** Cite properly (91% adoption, 3.6 hours saved weekly)
-
-7. [x] **Add personal anecdotes:** Specific examples of wins/failures with each tool
-
-The need to cut and paste JavaScript console errors and logs to Cursor has made it hard to use for developing Web-based front end. In summer and fall of last year I could see that the Cursor agent would try different approaches of testing Web UI, including creating test pages etc. However you still need to cut and paste JS console logs. 
-
-TRAE solves this with built-in Web browser. Guessing Cursor and others will follow suit. I have seen TRAE solo and Cursor UI slowdown to a crawl if you issue multiple request as agent is working. Better to have few requests at once.
-
-Claude Code has been most stable and reliable for all coding tasks. Even Web UI but suffers from JavaScript console issue as well.
-
-All agents seem to work better if you plan better and divide work into features you can execute steps by step. The agent typically can help create plan so that's been my modus operandi.
-
-Finally, I've had great results when I use many agents to address issues, testing, plan, debug -- different than one generating code. So while one is generating code I might use other Claude Code instance or Cursor or TRAE to test and or plan. And feed result to Claude Code to fix or implement new feature.
-
-8. [x] **Meetup recording link:** Add link to AI Agents SF #7 recording
-
-AI Alliance LinkedIn live stream: https://www.linkedin.com/posts/the-ai-alliance_ai-agent-meetup-7-in-san-francisco-https-activity-7384387097518018560-UaOQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAACwFN8BoX7uhT4LLNqDmA6ESIpzaQN2DJA
-
-9. [ ] **Screenshot/visuals:** Consider adding UI screenshots of each tool
-
-10. [x] **Amp details:** Verify current features and pricing model
-
-In 2026, Amp (often referred to as AmpCode), an agentic coding tool developed by Sourcegraph, follows an innovative "Free Frontier" pricing model. Unlike traditional seat-based subscriptions, Amp focuses on a daily-replenishing credit system supported by high-tier frontier models. 
-
-Current Pricing Model (2026)
-
-Amp Free ($0/mo): Provides $10 worth of credits per day (approximately $300/mo in value).
-
-Credits replenish hourly.
-
-Includes access to all modes and frontier models (e.g., Opus 4.5).
-
-Privacy Note: While early versions required data sharing for training, the 2026 free version is supported by unobtrusive ads within the IDE and does not require sharing code for training.
-
-Pay-as-you-go: Individual users can purchase additional credits beyond the daily free limit with no markup on underlying API costs.
-
-Enterprise: Tailored for large teams with features like centralized billing, SSO, and shared context. 
-
-Key Features
-
-Agentic Operation: Unlike standard autocomplete, Amp functions as an autonomous agent that can plan multi-step workflows, manage its own context, and execute coordinated changes across dozens of files simultaneously.
-
-Multi-Model Intelligence:
-
-Smart Mode: Currently driven by Opus 4.5 for high-reasoning tasks.
-
-Rush Mode: Optimized for speed and lower cost, powered by Haiku 4.5.
-
-Sub-Agents: Utilizes specialized sub-agents like the "Oracle" and "Librarian" for deep codebase search and analysis.
-
-Editor Flexibility: Not a standalone IDE, but a "layer" that integrates as a VS Code extension, CLI tool, or even as an extension within other AI editors like Cursor and Windsurf.
-
-Efficient Context (MCP): Uses Model Context Protocol (MCP) to load tools and context only when needed, preventing "context bloat" during long sessions.
-
-Agentic Review: A specialized agent for reviewing code generated by other AI agents to ensure production-readiness.
-
-Visual Integration: Supports "Clickable Diagrams" where Mermaid charts generated by the AI link directly back to the relevant code blocks. 
-
-For the most current usage limits, you can check your status in the Amp Dashboard or via the /settings command in the CLI. 
+### ✅ Completed
+
+1. **Cursor context window:** 10K-20K standard, 200K in Max Mode, up to 1M for some models
+2. **Cursor pricing:** Hobby (Free), Pro ($20), Pro+ ($60), Ultra ($200) with credit pool system
+3. **TRAE model availability:** Claude removed Nov 2025; now GPT-5, Gemini 2.5 Pro, Kimi-K2, DeepSeek V3.1
+4. **TRAE privacy concerns:** 500 network calls/10 min, hardware fingerprinting, Privacy Mode available, subject to PRC data laws
+5. **Personal anecdotes:** JS console friction, TRAE browser advantage, multi-agent workflow, planning approach
+6. **Meetup recording link:** AI Alliance LinkedIn live stream added
+7. **Amp details:** Free Frontier model ($10/day credits), MCP integration, Opus 4.5 access
+
+### ⏳ Pending
+
+1. **METR study citation:** Add formal citation (currently linked in Resources)
+2. **DX Q4 2025 report citation:** Add formal citation (currently linked in Resources)  
+3. **Screenshots/visuals:** Add UI screenshots of Cursor, Claude Code, TRAE, Amp
 
 ---
 
-*Word count: ~2,400 words (target: ~2,000—consider trimming "Other Notable Tools" section)*
+## Assessment: DRAFT 2
+
+**Strengths:**
+- Strong personal voice with authentic experience
+- Good balance of technical detail and practical advice
+- Pricing and feature info is current and detailed
+- Privacy section on TRAE is thorough without being alarmist
+- Best practices section is genuinely useful
+- Multi-agent workflow insight is distinctive
+
+**Ready for publication with:**
+- Adding 2-3 screenshots to break up text
+- Optional: formal academic citations for METR/DX (the links are sufficient for a blog)
+
+**Word count:** ~2,800 words (over target, but content is substantive—consider whether to trim "Other Notable Tools" or keep the depth)
+
+**Recommendation:** This is ready for final polish. The additional detail from your research makes it genuinely useful rather than just another overview. The personal anecdotes differentiate it from the dozens of "Cursor vs Claude Code" posts out there.
