@@ -34,11 +34,11 @@ Cursor was the first major player in the IDE-focused agent space, and it shows. 
 
 The VSCode integration feels native because it essentially *is* native—Cursor is a fork of VSCode. If you're coming from that ecosystem, there's almost no learning curve. Your extensions work. Your keybindings work. It just feels like VSCode with superpowers.
 
-The background agent capabilities are particularly compelling. You can spin up tasks and let them run while you focus on something else. The UI for reviewing and approving changes is clear and well-designed. And model flexibility means you can choose your preferred LLM—Claude, GPT-4, or others.
+The background agent capabilities are particularly compelling. You can spin up tasks, in containers, and let them run while you focus on something else. The UI for reviewing and approving changes is clear and well-designed. And model flexibility means you can choose your preferred LLM—Claude, GPT-5, or others.
 
 **My experience (three months of extensive use):**
 
-I especially liked the background agent workflow for parallelizing work. For UI-heavy projects, Cursor worked well, though I often found myself needing to provide browser context manually—copying the browser's JavaScript console output and pasting it to the agent. Where it struggled was with long sessions—context approaching its limits would cause the agent to slow down significantly and "forget" earlier decisions or make suggestions that conflicted with code it had written minutes before.
+I especially liked the background agent workflow for parallelizing work. For UI-heavy projects, Cursor worked well, though I often found myself needing to provide browser context manually—copying the browser's JavaScript console output and pasting it to the agent. Where it struggled was with long sessions—context approaching its limits would cause the agent to slow down significantly and "forget" earlier decisions or make suggestions that conflicted with code it had written minutes before. the UI would also slow down and even hang.
 
 Context windows in Cursor vary: standard use runs around 10K-20K tokens for edits and chat, while "Max Mode" provides 200K tokens for larger projects and can access even larger model contexts (up to 1M tokens for some models) for deeper analysis. You can monitor usage in real-time and use features like rules to manage larger context effectively across chats.
 
@@ -64,7 +64,7 @@ The philosophy is fundamentally different from Cursor. Instead of embedding AI i
 
 The deep reasoning capabilities from Claude models are immediately apparent. Multi-file operations that would require careful orchestration in an IDE-based tool happen naturally here. The MCP (Model Context Protocol) integration opens up powerful tool access. And the speed of CLI interaction removes the overhead of waiting for visual updates.
 
-The 200K context window actually delivers what it promises. When you're working on a large codebase and need the AI to understand how your authentication system connects to your API routes connects to your database schema—that context matters. Reports suggest Claude Code uses 5.5x fewer tokens than Cursor for equivalent tasks while finishing faster with fewer errors.
+The 200K context window actually delivers what it promises. Reports suggest Claude Code uses 5.5x fewer tokens than Cursor for equivalent tasks while finishing faster with fewer errors.
 
 **My experience:**
 
@@ -86,7 +86,7 @@ TRAE (The Real AI Engineer) launched in early 2025 and has grown remarkably fast
 
 **What sets it apart:**
 
-The built-in browser is huge for UI work. No more switching between your IDE and a browser to see what you're building—it's integrated directly. No more copying JavaScript console errors and pasting them to the agent. This alone solves a major friction point that Cursor and Claude Code still have. (I expect others will follow suit.)
+The built-in browser is huge for UI work. Less switching between your IDE and a browser to see what you're building—it's integrated directly. No more copying JavaScript console errors and pasting them to the agent. This alone solves a major friction point that Cursor and Claude Code still have. (I expect others will follow suit.)
 
 The no-interrupt run mode lets you kick off complex tasks without constant prompting. And the multiple agents capability means you can parallelize work within the IDE itself.
 
@@ -98,11 +98,11 @@ TRAE is roughly half the price of Cursor (at the time of this writing). However,
 
 Current model availability includes GPT-5, Gemini 2.5 Pro, Kimi-K2-0905, and DeepSeek V3.1-Terminus. TRAE states these models are optimized for "reasoning quality" and "execution chain" to maintain performance levels similar to when Claude was available. The open-source Trae-CLI still supports bring-your-own-key functionality if you want to use your own Anthropic API key.
 
-For me, this is actually a feature: since I use Claude Code as my primary tool, TRAE provides a useful counterbalance with different models for testing, reviewing, and getting alternative perspectives on code.
+For me, this is actually a feature: since I use Claude Code as my primary tool, TRAE provides a useful counterbalance with different models for testing, reviewing, and getting alternative perspectives, at times, on specific code.
 
 **The trade-offs:**
 
-TRAE lacks the fast CLI interface that makes Claude Code so compelling. For developers who think in terminal commands, this is a significant gap. The ecosystem is also newer and less mature than Cursor's. I've also seen TRAE SOLO (and Cursor) slow to a crawl if you issue multiple requests while the agent is working—better to queue up requests one at a time.
+TRAE lacks the fast CLI interface that makes Claude Code so compelling. For developers who think in terminal commands, this is a significant gap. The ecosystem is also newer and less mature than Cursor's. I've also seen TRAE SOLO (and Cursor) slow to a crawl if you issue multiple requests while the agent is working—better to queue up requests one at a time or wait for agent to be done and waiting for input.
 
 **Privacy concerns:**
 
@@ -118,7 +118,7 @@ The landscape is crowded. Here's a quick rundown of other tools worth knowing:
 
 **Amp (Sourcegraph):** An agentic coding tool following an innovative "Free Frontier" pricing model. The free tier provides $10 worth of credits per day (approximately $300/month in value), replenishing hourly, with access to all modes and frontier models including Opus 4.5. Unlike standard autocomplete, Amp functions as an autonomous agent that can plan multi-step workflows and execute coordinated changes across dozens of files. It uses MCP to load tools and context only when needed, preventing "context bloat" during long sessions. Beyang Liu, the co-founder and CTO, spoke at our [AI Agents Meetup SF #7 on Coding Agents](https://www.linkedin.com/posts/the-ai-alliance_ai-agent-meetup-7-in-san-francisco-https-activity-7384387097518018560-UaOQ). His thesis: "Code review is dead; long live code review!"—the bottleneck has shifted from writing to reviewing.
 
-**Warp:** CLI-focused with multiple tabs capability. Great for terminal lovers who want AI assistance without leaving their shell. Still depends on underlying LLMs. My friend Allie Jones introduced me to this tool and swears by it.
+**Warp:** CLI-focused with multiple tabs capability. Great for terminal lovers who want AI assistance without leaving their shell. Still depends on underlying LLMs. My friend [Allie Jones](https://www.linkedin.com/in/allierays/) introduced me to this tool and swears by it--at least in late fall 2025.
 
 **Codex (OpenAI):** OpenAI's entry has re-emerged as a serious agent-first tool. Limited personal experience, but reports suggest it's competitive, particularly for deterministic multi-step tasks.
 
@@ -130,7 +130,7 @@ The landscape is crowded. Here's a quick rundown of other tools worth knowing:
 
 ## The Two Paradigms
 
-After a year of testing, I've concluded that the IDE vs CLI distinction is more fundamental than the specific tool you choose.
+After a year of testing, I've concluded, at this point, that the IDE vs CLI distinction is more fundamental than the specific tool you choose.
 
 **IDE-based (Cursor, TRAE, Windsurf):**
 
@@ -170,9 +170,11 @@ Whatever tool you choose, these practices make a difference:
 
 **Testing is non-negotiable.** Agents make changes fast—tests catch mistakes and regressions. Automate testing early in the project. Let the agent run tests after changes. Use agents to create tests too! This is the single most important discipline for AI-assisted development.
 
-**Context management matters.** I've developed personal conventions: NEXT_STEPS.md, TODOs.md, CHANGELOG.md files that persist context across sessions. A docs/planning/ directory for the agent to reference and create detailed plans of features. Explicit handoff notes when context is getting long. These feel manual, but they dramatically improve agent performance.
+For instance, all my repos include a `lint.sh`, `build.sh`, and `test.sh` that I use to ensure quality and avoid regressions. I use AI to create these and update them but for each new project I point the AI to previous versions so that the scripts are similar keeping my flow: `./lint.sh && ./build.sh && ./test.sh` a command I use before and after every change. Then when ready I move this to CI/CD ensuring every push re-runs these as well as longer integration tests.
 
-**Planning before coding pays off.** All agents seem to work better if you plan better and divide work into features you can execute step by step. The agent can help create the plan—so that's become my modus operandi. Describe the goal, have the agent break it down, then execute incrementally.
+**Context management matters.** I've developed personal conventions: NEXT_STEPS.md, TODOs.md, and the classic CHANGELOG.md files that persist context across sessions. A docs/planning/ directory for the agent to reference and create detailed plans of features. Explicit handoff notes when context is getting long. These feel manual, but they dramatically improve agent performance. And again the agent can update and clean these easily with one prompt.
+
+**Planning before coding pays off.** All agents seem to work better if you plan better and divide work into features you can execute step by step. The agent can help create the plan—so that's become my modus operandi. Describe the goal, have the agent break it down, save a plan with TODOs, then execute incrementally.
 
 **Review discipline is essential.** Speed is addictive. Build review into your workflow deliberately. Trust but verify. The 30% code acceptance rate for GitHub Copilot suggestions isn't a bug—it's appropriate skepticism.
 
@@ -184,7 +186,7 @@ The space is evolving fast. Here's where I see it heading:
 
 **Near-term:** Context management will improve dramatically. Hybrid approaches combining IDE and CLI will become common. Better integration with the full development lifecycle—not just coding, but testing, deployment, and monitoring. And built-in browsers will become standard (TRAE is ahead here).
 
-**Medium-term:** The multi-agent future is coming. You'll describe goals and let agents manage other agents. Orchestration becomes the key skill. Human developers become architects and reviewers rather than primary code writers.
+**Medium-term:** The multi-agent future is coming. You'll describe goals and let agents manage other agents. Orchestration becomes the key skill. Human developers become project managers, architects, and reviewers rather than primary code writers.
 
 **Longer-term:** The 41% of code that's AI-generated today will grow. The question isn't whether AI will change software development—it's how we adapt our practices, our teams, and our careers to the new reality.
 
@@ -192,7 +194,7 @@ The space is evolving fast. Here's where I see it heading:
 
 Two leading paradigms: IDE-integrated and terminal-native. All depend on LLM quality and face context window challenges. Choose based on your workflow preference and project needs.
 
-The productivity gains are real—developers report 30-75% time savings on coding, testing, and documentation. For me it's easily in the 50% to 80% range. But so are the challenges: context limits, review discipline, and the need to maintain your own coding skills even as you delegate more to agents.
+The productivity gains are real—developers report 30-75% time savings on coding, testing, and documentation. For me it's easily in the 50% to 80% range. But so are the challenges: context limits, review and testing discipline, and the need to maintain your own coding skills even as you delegate more to agents.
 
 Invest in testing infrastructure early—locally and in CI/CD. Develop context management strategies. Embrace the tools thoughtfully, not uncritically.
 
