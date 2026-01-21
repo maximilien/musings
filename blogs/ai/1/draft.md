@@ -104,7 +104,7 @@ All these tools share fundamental limitations:
 
 **LLM dependency is the great equalizer.** The tool is only as good as its underlying model. Integration, prompting, and workflow matter, but model quality is the foundation.
 
-**The productivity paradox is real.** A METR study found experienced open-source developers actually took 19% *longer* with AI tools in certain contexts. Meanwhile, DX's Q4 2025 report shows 91% adoption and real time savings. The difference? AI helps more with unfamiliar codebases and routine tasks; it can slow you down on deeply familiar code where your intuition is faster than explaining to an agent.
+**The productivity paradox is real.** A METR study found experienced open-source developers actually took 19% *longer* with AI tools in certain contexts. Meanwhile, DX's Q4 2025 report shows 91% adoption and real-time savings. The difference? AI helps more with unfamiliar codebases and routine tasks; it can slow you down on deeply familiar code where your intuition is faster than explaining to an agent.
 
 ## Best Practices Across Tools
 
@@ -116,7 +116,7 @@ Whatever tool you choose, these practices make a difference:
 
 **Planning before coding pays off.** All agents work better if you plan better and divide work into features you can execute step by step. Describe the goal, have the agent break it down, save a plan with TODOs, then execute incrementally.
 
-**Multiple tools in parallel is normal.** 59% of developers now run three or more AI coding tools simultaneously. While one agent generates code, I might use another to test and plan—then feed results back to fix or implement new features.
+**Multiple tools in parallel is normal.** 59% of developers now run three or more AI coding tools simultaneously (Qodo 2025 Report). While one agent generates code, I might use another to test and plan—then feed results back to fix or implement new features.
 
 ## Looking Forward
 
@@ -154,7 +154,9 @@ The dream of dramatically accelerated engineering isn't just a dream anymore. Bu
 - [Latent Space podcast](https://www.latent.space/) — Episodes on coding agents
 - [METR Study on AI Developer Productivity](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/)
 - [DX Q4 2025 AI Impact Report](https://getdx.com/blog/ai-assisted-engineering-q4-impact-report-2025/)
+- [Qodo State of AI Code Quality 2025](https://www.qodo.ai/reports/state-of-ai-code-quality/)
 
 **From AI Agents Meetup SF:**
 - [#7: Coding Agents](https://luma.com/5ry1w1ak) — Talks from Sourcegraph, DevSwarm, TRAE, and Morph
 - [AI Alliance LinkedIn Live Stream](https://www.linkedin.com/posts/the-ai-alliance_ai-agent-meetup-7-in-san-francisco-https-activity-7384387097518018560-UaOQ)
+- [AI Agents Meetup SF #7 - Coding Agents - images by Dr. Max](https://photos.app.goo.gl/TCdX5td4wuvWU1FE8)
