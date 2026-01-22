@@ -32,7 +32,7 @@ Cursor was the first major player in the IDE-focused agent space. The VSCode int
 
 **My experience:** I liked the background agent workflow for parallelizing work. For UI-heavy projects, Cursor worked well, though I often found myself copying browser console output to provide context. Where it struggled was with long sessions—context approaching limits would cause the agent to slow down, "forget" earlier decisions, or make conflicting suggestions.
 
-[SCREENSHOT PLACEHOLDER: Cursor IDE interface]
+![Cursor IDE interface](images/weave-mcp__cursor.png)
 
 **Pricing (January 2026):** Hobby (Free): 2,000 completions and 50 slow requests/month. Pro ($20/mo): Unlimited completions, $20 credit pool for premium models. Pro+ ($60/mo): 3x credits. Ultra ($200/mo): 20x credits with priority access.
 
@@ -44,7 +44,7 @@ Claude Code is Anthropic's bet on terminal-native development, and for me, it's 
 
 The philosophy differs fundamentally from Cursor. Instead of embedding AI into an existing IDE, Claude Code operates as an autonomous agent in your terminal. You describe what you want, it goes and does it—cloning repos, grepping for answers, editing files, running tests, staging commits.
 
-[SCREENSHOT PLACEHOLDER: Claude Code CLI in action]
+![Claude Code CLI in action](images/weave-cli__claude.png)
 
 **What works well:** Deep reasoning capabilities from Claude models are immediately apparent. Multi-file operations that would require careful orchestration in an IDE happen naturally. The 200K context window actually delivers—reports suggest Claude Code uses 5.5x fewer tokens than Cursor for equivalent tasks while finishing faster with fewer errors.
 
@@ -64,7 +64,7 @@ TRAE (The Real AI Engineer) has grown remarkably fast—over 6 million registere
 
 **What sets it apart:** The built-in browser is huge for UI work. No more copying JavaScript console errors—it's integrated directly. This alone solves a major friction point that Cursor and Claude Code still have. The no-interrupt run mode lets you kick off complex tasks without constant prompting, and multiple agents capability means you can parallelize work within the IDE itself.
 
-[SCREENSHOT PLACEHOLDER: TRAE interface with integrated browser]
+![TRAE Solo agent interface](images/weave-cli__trae-solo.png)
 
 **Pricing and models:** TRAE is roughly half the price of Cursor. However, ByteDance removed all Claude models in November 2025 due to Anthropic's updated policy restricting services for Chinese-controlled entities. Current models include GPT-5, Gemini 2.5 Pro, Kimi-K2, and DeepSeek V3.1. For me, this is actually useful: since I use Claude Code as my primary tool, TRAE provides a counterbalance with different models for testing and alternative perspectives.
 
@@ -74,9 +74,11 @@ TRAE (The Real AI Engineer) has grown remarkably fast—over 6 million registere
 
 ## Other Notable Tools
 
+![Beyang Liu at AI Agents Meetup SF #7 - Coding Agents](images/amp-talk__ai-agents-meetup-sf-1.jpg)
+
 **Amp (Sourcegraph):** Innovative "Free Frontier" pricing—$10 worth of credits per day (approximately $300/month in value), replenishing hourly, with access to all frontier models including Opus 4.5. Uses MCP to load tools and context only when needed, preventing "context bloat." Beyang Liu, co-founder and CTO, spoke at our AI Agents Meetup SF #7, with his thesis: "Code review is dead; long live code review!"—the bottleneck has shifted from writing to reviewing.
 
-[PHOTO PLACEHOLDER: Amp talk at AI Agents Meetup SF #7]
+![Amp CLI in action at AI Agents Meetup SF #7 - Coding Agents](images/amp-talk__ai-agents-meetup-sf-2.jpg)
 
 **Warp:** CLI-focused with multiple tabs. Great for terminal lovers who want AI assistance without leaving their shell.
 
@@ -102,7 +104,7 @@ All these tools share fundamental limitations:
 
 **LLM dependency is the great equalizer.** The tool is only as good as its underlying model. Integration, prompting, and workflow matter, but model quality is the foundation.
 
-**The productivity paradox is real.** A METR study found experienced open-source developers actually took 19% *longer* with AI tools in certain contexts. Meanwhile, DX's Q4 2025 report shows 91% adoption and real time savings. The difference? AI helps more with unfamiliar codebases and routine tasks; it can slow you down on deeply familiar code where your intuition is faster than explaining to an agent.
+**The productivity paradox is real.** A METR study found experienced open-source developers actually took 19% *longer* with AI tools in certain contexts. Meanwhile, DX's Q4 2025 report shows 91% adoption and real-time savings. The difference? AI helps more with unfamiliar codebases and routine tasks; it can slow you down on deeply familiar code where your intuition is faster than explaining to an agent.
 
 ## Best Practices Across Tools
 
@@ -114,7 +116,7 @@ Whatever tool you choose, these practices make a difference:
 
 **Planning before coding pays off.** All agents work better if you plan better and divide work into features you can execute step by step. Describe the goal, have the agent break it down, save a plan with TODOs, then execute incrementally.
 
-**Multiple tools in parallel is normal.** 59% of developers now run three or more AI coding tools simultaneously. While one agent generates code, I might use another to test and plan—then feed results back to fix or implement new features.
+**Multiple tools in parallel is normal.** 59% of developers now run three or more AI coding tools simultaneously (Qodo 2025 Report). While one agent generates code, I might use another to test and plan—then feed results back to fix or implement new features.
 
 ## Looking Forward
 
@@ -152,7 +154,9 @@ The dream of dramatically accelerated engineering isn't just a dream anymore. Bu
 - [Latent Space podcast](https://www.latent.space/) — Episodes on coding agents
 - [METR Study on AI Developer Productivity](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/)
 - [DX Q4 2025 AI Impact Report](https://getdx.com/blog/ai-assisted-engineering-q4-impact-report-2025/)
+- [Qodo State of AI Code Quality 2025](https://www.qodo.ai/reports/state-of-ai-code-quality/)
 
 **From AI Agents Meetup SF:**
 - [#7: Coding Agents](https://luma.com/5ry1w1ak) — Talks from Sourcegraph, DevSwarm, TRAE, and Morph
 - [AI Alliance LinkedIn Live Stream](https://www.linkedin.com/posts/the-ai-alliance_ai-agent-meetup-7-in-san-francisco-https-activity-7384387097518018560-UaOQ)
+- [AI Agents Meetup SF #7 - Coding Agents - images by Dr. Max](https://photos.app.goo.gl/TCdX5td4wuvWU1FE8)
