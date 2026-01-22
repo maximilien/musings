@@ -2,7 +2,7 @@
 
 *Nine events, 4,000+ registrations, and what we learned building a community around AI agents*
 
-**TL;DR:** In January 2025, Dave Nielsen and I asked: does the Bay Area need another AI meetup? The answer was yes—because 2025 was to be the year of AI agents, and there was no dedicated forum. We launched AI Agents Meetup SF and ran 9 events in our first year. This post reflects on what we learned, who spoke, and what's next for 2026.
+**TL;DR:** In January 2025, Dave Nielsen, Alexy Khrabrov, and I asked: does the Bay Area need another AI meetup? The answer, for us was a resounding yes—because 2025 was to be the year of AI agents, and back then there was no dedicated forum. We launched AI Agents Meetup SF and ran 9+ events in our first year. This post reflects on what we learned, who spoke, and what's next for 2026.
 
 ---
 
@@ -16,9 +16,9 @@ So Dave Nielsen and I decided to create one.
 
 ## The Team
 
-I've known Dave for over 20 years. I watched him lead various Bay Area tech communities—Cloud Foundry, ServerlessDays, and countless others. He was also leading IBM's AI Alliance involvement, which gave us a key connection to the broader open-source AI ecosystem. When I pitched the idea, he was in immediately.
+I've known Dave for over 20 years. I watched him lead various Bay Area tech communities—MashupCamp, CloudCamp, Cloud Foundry, ServerlessDays, and countless others. He was also leading IBM's AI Alliance involvement, which gave us a key connection to the broader open-source AI ecosystem. When I pitched the idea, he was in immediately.
 
-We recruited Alexy Khrabrov to round out the team. Alexy has a long history leading tech conferences—he founded AI by the Bay, runs Bay Area AI (the longest-running AI meetup in the world), and recently helped establish AI Agent meetups in Berlin and Amsterdam. His deep community connections and conference experience were exactly what we needed.
+We recruited Alexy Khrabrov to round out the team. Alexy has a long history leading tech conferences—he founded AI by the Bay, runs Bay Area AI (the longest-running AI meetup in the world). His deep community connections and conference experience were exactly what we needed.
 
 Together: the right mix of experience, connections, and passion for building community.
 
