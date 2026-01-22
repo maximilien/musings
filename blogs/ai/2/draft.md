@@ -92,13 +92,19 @@ If you need exact matches—specific product SKUs, legal citations, error codes�
 
 If your data can be structured with known schemas, use a relational database. SQL beats semantic search for structured queries, every time. "Show me all orders over $1,000 from Q4" doesn't need embeddings.
 
+[Any citations for these assertions?]
+
 **Small datasets:**
 
 For collections under 10,000 chunks, the overhead of vector databases often isn't worth it. Simple keyword search with BM25 might suffice. Chroma is popular for prototyping precisely because it minimizes this overhead—but teams regularly migrate to more robust solutions as they scale.
 
+[Any citations for these assertions?]
+
 **Relationship-heavy data:**
 
 If your questions involve traversing relationships ("What vendors does this customer's subsidiary use?"), knowledge graphs may serve you better than vector search. Graph databases excel at relationship queries; vector databases excel at similarity queries.
+
+[Any citations for these assertions?]
 
 ## Alternatives and Complements
 
@@ -125,18 +131,18 @@ If you've determined a vector database is right for your use case, here's how to
 **For production scale (open source):**
 - **Qdrant**: Rust-based, excellent performance, strong filtering, cost-effective. My current recommendation for teams that want control without excessive operational burden.
 - **Milvus**: Battle-tested at billion-vector scale. More operational complexity, but proven. Zilliz provides managed hosting.
-- **Weaviate**: Strong hybrid search, good documentation, GraphQL API. Solid middle ground.
+- **Weaviate**: Strong hybrid search, good documentation, GraphQL API. Solid middle ground. Also provides managed hosting.
 
 **For managed simplicity:**
 - **Pinecone**: Fully managed, easy to use, reliable. Higher cost, but minimal operational overhead. Good default for teams that don't want to manage infrastructure.
 
 **Decision framework:**
 
-1. If you need it yesterday and don't want to manage anything: Pinecone
+1. If you need it yesterday and don't want to manage anything: Pinecone, Weaviate, Zilliz
 2. If you have ops capacity and want cost efficiency at scale: Qdrant or Milvus
 3. If hybrid search is critical: Weaviate or Qdrant
 4. If you're prototyping: Chroma
-5. If you're already on Postgres and scale is moderate: pgvector
+5. If you're already on Postgres and scale is moderate: pgvector (Supabase)
 
 [VERIFY: Current pricing for each—Pinecone tiers, Qdrant cloud, Weaviate cloud, Zilliz]
 
