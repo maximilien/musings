@@ -1,4 +1,4 @@
-7. In Depth: Claude Code vs Cursor vs TRAE vs ...
+# In Depth: Claude Code vs Cursor vs TRAE vs ...
 
 Target length: ~2000 words
 
@@ -6,20 +6,22 @@ Abstract
 * The agentic coding space has exploded with multiple compelling options
 * Each tool has different philosophies, strengths, and ideal use cases
 * This post provides an in-depth comparison to help developers choose the right tool
-* Tools covered: Claude Code, Cursor, TRAE, Windsurf, GitHub Copilot Workspace, Cody, others
-* Comparison axes: capabilities, pricing, integration, learning curve, output quality
-* Goal: not to declare a winner but to map the landscape and match tools to workflows
+* Tools covered: Claude Code, Cursor, TRAE, Amp, Windsurf, GitHub Copilot Workspace, Ralph, others
+* Comparison axes: capabilities, stability, security, pricing, integration, learning curve, output quality
+* Goal: not to declare a winner but to map the landscape and attempt to match tools to workflows
 
 Introduction
 * The rise of agentic coding: from autocomplete to autonomous agents
 * Why the market has fragmented into so many options
 * [Brief timeline of tool releases: Copilot → ChatGPT → Claude Code → Cursor → TRAE]
 * Methodology for this comparison: hands-on usage, specific test cases, community feedback
+* * Emerging landscape: IDE-based, CLI-based, Orchestrators, ...
 
 Comparison Framework
 * We'll evaluate each tool on:
     * Core capabilities and features
     * Integration with development environments
+    * CLI capabilities
     * Pricing and access models
     * Learning curve and onboarding
     * Output quality and reliability
@@ -60,7 +62,7 @@ TRAE (ByteDance)
     * Active development
 * Considerations:
     * Newer entrant, less mature ecosystem
-    * ByteDance ownership may concern some users
+    * ByteDance ownership may concern some users -- foreign data access?
     * Documentation still developing
 * Ideal use cases: Cost-conscious developers, trying agentic coding, VSCode users
 Other Notable Tools
@@ -76,6 +78,10 @@ Other Notable Tools
     * Codebase understanding
     * Enterprise search integration
     * Strong context retrieval
+* Amp
+    * CLI-based
+    * Free tier with advertisement
+* Ralph [TBD]
 * [Others to mention briefly: Aider, Continue, Cline]
 
 Head-to-Head Comparison Table
@@ -88,6 +94,10 @@ Head-to-Head Comparison Table
     * Multi-file operations
     * Terminal/CLI support
     * MCP/tool integration
+    * Non-functional capabilities
+        * security
+        * update frequency
+        * documentation
 
 Real-World Test Cases
 * Test 1: Refactoring a legacy codebase (500+ files)
@@ -104,8 +114,9 @@ Choosing the Right Tool
     * Team vs individual use
     * Type of work (greenfield vs maintenance)
     * Comfort with CLI vs GUI
-* It's not one-or-nothing: many developers use multiple tools
-* Consider: Claude Code for complex reasoning + Cursor for daily coding
+* It's not one-or-nothing: many developers use multiple tools (including myself)
+* Consider: Claude Code for complex reasoning + Cursor for daily coding if IDE-based development is your preferred approach OR stay in Claude Code if you feel confortable
+* Use multiple coding assistants to feeback into each other. For instance have one code and one test and pass the result into other.
 
 The Future of Agentic Coding
 * Where is the space heading?
@@ -115,7 +126,7 @@ The Future of Agentic Coding
 
 Conclusion
 * No single "best" tool — depends on workflow and needs
-* The space is evolving rapidly — check back in 6 months
+* The space is evolving rapidly — check back every 6 months
 * Experiment: most tools have free tiers or trials
 * Personal recommendation: [Your take based on your workflow]
 * The best tool is the one you'll actually use consistently
