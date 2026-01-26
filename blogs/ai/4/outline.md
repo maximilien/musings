@@ -21,17 +21,19 @@
 
 - A software stack is the collection of libraries and services used to build a solution
 - For any given problem, there are many possible choices
+- Is there an optimal choice for each problem?
+- Surely one stack does not fit all solutions to all problems?
 
 ### The Default Stack Problem
 
 - People tend to use their default/familiar stack
-- Is this the right approach?
+- Is this the right approach? Is this the right choice?
 - Are some stacks better suited for certain problems than others?
 
 ### The Current Landscape
 
 - Python stacks have become the default choice for AI solutions
-- But other stacks are possible and sometimes preferable
+- But other stacks are possible and sometimes preferable in my experience
 - **Core argument: The choice of the correct stack is key to long-term success**
 - AI coding agents make exploring unfamiliar stacks easier than ever before
 
@@ -43,9 +45,11 @@
 
 A typical stack decision involves:
 
-- **Language** — The foundation of your codebase
-- **Libraries** — Frameworks, utilities, and dependencies
-- **Services** — External APIs, databases, cloud infrastructure
+- **Language** — The foundation of your codebase -- some languages have built in features to make them better suited for some workloads
+- **Libraries** — Frameworks, utilities, and dependencies -- because of historical reasons some languages have more libraries for certain domains
+- **Services** — Package management, external APIs, databases, cloud infrastructure
+- **Maintenance** - How easy is it to maintain and keep your software running and up to date (so-called day 2 operations)
+- **Non-functional** - Performance, security, reliability, and maintainability (also its own consideration)
 
 ### AI Stack Choices
 
@@ -59,9 +63,21 @@ A typical stack decision involves:
 #### Alternative Stacks
 
 - **Go (Golang)** — Performance, concurrency, deployment simplicity
+
+[Elaborate key features]
+  
 - **Java/Kotlin** — Enterprise ecosystem, mature tooling
+
+[Elaborate key features]
+
 - **Rust** — Memory safety, performance
+
+[Elaborate key features]
+  
 - **TypeScript/Node.js** — Full-stack unification
+
+[Elaborate key features]
+
 - [Add more as relevant]
 
 -----
@@ -94,6 +110,7 @@ A typical stack decision involves:
 
 ### DevOps & Tooling
 
+- **Package mangement** - access to libraries, updates
 - **CI/CD support** — Build pipelines, testing frameworks
 - **Containerization** — Docker compatibility, image sizes
 - **Observability** — Logging, monitoring, debugging tools
