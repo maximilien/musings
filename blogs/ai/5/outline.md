@@ -1,4 +1,4 @@
-5. AI-Driven Development
+# AI-Driven Development
 
 Target length: ~2000 words
 
