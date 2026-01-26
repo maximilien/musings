@@ -1,14 +1,15 @@
-8. On the Importance of Reading
+# On the Importance of Reading
 
 Target length: ~2000 words
 
 Abstract
 * In an age of AI-generated summaries and instant answers, deep reading remains essential
 * Reading builds mental models, nuanced understanding, and creative capacity that AI cannot shortcut
-* This is especially important for technology practitioners who must understand complex systems
+* This is especially important for technology practitioners who must understand complex systems fast
 * The paradox: AI makes information more accessible but deep understanding requires slow reading
 * Types of reading: skimming, scanning, deep reading — each has its place
 * A call to protect and cultivate reading as a core professional and personal practice
+* Reading and reading comprehension (especially fast) will make humans better at using AI
 
 Introduction
 * Observation: how reading habits have changed in the AI era
@@ -24,6 +25,7 @@ What Reading Does That AI Summaries Cannot
 * Understanding author's reasoning, not just conclusions
 * Exposure to writing styles that improve your own communication
 * The irreplaceable experience of following a complex argument
+* Humans are slow learners and putting in time reading helps increase understanding
 * [Research: cognitive science on reading vs information retrieval]
 
 Types of Reading and When to Use Each
@@ -53,7 +55,7 @@ Reading in Technology Practice
     * Non-technology books for cross-pollination and creativity
 
 The Reading-Writing Connection
-* Reading improves writing, which improves thinking
+* Reading improves writing, which improves thinking (which probably then improve reading and so on)
 * Writers read voraciously — the input-output relationship
 * AI can generate text but understanding what makes good writing requires reading
 * Technical writing specifically benefits from reading good technical writing
@@ -62,7 +64,7 @@ The Reading-Writing Connection
 
 Building a Reading Practice
 * Time: Scheduling reading vs finding time
-    * Morning reading rituals
+    * Morning and night-time reading rituals
     * Commute/travel as reading time
     * Reducing screen time in favor of reading time
 * Selection: What deserves your reading attention
@@ -70,7 +72,8 @@ Building a Reading Practice
     * Classics in your field
     * Outside your comfort zone
 * Method: Active reading practices
-    * Note-taking and annotation
+    * Note-taking and annotation (paper or e-devices)
+    * reMarkable experience for note taking
     * Discussing what you read
     * Writing about what you read (blogs!)
 * Tools: Supporting deep reading
