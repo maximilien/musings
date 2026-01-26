@@ -1,4 +1,4 @@
-6. Hackathons as Research Platform
+# Hackathons as Research Platform
 
 Target length: ~2000 words
 
@@ -14,7 +14,7 @@ Introduction
 * Traditional view of hackathons: competitions, networking, fun coding
 * Emerging view: controlled environments for studying innovation and tool usage
 * [History of hackathons and their evolution from 1999 OpenBSD to modern AI hackathons]
-* Personal experience with hackathons and observations
+* [Personal experience with hackathons and observations]
 
 Why Hackathons Work as Research Platforms
 * Time compression: 24-48 hours forces decisions that might take weeks in normal development
@@ -53,6 +53,17 @@ Case Studies
 * Academic hackathons for CS education research
     * Understanding how students learn under pressure
     * Comparing teaching methodologies through hackathon outcomes
+
+[Interview with Dave Nielsen]
+- One of the oldest community managers in Bay Area
+- Mashup campls
+- Cloud camps
+- Going global
+
+[Interview with Adam Chan]
+- Prolifit hackathon organizer
+- AI focused
+- Tooling hackdev.cio
 
 Limitations and Challenges
 * Hackathon conditions don't match real-world development
