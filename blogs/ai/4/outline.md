@@ -29,13 +29,13 @@
 - People tend to use their default/familiar stack
 - Is this the right approach? Is this the right choice?
 - Are some stacks better suited for certain problems than others?
+- AI Agents might delay the inevatability by hiding the issue and due to ease of fixing and masking complex problems.
 
 ### The Current Landscape
 
 - Python stacks have become the default choice for AI solutions
 - But other stacks are possible and sometimes preferable in my experience
 - **Core argument: The choice of the correct stack is key to long-term success**
-- AI coding agents make exploring unfamiliar stacks easier than ever before
 
 -----
 
@@ -124,6 +124,10 @@ A typical stack decision involves:
 - [Add your Cloud Foundry stack decisions and lessons learned]
 - [What worked, what didn’t, what you’d do differently]
 
+### Twitter (now X)
+
+- [Add Ruby/Rails issues]
+
 ### Knative
 
 - [Add relevant Knative experience]
@@ -143,6 +147,7 @@ A typical stack decision involves:
 - Rapid prototyping speed matters less when agents accelerate all development
 - Documentation quality becomes more important (AI needs good docs)
 - Still need human expertise for architecture decisions
+- AI coding agents make exploring unfamiliar stacks easier than ever before
 - [Add your practitioner perspective on this shift]
 
 -----
@@ -151,6 +156,7 @@ A typical stack decision involves:
 
 - [Summarize key decision framework]
 - [Reiterate thesis: think before starting, and before moving beyond prototype]
+- [Predict that the python AI wave will reveal the issues when protoypes need to go in prodiction and scale]
 - [Call to action or reflection for readers]
 
 -----
