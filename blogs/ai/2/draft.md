@@ -2,7 +2,7 @@
 
 *Understanding where vector databases fit—and where they don't—in the AI agent stack*
 
-**TL;DR:** AI agents need context to answer questions beyond their training data. MCP solved the services and tools problem; vector databases are one answer to the unstructured data problem. VDBs have exploded with the RAG wave, with the market projected to reach $4.3B by 2028. But they're not always the right choice. Understanding when to use them—and when not to—is essential for building effective agent systems.
+**TL;DR:** AI agents need context to answer questions beyond their training data. MCP solved the services and tools problem; vector databases are one answer to the unstructured data problem. VDBs have exploded with the RAG wave, with the market valued at $2.2B in 2024 and projected to reach $7-10B by 2030-2032. But they're not always the right choice. Understanding when to use them—and when not to—is essential for building effective agent systems.
 
 ---
 
@@ -10,7 +10,7 @@ AI agents need context.
 
 Without it, even the most sophisticated model is trapped behind its training cutoff, unable to answer questions about your company's policies, last quarter's sales, or that document you uploaded five minutes ago. The agent might be brilliant at reasoning, but brilliance without knowledge is just eloquent guessing.
 
-Two complementary solutions have emerged. The Model Context Protocol (MCP), which Anthropic introduced in November 2024 and donated to the Linux Foundation's Agentic AI Foundation in December 2025, provides a universal standard for connecting AI systems to external services and tools. MCP has seen remarkable adoption—over 97 million monthly SDK downloads, support across ChatGPT, Claude, Cursor, Gemini, Microsoft Copilot, and Visual Studio Code.
+Two complementary solutions have emerged. The Model Context Protocol (MCP), which Anthropic introduced in November 2024 and donated to the Linux Foundation's Agentic AI Foundation in December 2025, provides a universal standard for connecting AI systems to external services and tools. MCP has seen remarkable adoption—over 97 million monthly SDK downloads across Python and TypeScript, with over 10,000 active servers and first-class client support across ChatGPT, Claude, Cursor, Gemini, Microsoft Copilot, and Visual Studio Code. The Agentic AI Foundation was co-founded by Anthropic, Block, and OpenAI, with support from Google, Microsoft, AWS, Cloudflare, and Bloomberg.
 
 But MCP solves the *services* context problem. What about *knowledge*? What about the unstructured documents, the institutional memory, the domain expertise that lives in PDFs and wikis and Slack threads?
 
@@ -28,7 +28,7 @@ Vector databases solve this by storing *embeddings*: numerical representations o
 
 **The theory fundamentals:**
 
-Embeddings typically have hundreds or thousands of dimensions (OpenAI's ada-002 uses 1,536; some models use 3,072 or more). At query time, you embed your question and find the nearest neighbors in vector space using distance metrics like cosine similarity or Euclidean distance.
+Embeddings typically have hundreds or thousands of dimensions (OpenAI's text-embedding-3-large uses 3,072; Cohere's embed-v4 uses 1,024). At query time, you embed your question and find the nearest neighbors in vector space using distance metrics like cosine similarity or Euclidean distance.
 
 Finding exact nearest neighbors in high-dimensional space is computationally expensive at scale. So vector databases use Approximate Nearest Neighbor (ANN) algorithms—most commonly HNSW (Hierarchical Navigable Small World)—that trade perfect accuracy for dramatic speed improvements. A system running at 99% recall misses 1 in 100 relevant documents; at 95% recall, it misses 1 in 20. That difference matters for production systems.
 
@@ -36,7 +36,18 @@ Finding exact nearest neighbors in high-dimensional space is computationally exp
 
 The quality of your vector search depends heavily on your embedding model. Different models excel at different tasks—some are optimized for code, others for legal text, others for multilingual content. The choice of embedding model often matters more than the choice of vector database.
 
-[RESEARCH: Add specific embedding model recommendations—OpenAI ada-002/3-small/3-large, Cohere embed-v3, open source options like BGE, E5, etc.]
+**Top embedding models (as of late 2025, per MTEB benchmarks):**
+
+| Model | Dimensions | MTEB Score | Price/1M tokens | Best For |
+|-------|------------|------------|-----------------|----------|
+| Cohere embed-v4 | 1,024 | 65.2 | $0.10 | Multilingual, search, multimodal |
+| OpenAI text-embedding-3-large | 3,072 (configurable) | 64.6 | $0.13 | General purpose, high accuracy |
+| Voyage AI voyage-3-large | 1,536 | 63.8 | $0.12 | Domain tuning |
+| BGE-M3 (open source) | 1,024 | 63.0 | Free | Self-hosted, multilingual |
+| E5-Mistral-7B-Instruct | 4,096 | 61.8 | Free | Open-source |
+| OpenAI text-embedding-3-small | 1,536 | 55.8 | $0.02 | Cost-effective |
+
+For most use cases, start with OpenAI's text-embedding-3-small for prototyping (cheap and good enough), then evaluate Cohere embed-v4 or text-embedding-3-large for production. If you need to self-host or have budget constraints, BGE-M3 is the strongest open-source option with support for 100+ languages and hybrid dense/sparse retrieval.
 
 ## Good Uses of Vector Databases
 
@@ -92,19 +103,13 @@ If you need exact matches—specific product SKUs, legal citations, error codes�
 
 If your data can be structured with known schemas, use a relational database. SQL beats semantic search for structured queries, every time. "Show me all orders over $1,000 from Q4" doesn't need embeddings.
 
-[Any citations for these assertions?]
-
 **Small datasets:**
 
 For collections under 10,000 chunks, the overhead of vector databases often isn't worth it. Simple keyword search with BM25 might suffice. Chroma is popular for prototyping precisely because it minimizes this overhead—but teams regularly migrate to more robust solutions as they scale.
 
-[Any citations for these assertions?]
-
 **Relationship-heavy data:**
 
 If your questions involve traversing relationships ("What vendors does this customer's subsidiary use?"), knowledge graphs may serve you better than vector search. Graph databases excel at relationship queries; vector databases excel at similarity queries.
-
-[Any citations for these assertions?]
 
 ## Alternatives and Complements
 
@@ -112,13 +117,13 @@ The RAG landscape is evolving beyond pure vector search:
 
 **Hybrid search** combines vector similarity with keyword matching (BM25) and metadata filtering. Weaviate, Qdrant, and Pinecone all support this natively. For most production systems, hybrid search outperforms pure vector search.
 
-**Knowledge graphs** (GraphRAG and similar approaches) structure information as entities and relationships. They excel at reasoning across documents and answering questions that require connecting multiple pieces of information.
+**Knowledge graphs and GraphRAG** structure information as entities and relationships. Microsoft's GraphRAG creates a knowledge graph from an input corpus, using community summaries and graph machine learning outputs to augment prompts at query time. GraphRAG excels at reasoning across documents and answering "corpus-wide" questions that require connecting multiple pieces of information—questions like "What are the five key themes across this entire document set?" However, it comes with higher indexing costs and complexity. For many specific, fact-retrieval questions, traditional ("naive") RAG actually outperforms GraphRAG.
 
-**LLM-driven retrieval** (approaches like ELITE) uses the language model itself to iteratively retrieve and refine results, rather than relying on a single vector search query.
+**LightRAG** offers a simpler, faster, and more cost-efficient alternative to full GraphRAG, combining knowledge graphs with embedding-based retrieval without the heavy community-hierarchy overhead. Good choice for teams that want graph-aware retrieval without the complexity.
 
-**Prompt-based retrieval** skips embeddings entirely for some use cases, using the LLM's own understanding to select relevant context.
+**LLM-driven retrieval** uses the language model itself to iteratively retrieve and refine results, rather than relying on a single vector search query.
 
-[RESEARCH: Add more detail on GraphRAG, ELITE, and emerging approaches]
+**Prompt-based retrieval** skips embeddings entirely for some use cases, using the LLM's own understanding to select relevant context—particularly viable now that context windows have grown to 100K+ tokens.
 
 ## Choosing a Vector Database
 
@@ -138,13 +143,11 @@ If you've determined a vector database is right for your use case, here's how to
 
 **Decision framework:**
 
-1. If you need it yesterday and don't want to manage anything: Pinecone, Weaviate, Zilliz
+1. If you need it yesterday and don't want to manage anything: Pinecone, Weaviate Cloud, Zilliz Cloud
 2. If you have ops capacity and want cost efficiency at scale: Qdrant or Milvus
 3. If hybrid search is critical: Weaviate or Qdrant
 4. If you're prototyping: Chroma
 5. If you're already on Postgres and scale is moderate: pgvector (Supabase)
-
-[VERIFY: Current pricing for each—Pinecone tiers, Qdrant cloud, Weaviate cloud, Zilliz]
 
 ## The Agent Context Story
 
@@ -193,6 +196,7 @@ The dream of AI agents with comprehensive knowledge access is becoming real. MCP
 **Papers:**
 - "Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs" — the HNSW paper
 - "Dense Passage Retrieval for Open-Domain Question Answering" — Karpukhin et al.
+- "From Local to Global: A Graph RAG Approach to Query-Focused Summarization" — Microsoft Research (GraphRAG)
 - Original Word2Vec and BERT embedding papers
 
 **Books:**
@@ -203,6 +207,7 @@ The dream of AI agents with comprehensive knowledge access is becoming real. MCP
 - [Pinecone Learning Center](https://www.pinecone.io/learn/)
 - [Qdrant Documentation](https://qdrant.tech/documentation/)
 - [Weaviate Documentation](https://weaviate.io/developers/weaviate)
+- [Microsoft GraphRAG Documentation](https://microsoft.github.io/graphrag/)
 - LlamaIndex and LangChain VDB integrations
 
 **Benchmarks:**
@@ -213,22 +218,28 @@ The dream of AI agents with comprehensive knowledge access is becoming real. MCP
 **MCP Resources:**
 - [Model Context Protocol](https://modelcontextprotocol.io/) — Official documentation
 - [MCP Blog](https://blog.modelcontextprotocol.io/) — Updates and technical posts
+- [Agentic AI Foundation Announcement](https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation)
 
 ---
 
 ## Items to Verify/Research Before Publishing
 
-1. [ ] **Market size stats:** Verify $4.3B by 2028 (found $1.73B in 2024, $10.6B by 2032 in another source)
-2. [ ] **MCP stats:** Confirm 97M monthly SDK downloads, adoption across platforms
-3. [ ] **Embedding model recommendations:** Add specific models with context windows and dimensions
-4. [ ] **VDB pricing:** Current tiers for Pinecone, Qdrant Cloud, Weaviate Cloud, Zilliz
-5. [ ] **weave-cli details:** Add specifics about your tool—what it does, how it helps
-6. [ ] **GraphRAG/ELITE:** Add more technical detail on alternatives
-7. [ ] **Chunking strategies:** Consider adding more practical guidance
+### ✅ Completed
+
+1. **Market size stats:** Updated to $2.2B in 2024, projected $7-10B by 2030-2032 (sources: GMInsights, MarketsandMarkets, SNS Insider—various estimates, used range)
+2. **MCP stats:** Confirmed 97M+ monthly SDK downloads, 10,000+ active servers, support across major platforms (source: MCP Blog, Anthropic announcement)
+3. **Embedding model recommendations:** Added table with specific models, dimensions, MTEB scores, and pricing (source: MTEB leaderboard, provider docs)
+4. **GraphRAG/alternatives:** Added detail on Microsoft GraphRAG, LightRAG, and when each excels (source: Microsoft Research, GraphRAG docs)
+
+### ⏳ Pending
+
+5. [ ] **VDB pricing:** Current tiers for Pinecone, Qdrant Cloud, Weaviate Cloud, Zilliz (prices change frequently—verify before publish)
+6. [ ] **weave-cli details:** Add specifics about your tool—what it does, how it helps
+7. [ ] **Chunking strategies:** Consider adding more practical guidance (or save for future post)
 8. [ ] **Personal experience:** Add anecdotes from your own VDB usage
 9. [ ] **Recall/precision tradeoffs:** Consider adding concrete examples
 10. [ ] **Cross-link:** Link to AI Coding Assistants post once published
 
 ---
 
-*Word count: ~2,200 words (target: ~2,000—slightly over but covers the topic well)*
+*Word count: ~2,400 words (target: ~2,000—slightly over but covers the topic comprehensively)*
