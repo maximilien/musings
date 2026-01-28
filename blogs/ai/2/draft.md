@@ -12,7 +12,7 @@ Without it, even the most sophisticated model is trapped behind its training cut
 
 Two complementary solutions have emerged. The Model Context Protocol (MCP), which Anthropic introduced in November 2024 and donated to the Linux Foundation's Agentic AI Foundation in December 2025, provides a universal standard for connecting AI systems to external services and tools. MCP has seen remarkable adoption—over 97 million monthly SDK downloads across Python and TypeScript, with over 10,000 active servers and first-class client support across ChatGPT, Claude, Cursor, Gemini, Microsoft Copilot, and Visual Studio Code. The Agentic AI Foundation was co-founded by Anthropic, Block, and OpenAI, with support from Google, Microsoft, AWS, Cloudflare, and Bloomberg.
 
-But MCP solves the *services* context problem. What about *knowledge*? What about the unstructured documents, the institutional memory, the domain expertise that lives in PDFs and wikis and Slack threads?
+But MCP solves the *services* context problem. What about *knowledge*? What about the unstructured documents, the institutional memory, the tacit enterprise knowledge, the domain expertise that lives in PDFs and wikis and Slack threads?
 
 This is where vector databases enter the picture. And this is where things get interesting—because vector databases are powerful, but they're not always the right answer.
 
@@ -29,6 +29,8 @@ Vector databases solve this by storing *embeddings*: numerical representations o
 **The theory fundamentals:**
 
 Embeddings typically have hundreds or thousands of dimensions (OpenAI's text-embedding-3-large uses 3,072; Cohere's embed-v4 uses 1,024). At query time, you embed your question and find the nearest neighbors in vector space using distance metrics like cosine similarity or Euclidean distance.
+
+[TODO: add illustration graph of vector search with 3D example and Eucleudian distance]
 
 Finding exact nearest neighbors in high-dimensional space is computationally expensive at scale. So vector databases use Approximate Nearest Neighbor (ANN) algorithms—most commonly HNSW (Hierarchical Navigable Small World)—that trade perfect accuracy for dramatic speed improvements. A system running at 99% recall misses 1 in 100 relevant documents; at 95% recall, it misses 1 in 20. That difference matters for production systems.
 
@@ -105,7 +107,7 @@ If your data can be structured with known schemas, use a relational database. SQ
 
 **Small datasets:**
 
-For collections under 10,000 chunks, the overhead of vector databases often isn't worth it. Simple keyword search with BM25 might suffice. Chroma is popular for prototyping precisely because it minimizes this overhead—but teams regularly migrate to more robust solutions as they scale.
+For collections under 10,000 chunks [TODO: can we cite source for this previous statement?], the overhead of vector databases often isn't worth it. Simple keyword search with BM25 might suffice. Chroma is popular for prototyping precisely because it minimizes this overhead—but teams regularly migrate to more robust solutions as they scale.
 
 **Relationship-heavy data:**
 
@@ -131,7 +133,7 @@ If you've determined a vector database is right for your use case, here's how to
 
 **For prototyping and small scale:**
 - **Chroma**: Developer-friendly, simple API, free. Excellent for getting started. Outgrow it and migrate when you hit scale.
-- **pgvector**: If you're already on PostgreSQL, adding vector search is straightforward. Not as fast as dedicated solutions, but eliminates operational complexity.
+- **pgvector**: If you're already on PostgreSQL or Supabase, adding vector search is straightforward. Not as fast as dedicated solutions, but eliminates operational complexity.
 
 **For production scale (open source):**
 - **Qdrant**: Rust-based, excellent performance, strong filtering, cost-effective. My current recommendation for teams that want control without excessive operational burden.
@@ -169,9 +171,13 @@ LangChain, LlamaIndex, and similar frameworks provide abstractions for working w
 
 **weave-cli and the ecosystem:**
 
-[PLACEHOLDER: Add details about weave-cli—your tool for working across VDBs. What problem does it solve? Development/testing/production workflows? What makes it different from existing tools?]
+As I started experimenting creating agents and eventually created my own AI agents startup, some of initial pain points that I experienced (myself and clients) is the difficulty dealing with VDBs at scale and beyond the initial happy success.
 
-This is an area I'm actively working on and will cover in more detail in a future post.
+Having answers to questions: how to choose the right VDB? what is the chunking startegy for my data? what embeddings should I use? have surfaced often after the initial sucess of adding a few documents and creating a RAG agent to use the data.
+
+Also, the realities of day-two operations bite quickly. Having tools that can allow quick re-injestion of data. Ability to evaluate different VDBs and ingestion / chucking and vectorizers in a fashion that is seamless and objective. Ability to integrate into CI/CD and monitor results. And most importantly can we achieve these without tying outself to a particular VDB? Are there open source approaches for this.
+
+To address these issues (and more) I have created the open source project [weave-cli](https://github.com/maximilien/weave-cli). Out of the box it provides solution to the questions above and can be used across 10+ VDBs. I plan a future post on weave-cli but in the meantime I'd recommend perusing the repository and the extensive documentation. Feel free to leave comments here or create issues or discussion on the github repo.
 
 ## Conclusion
 
