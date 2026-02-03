@@ -90,7 +90,7 @@ If you've determined a VDB is right for your use case:
 
 **For managed simplicity:** Pinecone is fully managed and reliable. Higher cost, but minimal operational overhead.
 
-![Weaviate Hackathon](weaviate-hackathon.jpg)
+![AI Agents Hackathon](images/ai-musings-2-2.jpg)
 *Hackathon participants at a recent AI Agents Meetup SF working with vector databases. The hands-on experience of building with these tools is invaluable.*
 
 ## My Experience: weave-cli
