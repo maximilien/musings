@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <defs>
+    <linearGradient id="docGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa"/>
+      <stop offset="100%" style="stop-color:#e9ecef"/>
+    </linearGradient>
+    <linearGradient id="chunk1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4edda"/>
+      <stop offset="100%" style="stop-color:#c3e6cb"/>
+    </linearGradient>
+    <linearGradient id="chunk2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#cce5ff"/>
+      <stop offset="100%" style="stop-color:#b8daff"/>
+    </linearGradient>
+    <linearGradient id="chunk3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff3cd"/>
+      <stop offset="100%" style="stop-color:#ffeeba"/>
+    </linearGradient>
+    <linearGradient id="chunk4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5c6cb"/>
+      <stop offset="100%" style="stop-color:#f1b0b7"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="420" fill="#fafafa"/>
+  
+  <!-- Title -->
+  <text x="400" y="32" font-family="Georgia, serif" font-size="22" font-weight="600" fill="#1a1a2e" text-anchor="middle">Document Chunking for Vector Embedding</text>
+  
+  <!-- Original Document -->
+  <g transform="translate(30, 60)">
+    <text x="60" y="0" font-family="Georgia, serif" font-size="13" font-weight="600" fill="#495057">Original Document</text>
+    
+    <rect x="0" y="10" width="140" height="280" rx="4" fill="url(#docGrad)" stroke="#dee2e6" stroke-width="1" filter="url(#shadow)"/>
+    
+    <!-- Document lines representing text -->
+    <g fill="#adb5bd">
+      <rect x="10" y="25" width="120" height="3" rx="1"/>
+      <rect x="10" y="33" width="110" height="3" rx="1"/>
+      <rect x="10" y="41" width="118" height="3" rx="1"/>
+      <rect x="10" y="49" width="95" height="3" rx="1"/>
+      
+      <rect x="10" y="62" width="120" height="3" rx="1"/>
+      <rect x="10" y="70" width="115" height="3" rx="1"/>
+      <rect x="10" y="78" width="105" height="3" rx="1"/>
+      <rect x="10" y="86" width="120" height="3" rx="1"/>
+      <rect x="10" y="94" width="85" height="3" rx="1"/>
+      
+      <rect x="10" y="107" width="118" height="3" rx="1"/>
+      <rect x="10" y="115" width="120" height="3" rx="1"/>
+      <rect x="10" y="123" width="100" height="3" rx="1"/>
+      <rect x="10" y="131" width="115" height="3" rx="1"/>
+      
+      <rect x="10" y="144" width="120" height="3" rx="1"/>
+      <rect x="10" y="152" width="108" height="3" rx="1"/>
+      <rect x="10" y="160" width="120" height="3" rx="1"/>
+      <rect x="10" y="168" width="95" height="3" rx="1"/>
+      <rect x="10" y="176" width="112" height="3" rx="1"/>
+      
+      <rect x="10" y="189" width="118" height="3" rx="1"/>
+      <rect x="10" y="197" width="120" height="3" rx="1"/>
+      <rect x="10" y="205" width="105" height="3" rx="1"/>
+      <rect x="10" y="213" width="118" height="3" rx="1"/>
+      
+      <rect x="10" y="226" width="120" height="3" rx="1"/>
+      <rect x="10" y="234" width="95" height="3" rx="1"/>
+      <rect x="10" y="242" width="115" height="3" rx="1"/>
+      <rect x="10" y="250" width="110" height="3" rx="1"/>
+      <rect x="10" y="258" width="120" height="3" rx="1"/>
+      <rect x="10" y="266" width="80" height="3" rx="1"/>
+    </g>
+    
+    <!-- Section highlights to show where chunks come from -->
+    <rect x="8" y="22" width="126" height="38" rx="2" fill="#28a745" fill-opacity="0.15" stroke="#28a745" stroke-width="1" stroke-dasharray="3,2"/>
+    <rect x="8" y="59" width="126" height="43" rx="2" fill="#007bff" fill-opacity="0.15" stroke="#007bff" stroke-width="1" stroke-dasharray="3,2"/>
+    <rect x="8" y="101" width="126" height="38" rx="2" fill="#ffc107" fill-opacity="0.15" stroke="#ffc107" stroke-width="1" stroke-dasharray="3,2"/>
+    <rect x="8" y="138" width="126" height="48" rx="2" fill="#dc3545" fill-opacity="0.15" stroke="#dc3545" stroke-width="1" stroke-dasharray="3,2"/>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <line x1="175" y1="140" x2="220" y2="140" stroke="#6c757d" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Chunking Process Box -->
+  <g transform="translate(230, 85)">
+    <rect x="0" y="0" width="130" height="110" rx="6" fill="#f8f9fa" stroke="#6c757d" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="65" y="25" font-family="Georgia, serif" font-size="12" font-weight="600" fill="#495057" text-anchor="middle">Chunking</text>
+    <text x="65" y="45" font-family="Georgia, serif" font-size="10" fill="#6c757d" text-anchor="middle">Split by:</text>
+    <text x="65" y="62" font-family="SF Mono, Monaco, monospace" font-size="9" fill="#495057" text-anchor="middle">• Token count</text>
+    <text x="65" y="76" font-family="SF Mono, Monaco, monospace" font-size="9" fill="#495057" text-anchor="middle">• Semantic breaks</text>
+    <text x="65" y="90" font-family="SF Mono, Monaco, monospace" font-size="9" fill="#495057" text-anchor="middle">• With overlap</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <line x1="365" y1="140" x2="410" y2="140" stroke="#6c757d" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Chunks -->
+  <g transform="translate(420, 55)">
+    <text x="50" y="0" font-family="Georgia, serif" font-size="13" font-weight="600" fill="#495057">Text Chunks</text>
+    
+    <!-- Chunk 1 -->
+    <rect x="0" y="15" width="100" height="55" rx="4" fill="url(#chunk1)" stroke="#28a745" stroke-width="1" filter="url(#shadow)"/>
+    <text x="50" y="35" font-family="SF Mono, Monaco, monospace" font-size="10" fill="#155724" text-anchor="middle">Chunk 1</text>
+    <text x="50" y="50" font-family="Georgia, serif" font-size="9" fill="#155724" text-anchor="middle" font-style="italic">~500 tokens</text>
+    <g fill="#155724" opacity="0.4">
+      <rect x="10" y="58" width="80" height="2" rx="1"/>
+      <rect x="10" y="63" width="70" height="2" rx="1"/>
+    </g>
+    
+    <!-- Chunk 2 -->
+    <rect x="0" y="80" width="100" height="55" rx="4" fill="url(#chunk2)" stroke="#007bff" stroke-width="1" filter="url(#shadow)"/>
+    <text x="50" y="100" font-family="SF Mono, Monaco, monospace" font-size="10" fill="#004085" text-anchor="middle">Chunk 2</text>
+    <text x="50" y="115" font-family="Georgia, serif" font-size="9" fill="#004085" text-anchor="middle" font-style="italic">~500 tokens</text>
+    <g fill="#004085" opacity="0.4">
+      <rect x="10" y="123" width="80" height="2" rx="1"/>
+      <rect x="10" y="128" width="75" height="2" rx="1"/>
+    </g>
+    
+    <!-- Chunk 3 -->
+    <rect x="0" y="145" width="100" height="55" rx="4" fill="url(#chunk3)" stroke="#ffc107" stroke-width="1" filter="url(#shadow)"/>
+    <text x="50" y="165" font-family="SF Mono, Monaco, monospace" font-size="10" fill="#856404" text-anchor="middle">Chunk 3</text>
+    <text x="50" y="180" font-family="Georgia, serif" font-size="9" fill="#856404" text-anchor="middle" font-style="italic">~500 tokens</text>
+    <g fill="#856404" opacity="0.4">
+      <rect x="10" y="188" width="80" height="2" rx="1"/>
+      <rect x="10" y="193" width="65" height="2" rx="1"/>
+    </g>
+    
+    <!-- Chunk 4 -->
+    <rect x="0" y="210" width="100" height="55" rx="4" fill="url(#chunk4)" stroke="#dc3545" stroke-width="1" filter="url(#shadow)"/>
+    <text x="50" y="230" font-family="SF Mono, Monaco, monospace" font-size="10" fill="#721c24" text-anchor="middle">Chunk 4</text>
+    <text x="50" y="245" font-family="Georgia, serif" font-size="9" fill="#721c24" text-anchor="middle" font-style="italic">~500 tokens</text>
+    <g fill="#721c24" opacity="0.4">
+      <rect x="10" y="253" width="80" height="2" rx="1"/>
+      <rect x="10" y="258" width="72" height="2" rx="1"/>
+    </g>
+    
+    <!-- Overlap indicators -->
+    <rect x="-5" y="68" width="110" height="18" rx="2" fill="none" stroke="#6c757d" stroke-width="1" stroke-dasharray="2,2"/>
+    <text x="115" y="80" font-family="Georgia, serif" font-size="8" fill="#6c757d" font-style="italic">overlap</text>
+    
+    <rect x="-5" y="133" width="110" height="18" rx="2" fill="none" stroke="#6c757d" stroke-width="1" stroke-dasharray="2,2"/>
+    <text x="115" y="145" font-family="Georgia, serif" font-size="8" fill="#6c757d" font-style="italic">overlap</text>
+    
+    <rect x="-5" y="198" width="110" height="18" rx="2" fill="none" stroke="#6c757d" stroke-width="1" stroke-dasharray="2,2"/>
+    <text x="115" y="210" font-family="Georgia, serif" font-size="8" fill="#6c757d" font-style="italic">overlap</text>
+  </g>
+  
+  <!-- Arrow 3 -->
+  <line x1="530" y1="180" x2="575" y2="180" stroke="#6c757d" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Embedding Process -->
+  <g transform="translate(585, 115)">
+    <rect x="0" y="0" width="90" height="130" rx="6" fill="#e9ecef" stroke="#6c757d" stroke-width="1"/>
+    <text x="45" y="25" font-family="Georgia, serif" font-size="11" font-weight="600" fill="#495057" text-anchor="middle">Embedding</text>
+    <text x="45" y="42" font-family="Georgia, serif" font-size="11" font-weight="600" fill="#495057" text-anchor="middle">Model</text>
+    
+    <!-- Model icon -->
+    <rect x="25" y="55" width="40" height="35" rx="3" fill="#6c757d"/>
+    <text x="45" y="77" font-family="SF Mono, Monaco, monospace" font-size="9" fill="#fff" text-anchor="middle">LLM</text>
+    
+    <text x="45" y="108" font-family="SF Mono, Monaco, monospace" font-size="8" fill="#6c757d" text-anchor="middle">OpenAI</text>
+    <text x="45" y="120" font-family="SF Mono, Monaco, monospace" font-size="8" fill="#6c757d" text-anchor="middle">ada-002</text>
+  </g>
+  
+  <!-- Arrow 4 -->
+  <line x1="680" y1="180" x2="710" y2="180" stroke="#6c757d" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Vector representations -->
+  <g transform="translate(715, 75)">
+    <text x="35" y="0" font-family="Georgia, serif" font-size="12" font-weight="600" fill="#495057">Vectors</text>
+    
+    <!-- Vector 1 -->
+    <rect x="0" y="10" width="70" height="45" rx="3" fill="#28a745" fill-opacity="0.2" stroke="#28a745" stroke-width="1"/>
+    <text x="35" y="28" font-family="SF Mono, Monaco, monospace" font-size="8" fill="#155724" text-anchor="middle">[0.12, -0.34,</text>
+    <text x="35" y="38" font-family="SF Mono, Monaco, monospace" font-size="8" fill="#155724" text-anchor="middle">0.78, ...]</text>
+    <text x="35" y="50" font-family="Georgia, serif" font-size="7" fill="#155724" text-anchor="middle" font-style="italic">1,536 dims</text>
+    
+    <!-- Vector 2 -->
+    <rect x="0" y="60" width="70" height="45" rx="3" fill="#007bff" fill-opacity="0.2" stroke="#007bff" stroke-width="1"/>
+    <text x="35" y="78" font-family="SF Mono, Monaco, monospace" font-size="8" fill="#004085" text-anchor="middle">[0.45, 0.12,</text>
+    <text x="35" y="88" font-family="SF Mono, Monaco, monospace" font-size="8" fill="#004085" text-anchor="middle">-0.56, ...]</text>
+    <text x="35" y="100" font-family="Georgia, serif" font-size="7" fill="#004085" text-anchor="middle" font-style="italic">1,536 dims</text>
+    
+    <!-- Vector 3 -->
+    <rect x="0" y="110" width="70" height="45" rx="3" fill="#ffc107" fill-opacity="0.2" stroke="#ffc107" stroke-width="1"/>
+    <text x="35" y="128" font-family="SF Mono, Monaco, monospace" font-size="8" fill="#856404" text-anchor="middle">[-0.23, 0.67,</text>
+    <text x="35" y="138" font-family="SF Mono, Monaco, monospace" font-size="8" fill="#856404" text-anchor="middle">0.34, ...]</text>
+    <text x="35" y="150" font-family="Georgia, serif" font-size="7" fill="#856404" text-anchor="middle" font-style="italic">1,536 dims</text>
+    
+    <!-- Vector 4 -->
+    <rect x="0" y="160" width="70" height="45" rx="3" fill="#dc3545" fill-opacity="0.2" stroke="#dc3545" stroke-width="1"/>
+    <text x="35" y="178" font-family="SF Mono, Monaco, monospace" font-size="8" fill="#721c24" text-anchor="middle">[0.89, -0.11,</text>
+    <text x="35" y="188" font-family="SF Mono, Monaco, monospace" font-size="8" fill="#721c24" text-anchor="middle">0.23, ...]</text>
+    <text x="35" y="200" font-family="Georgia, serif" font-size="7" fill="#721c24" text-anchor="middle" font-style="italic">1,536 dims</text>
+  </g>
+  
+  <!-- Bottom note -->
+  <text x="400" y="385" font-family="Georgia, serif" font-size="11" fill="#6c757d" text-anchor="middle" font-style="italic">Chunks with overlapping content help preserve context across boundaries.</text>
+  <text x="400" y="402" font-family="Georgia, serif" font-size="11" fill="#6c757d" text-anchor="middle" font-style="italic">Chunk size is a critical tradeoff: too small loses context, too large dilutes relevance.</text>
+</svg>
