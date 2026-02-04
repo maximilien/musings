@@ -18,7 +18,7 @@ In this post I cover:
 
 The RAG hype is real, but so are the tradeoffs. Understanding when to use VDBs—and when not to—is essential for building agents that actually work.
 
-Read the full post: [LINK]
+Read the full post: https://maximilien.substack.com/p/on-vector-search-ai-agents-knowledge
 
 #AIAgents #VectorDatabases #RAG #MCP #MachineLearning #AI
 
@@ -33,7 +33,7 @@ AI agents need context. MCP solved services. Vector databases are one answer to 
 
 But VDBs aren't magic. Here's what I've learned building with them 👇
 
-[LINK]
+https://maximilien.substack.com/p/on-vector-search-ai-agents-knowledge
 
 **Tweet 2 (Optional reply):**
 The chunking problem is real.
@@ -68,4 +68,4 @@ MCP solved the services problem. Vector databases are one answer to knowledge.
 
 But VDBs aren't always right. I cover when to use them, when not to, and the chunking problem nobody talks about enough.
 
-[LINK]
+https://maximilien.substack.com/p/on-vector-search-ai-agents-knowledge
