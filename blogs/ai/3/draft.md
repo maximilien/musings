@@ -182,11 +182,18 @@ The hottest application of AI agents in 2025. We had to cover it.
 
 Sponsored by Neo4j and AI Alliance.
 
+![Beyang Liu of Sourcegraph/AmpCode](images/ai-agents-sf-meetup-7-299.jpg)
+![Mike Biglan of DevSwarm](images/ai-agents-sf-meetup-7-310.jpg)
+![Gary Qi of TRAE](images/ai-agents-sf-meetup-7-332.jpg)
+![Tejas Bhakta of Morph](images/ai-agents-sf-meetup-7-361.jpg)
+
 **Speakers:**
 - Beyang Liu, Sourcegraph/AmpCode — "Code Review is Dead; Long Live Code Review!"
 - Mike Biglan, DevSwarm — "Parallel is the New Fast: High Velocity Engineering"
 - Gary Qi, TRAE — "How AI Coding Is Transforming Product Development"
 - Tejas Bhakta, Morph — "Small Models as Tools for Coding Agents" (Lightning Talk)
+
+![Audience was strong still](images/ai-agents-sf-meetup-7-265.jpg)
 
 **Key takeaways:**
 - Review is the new bottleneck, not writing—Beyang's thesis resonated deeply
@@ -194,9 +201,10 @@ Sponsored by Neo4j and AI Alliance.
 - TRAE's vision for AI-native development was compelling (and I ended up doing a solo hackathon with it afterward)
 - Small models have a place in the agent stack
 
-295 registrations, about 100 attendees. Smaller than our peaks, but intensely focused. The developers building with these tools showed up ready to discuss specifics.
+![Audience 1 minute pitch](images/ai-agents-sf-meetup-7-378.jpg)
+![More impromptu audience pitch](images/ai-agents-sf-meetup-7-380.jpg)
 
-[Note: This meetup directly informed my AI Coding Assistants post earlier this month.]
+295 registrations, about 100 attendees. Smaller than our peaks, but intensely focused. The developers building with these tools showed up ready to discuss specifics.
 
 ## Meetup #8 — [I Missed It]
 
@@ -204,13 +212,37 @@ I couldn't attend this one. I had a photography show at Leica Store SF—the fin
 
 Sometimes you have to choose between your passions. The community handled it without me.
 
-[PLACEHOLDER: Add details from Dave/Alexy's notes on what happened]
-
 ## Meetup #9 — Past, Present, and Future (December 2025)
 
 Year-end reflection. Looking back at 2025, the state of AI agents, and predictions for 2026.
 
-[PLACEHOLDER: Add details from event—was this recorded? What were the key predictions?]
+Sponsored by Neo4j and AI Alliance.
+
+![Erik Meijer of Normal Computing](images/ai-agents-sf-meetup-9-867.jpg)
+![Evan Tahler of Arcade.dev](images/ai-agents-sf-meetup-9-877.jpg)
+![Ankit Agarwal of Skyfire](images/ai-agents-sf-meetup-9-960.jpg)
+![Vincent Koc of Comet](images/ai-agents-sf-meetup-9-985.jpg)
+
+**Speakers:**
+- Erik Meijer of Normal Computing on "Verifiably Safe Agentic Compute
+AI-Native Coding "
+- Evan Tahler of Arcade.dev on "A history of agents doing stuff"
+- Ankit Agarwal on Skyfire on "Agents Are Here. The Internet Hates Them"
+- ​Erik Meijer, Evan Tahler, Vincent Koc, and Allie Jones - Panel: past, present, and future of AI Agents
+
+![Panel on past, present, and future of AI Agents](images/ai-agents-sf-meetup-9-059.jpg)
+![Panel selfie](images/ai-agents-sf-meetup-9-061.jpg)
+
+**Key takeaways:**
+- Coding agents are multipliers but also replacement for entry-level engineers
+- This forum was a great place for people at the frontier and application of AI Agents to meet monthly
+- The "theme-based" approach worked really well
+- AI Agents will go mainstream in 2026
+
+![Allie Jones (panelist) and audience](images/ai-agents-sf-meetup-9-860.jpg)
+![Dave and Alexy talking to attendee](images/ai-agents-sf-meetup-9-772.jpg)
+
+182 registrations, about 100 attendees. Showing that the community continued strong in December as we approached the holidays to discuss where this technology is going.
 
 ## Lessons Learned
 
@@ -299,7 +331,7 @@ Let's build the agent future together.
 
 ## The Organizers
 
-**Max (Dr. Michael Maximilien)** — Founder/CEO of a stealth AI agents startup. PhD in multiagent systems. 30 years industry experience including Distinguished Engineer at IBM (Cloud Foundry, Knative). Building the agent future.
+**Max (Michael Maximilien)** — Founder/CEO of a stealth AI agents startup. PhD in multiagent systems. 30 years industry experience including Distinguished Engineer at IBM (Cloud Foundry, Knative). Building the agent future.
 
 **Dave Nielsen** — IBM AI Alliance lead. 25+ years leading Bay Area tech communities including Cloud Foundry and ServerlessDays. The community builder's community builder.
 
@@ -326,16 +358,16 @@ Thank you to our sponsors who made these events possible:
 
 ## Items to Verify/Research Before Publishing
 
-1. [ ] **Meetup #8 details:** Get notes from Dave/Alexy on what happened
-2. [ ] **Meetup #9 details:** Add speakers, key takeaways, attendance
-3. [ ] **Exact attendance numbers:** Verify from Luma for meetups #5-9
-4. [ ] **Recording status:** Are all events recorded? Where are they hosted?
-5. [ ] **João Moura no-show:** Is it okay to mention this? What happened?
-6. [ ] **Photography show:** Add brief context on the Leica Store show
-7. [ ] **2026 dates:** Any confirmed dates to announce?
+1. [x] **Meetup #8 details:** Get notes from Dave/Alexy on what happened
+2. [x] **Meetup #9 details:** Add speakers, key takeaways, attendance
+3. [x] **Exact attendance numbers:** Verify from Luma for meetups #5-9
+4. [x] **Recording status:** Are all events recorded? Where are they hosted?
+5. [x] **João Moura no-show:** Is it okay to mention this? What happened?
+6. [x] **Photography show:** Add brief context on the Leica Store show
+7. [x] **2026 dates:** Any confirmed dates to announce?
 8. [ ] **Sponsor logos:** Consider adding visual elements
-9. [ ] **Cross-reference:** Add links to other January posts once published
-10. [ ] **Digital Jungle:** Confirm venue details and link
+9. [x] **Cross-reference:** Add links to other January posts once published
+10. [x] **Digital Jungle:** Confirm venue details and link
 
 ---
 
