@@ -96,6 +96,10 @@ How do you know if your agent is working? This question kept coming up in conver
 
 Sponsored by BeeAI.
 
+![Claire Longo of Comet](images/ai-agents-sf-meetup-4-123.jpg)
+![Priyan Jindal of Arize](images/ai-agents-sf-meetup-4-137.jpg)
+![Ofer Mendelevitch of Vectera](images/ai-agents-sf-meetup-4-142.jpg)
+
 **Speakers:**
 - Ranjan Sinha, IBM Fellow — "Natural Language Interaction Protocol (NLIP)" (Lightning Talk)
 - Claire Longo, Comet — "Best Practices for Monitoring Agent Applications in Production"
@@ -107,13 +111,23 @@ Sponsored by BeeAI.
 - The TextPRO framework from Arize offered a path to continuous agent improvement
 - RAG evaluation is crucial and complex—Vectara's open approach was refreshing
 
-648 registrations. The evaluation theme resonated strongly—everyone was building agents, but few knew how to measure if they were actually working.
+![Claire Longo again](images/ai-agents-sf-meetup-4-105.jpg)
+
+648 registrations. The evaluation theme resonated strongly—everyone was building agents, but few knew how to measure if they were actually working. We've also remained a place where community members that have something to announce or hiring needs can get a few minutes.
+
+![Alexander Jung of Unikraft announcing recent seed round and new product](images/ai-agents-sf-meetup-4-150.jpg)
+![More post-meetup mingling](images/ai-agents-sf-meetup-4-109.jpg)
 
 ## Meetup #5 — Agents in Production (May 2025)
 
 Moving from demos to deployments. What does it actually take to run agents in production?
 
 Sponsored by BeeAI.
+
+![Ricardo Marín of Vozy](images/ai-agents-sf-meetup-5-161.jpg)
+![James Ilse of Solo.io](images/ai-agents-sf-meetup-5-187.jpg)
+![Kai Wu of Meta](images/ai-agents-sf-meetup-5-202.jpg)
+![Cornelia Davis of Temporal](images/ai-agents-sf-meetup-5-220.jpg)
 
 **Speakers:**
 - Marquita Ellis, IBM Research — "From Academic Innovation to Enterprise-Grade Systems"
@@ -131,6 +145,8 @@ Sponsored by BeeAI.
 - Agent Gateway was addressing real connectivity challenges
 - Meta's Llama Stack + AI Alliance collaboration pointed to where open-source agents were heading
 
+![Cornelia Davis chatting with audience](images/ai-agents-sf-meetup-5-223.jpg)
+
 353 registrations. The attendance dipped slightly, but the quality of discussion was the highest yet. Production problems are harder than demo problems.
 
 ## Meetup #6 — Agents in the Workplace (June 2025)
@@ -139,16 +155,24 @@ AI Workers vs AI Agents—what's the difference? Computer-use agents were emergi
 
 Sponsored by BeeAI and Neo4j.
 
+![Nikita Ivanov of Humatron AI](images/ai-agents-sf-meetup-6-382.jpg)
+![Jamieson Leibovitch of Uber](images/ai-agents-sf-meetup-6-431.jpg)
+![Ran Xu of Salesforce AI Research](images/ai-agents-sf-meetup-6-480.jpg)
+
 **Speakers:**
 - Nikita Ivanov, Humatron AI — "Software-Defined AI Workforce: AI Workers vs. AI Agents"
 - Jamieson Leibovitch, Uber — "Uber's Multi-Agent Platform"
 - Ran Xu, Salesforce AI Research — "Build Computer-Use Agent: from Research to Enterprise"
+
+![Audience participation](images/ai-agents-sf-meetup-6-418.jpg)
 
 **Key takeaways:**
 - The distinction between task automation and autonomous agents matters for enterprise adoption
 - Uber's agent platform offered real-world insights at scale
 - Computer-use agents (Salesforce's GTA1 and CoAct-1 research) were the next frontier
 - Enterprise security considerations for agents with elevated permissions are non-trivial
+
+![Audience before talks](images/ai-agents-sf-meetup-6-367.jpg)
 
 514 registrations. The enterprise angle brought in a different crowd—people deploying agents in serious production environments.
 
