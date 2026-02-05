@@ -18,6 +18,8 @@ So Dave Nielsen and I decided to create one.
 
 I've known Dave for over 20 years. I watched him lead various Bay Area tech communities—MashupCamp, CloudCamp, Cloud Foundry, ServerlessDays, and countless others. He was also leading IBM's AI Alliance involvement, which gave us a key connection to the broader open-source AI ecosystem. When I pitched the idea, he was in immediately.
 
+![AI Agents Meetup SF signage at Digital Jungle](images/ai-agents-sf-meetup-2-154.jpg)
+
 We recruited Alexy Khrabrov to round out the team. Alexy has a long history leading tech conferences—he founded AI by the Bay, runs Bay Area AI (the longest-running AI meetup in the world). His deep community connections and conference experience were exactly what we needed.
 
 Together: the right mix of experience, connections, and passion for building community.
@@ -28,6 +30,8 @@ Together: the right mix of experience, connections, and passion for building com
 
 The inaugural meetup had no theme—we just wanted to introduce the community and establish the format. Would anyone show up? Would people care about agents specifically, or was this just another AI buzzword?
 
+![Sandi Bensen of IBM Research introducing BeeAI](images/ai-agents-sf-meetup-1-014.jpg)
+
 **Speakers:**
 - João Moura, CEO at crewAI — scheduled to present on crewAI, but was a no-show
 - Sandi Besen (Neudesic/IBM) & Ismael Faro (IBM Research) — "BeeAI"
@@ -35,11 +39,15 @@ The inaugural meetup had no theme—we just wanted to introduce the community an
 
 **The result:** 646 registrations and over 200 attendees. Overwhelming response.
 
+![First meetup attendees mingling over pizza and soft drinks](images/ai-agents-sf-meetup-1-040.jpg)
+
 The demand was real. People wanted a place to discuss agents specifically—not just LLMs, not just "AI," but the autonomous systems that could actually *do things* in the world. We had validated the thesis. Now we needed to build on it.
 
 ## Meetup #2 — Building Momentum (February 2025)
 
 Sponsored by BeeAI and Prometheus Swarm, our second event was an AI Alliance event that built on the first.
+
+![Dave Nielsen introducing Ally Cat](images/ai-agents-sf-meetup-2-245.jpg)
 
 **Speakers:**
 - Kai of Swarms.ai (Lightning Talk)
@@ -47,7 +55,11 @@ Sponsored by BeeAI and Prometheus Swarm, our second event was an AI Alliance eve
 - Dave Nielsen presenting AllyCat project (for Sujee Maniyam of Node51)
 - Filip Szymański — "What goes into building a voice agent?"
 
+![Filip Szymański discussing his experience with voice agents](images/ai-agents-sf-meetup-2-274.jpg)
+
 **The result:** 665 registrations and over 200 attendees—even stronger than the first.
+
+![Attendees at the second meetup](images/ai-agents-sf-meetup-2-178.jpg)
 
 Voice agents emerged as a hot topic. The community was forming around regular attendance. People started recognizing each other. The networking was as valuable as the talks.
 
