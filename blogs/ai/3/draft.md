@@ -12,7 +12,7 @@ The critical mass is undeniable: OpenAI, Anthropic, and Google's AI labs. Stanfo
 
 I've been deeply connected to this tech community for decades. I've watched waves come and go—cloud computing, mobile, blockchain, and now AI. And in late 2024, it became clear that 2025 was going to be different. The AI agents wave was building, but there was no dedicated community forum for it.
 
-So Dave Nielsen and I decided to create one.
+So Dave Nielsen and I decided to create one. This post sumamrizes our experience including lessons learned and some up coming themes. Amply illustrated with original photos by the author.
 
 ## The Team
 
@@ -69,6 +69,10 @@ Our first *themed* meetup. MCP had launched a few months earlier and was gaining
 
 Sponsored by BeeAI, Neo4j, and Convex.
 
+![Ian Macartney of Convex](images/ai-agents-sf-meetup-3-037.jpg)
+![Michael Hunger of Neo4j](images/ai-agents-sf-meetup-3-084.jpg)
+![Ivan Nardini of Google](images/ai-agents-sf-meetup-3-070.jpg)
+
 **Speakers:**
 - Ian Macartney, Convex — "Building AI Agents and Workflows for full-stack applications"
 - Sarmad Qadri, LastMile — "MCP-Agent"
@@ -83,6 +87,8 @@ Sponsored by BeeAI, Neo4j, and Convex.
 - The panel format worked well for topics with multiple perspectives
 
 539 registrations, over 200 attendees. Themed meetups drove focused discussion. We'd found our format.
+
+![Digital Jungle is a great place to network](images/ai-agents-sf-meetup-3-024.jpg)
 
 ## Meetup #4 — Agent Evaluations (April 2025)
 
