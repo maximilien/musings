@@ -1,77 +1,48 @@
-# On the Importance of Reading 
+# On the Importance of Reading
 
-ABSTRACT
+## Abstract
 
-Nothing murisches the soul like reading.
-Always find a way
-to apply what I read
+Nothing nourishes the soul like reading. Always find a way to apply what I read. Continuous education and staying sharp. In the age of AI, real-time conversational skills will help one distinguish himself/herself. Not only for ideas, but also to be better at everything you do.
 
-Continuous education
-and staying sharp
+## Introduction
 
-In the age of
-AI realtime conversatics will help are distinguish him/her self
+- Why read?
+- Philosophy of learning
+- Keeping current
+- Learning
+- Better comprehension
+- Ideas come when we make associations
+- Reading allows you to fill your cache — your subconscious cache as well
 
-Not only for ideas
-but also to better at everything you do
+## Theory
 
+- Keeping brain active, keeping cache full
+- Brain works by association, and reading infuses us with insights
+- Better comprehension
+- Learning
+- Ability to learn is directly correlated to reading
+- Fast learner ⇒ fast reader
 
+## My Routine
 
-INTRODUCTION- Why read? - [Philosophy of learning] - Keeping current - Learning - Better comprehension - Ideas are when
-we make associations
+- Rotate a variety of sources: current events, fiction, non-fiction, web sources
+- Mix viewing & reading content
 
-Reading allows you to fill you cache
-Subcurious cache
-as well
+### Ideal Process
 
+- Variety
+- Long form content & short form
+- Recommendations
+- Clubs
+- Papers
+- Scientific literature
 
+## Conclusion
 
-Theory
-keepin brain active keeping cache fill
-
-Brain wals by
-association and we
-
-insights infundin ⇒ we
-
-Better comprehension
-Learning
-
-Ability to learn
-directly correlated to reading
-
-Fast launce ⇒ fast
-reader
-
-My Runtime- Rotate a vanity of
-muces
-
-current events, fiction
-Non-fiction
-
-Web sunes
-Mix viewing &
-reading antat. Ideal Process
-
-Variety
-Long form anted & shut form
-Recommendations
-Clubs
-Papers
-Scientific literature
-
-
-CONCLUSION- Find you give - Stick to it - Rife to find
-cadence
-
-write reviews
-Capture what you learn in
-writing
-
-Use AI to
-reinfuce what you learn
-
-Go multimedia
-when subject is intent & want to learn
-
-more
+- Find your groove
+- Stick to it
+- Strive to find cadence
+- Write reviews
+- Capture what you learn in writing
+- Use AI to reinforce what you learn
+- Go multimedia when subject is intense & you want to learn more
