@@ -1,110 +1,63 @@
-# On selecting the right stack
+# On Selecting the Right Stack
 
-ABSTRACT
-selecting the night sta can cause a lot of
-pain latter
+## Abstract
 
-Scalling, debugging,
-integration are impaled by choice
+Selecting the right stack can cause a lot of pain later. Scaling, debugging, and integration are all impacted by choice. Harder to change the more code you have. AI agents make it easy to select stacks you are not familiar with — from experience, most web solutions default to Python for a rewrite. Think before starting, and before going beyond a prototype.
 
-Harder to change the
-mere code you ha
+## Introduction
 
-AI agents make it
-easy to select
+- Software stack is a collection of libraries & services used to build
+- For any problem there are many choices
+- People tend to use their default stack — is this the right thing?
+- Are there stacks better for some problems than others?
+- Python stacks seem to be the choice for AI solutions
+- Other stacks are possible
+- Let's explore why I claim that the choice of correct stack is key to long-term success
+- Also: AI agents make this easier than ever before
 
-stacks you are at familiar with from experience mast web solutions
+## Why Software Stack Matters
 
-go to my re-write
+- Different options available for all types of solutions
+- Typically starts with:
+    - Language
+    - Libraries
+    - Services
 
-Think before starting
-and befe going beyond a putotype
+### AI Stack Choices
 
+- Python
+    - Web framework: Django
+    - AI libraries: scikit-learn, etc.
 
+### Other Stacks
 
+- Golang
+- Rust
+- Java
+- Many more
 
+## Advantages & Disadvantages
 
-INTRODUCTION
-Software stack is collection 1 libraries & services used to bite
-For ay pulden there
-may choices.
+- Ease of development
+- Rapid prototyping (less important due to AI coding agents)
+- Availability of libraries
+- Execution speed
+- Services: CI/CD, testing, etc.
+- Open source & communities
+- Distribution: binary vs. library
+- Architecture: containers? Dependency hell?
+- Type safety
+- Concurrency
+- Ease of upgrading
+- Security
+- Memory usage
+- Resource usage on deploy
 
-tend to
+## Experience & Examples
 
-People use default stack
-Is this the right thing?
-Are there stacks better
-for some pullen than others?
+- Cloud Foundry
+- Recent experiences
 
-Pythm stads seem to
-be the choice for AI solutions
+## Conclusion
 
-Other stads possible
-Let's explore why I claim that the choice
-of correct shade is by to long-term success
-
-Also AI agents make this easier than ever
-before.
-
-Why software stack matters
-
-Different options available for all types of solutions
-Typically stats with
-Language
-Libraries
-☆ Services
-
-AI stacks chairs
-Pythm
-Web framework
-# Django
-
-#
-
-#
-
-AI binaries
-# scilitlemm #
-
-Other staal
-Golang.
-but
-Java
-Many more
-Advantages & Disadvantages
-
-Ease of development
-Rapid prototyping
-(less important due to AI coding agents)
-
-Availability of libraries
-Executi- speed
-Services: CIRD, testing,...
-Open sunce & communities
-Distribution
-☆ binary ☆ libay
-
-Architecture ☆ Contains Dependency hell?
-
-Type safe tyness...
-
-Concurrency
-
-
-Ease of uprading
-Security
-Memory usage
-Remuce usage on
-depley
-
-Experience & Examples
-
-Clind Fandy
-Recent Experiences
-
-
-
-
-
-Conclusion
-
+[To be filled in]
