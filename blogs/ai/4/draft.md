@@ -76,6 +76,21 @@ But there are also good reasons to question Python's dominance:
 
 **TypeScript/Node.js** — Full-stack unification (same language front and back), huge ecosystem (npm), good for I/O-bound services. Single-threaded event loop isn't ideal for CPU-bound work, but best for full-stack web applications and teams that want one language everywhere.
 
+### Stack Comparison at a Glance
+
+| Criteria | Python | Go | Rust | Java/Kotlin | TypeScript |
+|---|---|---|---|---|---|
+| **AI/ML Libraries** | ★★★★★ | ★★ | ★★ | ★★★ | ★★ |
+| **Prototyping Speed** | ★★★★★ | ★★★★ | ★★★ | ★★★ | ★★★★ |
+| **Execution Speed** | ★★ | ★★★★★ | ★★★★★ | ★★★★ | ★★★ |
+| **Concurrency** | ★★ | ★★★★★ | ★★★★★ | ★★★★ | ★★★ |
+| **Type Safety** | ★★ | ★★★★ | ★★★★★ | ★★★★★ | ★★★★ |
+| **Dependency Mgmt** | ★★ | ★★★★ | ★★★★★ | ★★★★ | ★★★ |
+| **Deploy Simplicity** | ★★ | ★★★★★ | ★★★★ | ★★★ | ★★★ |
+| **Community/Ecosystem** | ★★★★★ | ★★★★ | ★★★ | ★★★★★ | ★★★★★ |
+| **AI Agent Support** | ★★★★★ | ★★★★ | ★★★ | ★★★★ | ★★★★ |
+| **Day 2 Maintenance** | ★★★ | ★★★★★ | ★★★★ | ★★★★ | ★★★ |
+
 ## Evaluating Stacks: Advantages & Disadvantages
 
 Beyond the specifics of each language, here's a framework of evaluation criteria to apply to any stack decision:
@@ -137,13 +152,15 @@ But there's still a lesson here: Rails was great for getting Twitter started qui
 
 ### Cloud Foundry
 
-Cloud Foundry (CF) also started as a Ruby and Rails platform. And like for Twitter suffered significantly from that choice. Building a Platform-as-a-Service designed to run your application in any stack ironically showed the CF team that the rails choice for the core of CF the wrong choice, I was there and witsneed the long hours debugging. 
+Cloud Foundry (CF) also started as a Ruby on Rails platform. And like Twitter, it suffered significantly from that choice. Building a Platform-as-a-Service designed to run applications in any stack ironically showed the CF team that Rails was the wrong choice for the core of CF. I was there and witnessed the long hours debugging.
 
-And to their credit, Pivotal--the steward of CF took great care to enforce TDD and pair programming for all CF code. The quality of code was there but no amount of practice could solve the original sin.
+![PLACEHOLDER: CF pair programming photo — insert your photo of the CF pair programming experience here]
 
-This is why the CF team gradually replaced most of CF with Golang. It started with the CLI which was the core entry point to anyone using CF and was executed countless time during development and by users. The Go CLI proved so successful and pleasing to users that the rest of CF explored re-write in Golang.
+To their credit, Pivotal—the steward of CF—took great care to enforce TDD and pair programming for all CF code. The quality of code was there, but no amount of engineering discipline could solve the original sin of the wrong stack choice.
 
-Some component remained in Ruby and Rails but most of new development had switched to Golang. This was not only the choice of CF engineers but also proven by competing PaaS platforms (Docker and especially Kubernetes) which were implemented almost entirely in Golang.
+This is why the CF team gradually replaced most of CF with Golang. It started with the CLI, which was the core entry point for anyone using CF and was executed countless times during development and by users. The Go CLI proved so successful and pleasing to users that the rest of CF explored a rewrite in Golang.
+
+Some components remained in Ruby and Rails, but most new development had switched to Golang. This was not only the choice of CF engineers but also validated by competing PaaS platforms—Docker and especially Kubernetes—which were implemented almost entirely in Golang.
 
 ### Recent AI Agent Projects
 
@@ -151,7 +168,7 @@ In my current work on AI agents, I've had to make stack choices that will matter
 
 But I've found that splitting the stack often makes sense: Python for the AI/ML components where the libraries live, Go or Rust for the performance-critical infrastructure, TypeScript for anything user-facing. The boundaries require careful design, but the result is a system where each part uses the best tool for its job.
 
-One specific example is the data layer and tooling for vector databases. While it's easy to have python scripts integrated into pipelines for these tasks, I often find that the need to execute these often and the need to paralelize (many documents) make languages with fast startup, low memory usage, and better parallelization a much better choice--areas where languages like Golang and Rust shine.
+One specific example is the data layer and tooling for vector databases. While it's easy to have Python scripts integrated into pipelines for these tasks, I often find that the need to execute these frequently and the need to parallelize (many documents) make languages with fast startup, low memory usage, and better parallelization a much better choice—areas where languages like Golang and Rust shine.
 
 ## Conclusion
 
@@ -163,7 +180,7 @@ AI coding agents make this both better and worse. Better because switching stack
 
 The best AI practitioners don't just default—they choose deliberately. Before starting a new project, ask: What are the non-negotiable requirements? What does production look like? Who maintains this in 5 years? Where are the libraries? What's the deployment story?
 
-A few quick heuristics: if it's a prototype that might become production, start with the production stack if possible. If it's AI/ML-heavy, use Python for the ML but consider other languages for the surrounding infrastructure. If it's high-concurrency, Go or Rust deserve serious consideration. If the whole team knows one language well, factor that in—but don't let it be the only factor.
+![Stack Selection Decision Flowchart](images/stack-decision-flowchart.svg)
 
 The advice is boring but true: think before you start. Especially before you move beyond a prototype. The stack you choose will shape what's easy and what's hard for the life of the project. Choose deliberately.
 
@@ -195,14 +212,18 @@ The advice is boring but true: think before you start. Especially before you mov
 
 ## Items to Verify/Research Before Publishing
 
-### ⏳ Pending
-
-1. [x] **Cloud Foundry experience:** Add specific anecdotes about stack decisions and lessons learned
-2. [x] **Knative experience:** Stack choices and what you'd do differently. Removed this since experience is another Ruby vs Go and don't want to have the same over and over.
-3. [x] **AI agent project examples:** Specific stack decisions from your current work
+1. [x] **Cloud Foundry experience:** Added — Ruby to Go migration story
+2. [x] **Knative experience:** Removed — similar Ruby vs Go narrative, avoids repetition
+3. [x] **AI agent project examples:** Added — vector DB tooling example
 4. [ ] **Performance benchmarks:** Consider adding concrete Python vs Go/Rust comparisons for relevant workloads
-5. [ ] **Library availability table:** Could add a matrix showing library availability across languages for common AI tasks
-6. [ ] **Day 2 operations comparison:** Concrete examples of maintenance burden differences
-7. [x] **Cross-link:** Link to Vector Search post and AI Coding Assistants post once published. ADDED.
-8. [x] **weave-cli connection:** Add natural references to weave-cli and other projects where relevant. Marked this completed but did not add since I have a full post planned in future.
+5. [ ] **Library availability table:** Stack comparison table added above — review star ratings for accuracy
+6. [ ] **Day 2 operations comparison:** Covered in evaluation framework; consider adding a concrete anecdote
+7. [x] **Cross-link:** Previous post linked
+8. [x] **weave-cli connection:** Deferred to dedicated future post
+9. [x] **Diagram/visual:** Stack comparison table and decision flowchart added
+10. [ ] **CF pair programming photo:** Placeholder added — insert your photo before publishing
+11. [ ] **Final proofread:** One more pass before publishing
+
 ---
+
+*Word count: ~2,600 words (target: ~2,000 — consider trimming the evaluation framework section or the alternative stacks descriptions to hit target)*
