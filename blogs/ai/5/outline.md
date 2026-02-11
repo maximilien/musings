@@ -16,9 +16,9 @@ Introduction
 * The spectrum of AI assistance: suggestions, generation, autonomous agents
 * [Include statistics on AI coding tool adoption rates — search for recent surveys]
 
-The AI Development Stack
+The AI Development Landscape
 * Level 1: Code completion (GitHub Copilot, TabNine, Codeium)
-* Level 2: Chat-based coding assistance (ChatGPT, Claude in IDE)
+* Level 2: Chat-based coding assistance (Copilot, ChatGPT, Cursor, Claude in IDE)
 * Level 3: Agentic coding (Claude Code, Cursor Agent, Devin, Codex)
 * Each level requires different skills from the developer
 * Trade-off: more automation = more need for oversight and review
@@ -40,18 +40,31 @@ What Still Requires Human Judgment
 * Code review and quality assessment of AI output
 * Ethical considerations and bias in generated code
 
+Where AI-Driven Development is Heading
+* Progression is fast so we can assume quaterly progress
+* Ability for agent development loop to automate completely requirements -> production code is real
+* Concerns about Human Judgement could be automated with AI as well -- an PM agent!
+* Human - customer relationship will still be key
+* Extracting / understanding / and translating customer requirements so that agents build the right thing should be focus for humans
+* All humans become assisted
+
 Best Practices for AI-Driven Development
-* Treat AI as a junior developer: review everything
-* Use AI for first drafts, human refinement for final code
+* Treat AI as a junior developer: review as much as possible
+* Eventually for some tasks you can skip review if you have good tests in code base
+* For tricky code sse AI for first drafts, human refinement for final code using AI to help
 * Maintain strong testing practices — AI can help write tests but shouldn't be sole quality gate
-* Version control discipline: commit messages should reflect AI assistance
-* Document AI-generated sections for future maintainability
-* Build feedback loops: correct AI mistakes to improve future prompts
+* Build feedback loops: linting, builds, tests (unit, integration) that help ensure you have way to avoid regression and new bugs
+* Keep improving your tests everytime new features are added or bugs are fixed or system is updated.
 
 The Changing Role of the Developer
 * From writing code to directing code generation
 * New skills: prompt engineering, AI output evaluation, system orchestration
 * The importance of understanding fundamentals even when not writing code directly
+* The importance of architecture and day-2 operations -- lifecycle of systems
+* Understanding the goal of the project:
+  - is this a prototype that will go nowhere?
+  - or is this a project that will be deployed to many users?
+  - criticality of the system: human lives, assets, or money
 * Career implications: juniors learning differently, seniors becoming AI directors
 * Team dynamics: pair programming with AI as the pair
 * [Research job market trends for AI-augmented developers]
