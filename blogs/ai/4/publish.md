@@ -16,6 +16,8 @@ I've made this mistake. I've watched others make it. And with the current wave o
 
 Python stacks have become the default choice for AI solutions. There are good reasons for this, which I'll explore below. But other stacks are possible and sometimes preferable.
 
+![Ugo Rondinone’s Miami Mountain in Collins Park Miami Beach, FL (circa 2019)](images/art-stack-miami-beach-2019.jpg)
+
 **The thesis:** The choice of the correct stack is key to long-term success. Think carefully before starting, and especially before moving beyond a prototype. AI agents make exploring unfamiliar stacks easier than ever before—but they can't save you from choosing the wrong one. And the Python AI wave will reveal its costs when prototypes need to go into production and scale.
 
 ## Why Your Software Stack Matters
@@ -178,3 +180,4 @@ The advice is boring but true: think before you start. Especially before you mov
 - Go: "Learn Go with Tests" (quii.gitbook.io)
 - Rust: "The Rust Programming Language" (doc.rust-lang.org)
 - Kotlin: "Kotlin in Action" — Jemerov & Isakova
+
