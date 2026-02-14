@@ -174,7 +174,7 @@ You might be surprised how often it picks something you wouldn't have.
 
 ![Stack Selection Decision Flowchart](images/stack-decision-flowchart.svg)
 
-*The flowchart starts where it should: with your requirements and an AI agent, not with a language.*
+*Phase 1: describe your requirements and let the agent recommend. Phase 2: use the language-specific questions to verify the recommendation. Start with requirements—not with a language.*
 
 ---
 
