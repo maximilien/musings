@@ -2,7 +2,7 @@
 
 *The decision you make early that haunts you later—and how AI is changing the calculus*
 
-**TL;DR:** Your software stack choice is one of the most consequential decisions you'll make on a project. Get it wrong and you'll pay in scaling headaches, debugging nightmares, and eventual rewrites. AI coding agents make it easier to work in unfamiliar stacks—but they can also mask fundamental architectural mismatches, delaying the inevitable. Think carefully before you start, and especially before you move beyond a prototype.
+**TL;DR:** Your software stack choice is one of the most consequential decisions you'll make on a project. Get it wrong and you'll pay in scaling headaches, debugging nightmares, and eventual rewrites. But the answer isn't to agonize over languages—it's to focus on describing your requirements clearly (performance, scale, team, deployment) and let an AI coding agent recommend a stack. Then verify the reasoning. AI agents make it easier than ever to work in unfamiliar stacks, but they can also mask fundamental architectural mismatches. Know enough to challenge the recommendation, especially before you move beyond a prototype.
 
 ---
 
@@ -18,7 +18,7 @@ Python stacks have become the default choice for AI solutions. There are good re
 
 ![Ugo Rondinone’s Miami Mountain in Collins Park Miami Beach, FL (circa 2019)](images/art-stack-miami-beach-2019.jpg)
 
-**The thesis:** The choice of the correct stack is key to long-term success. Think carefully before starting, and especially before moving beyond a prototype. AI agents make exploring unfamiliar stacks easier than ever before—but they can't save you from choosing the wrong one. And the Python AI wave will reveal its costs when prototypes need to go into production and scale.
+**The thesis:** The choice of the correct stack is key to long-term success—but increasingly, that choice should be agent-assisted rather than habit-driven. Describe your requirements clearly, let an AI agent recommend a stack, and verify the reasoning before you start. Especially before you move beyond a prototype. AI agents make exploring unfamiliar stacks easier than ever before—but they can't save you from choosing the wrong one. And the Python AI wave will reveal its costs when prototypes need to go into production and scale.
 
 ## Why Your Software Stack Matters
 
@@ -48,7 +48,7 @@ But there are also good reasons to question Python's dominance:
 
 **Python is slow.** Not 50x slower than C anymore, but still **5–20x slower** than compiled languages for CPU-bound work. In web service benchmarks, Go handles roughly **11x the throughput** of Python for equivalent REST API workloads—about 15,000 requests/second versus 1,300. Instagram and YouTube use Python—but they also have teams dedicated to making Python not suck at scale. You probably don't.
 
-**Concurrency is painful.** The Global Interpreter Lock (GIL) means Python can't efficiently use multiple CPU cores within a single process. You work around this with multiprocessing, but that brings its own complexity and memory overhead.
+**Concurrency is painful.** The Global Interpreter Lock (GIL) has historically meant Python can't efficiently use multiple CPU cores within a single process. Python 3.13 introduced an experimental free-threaded mode that removes the GIL, but ecosystem support is still catching up—most libraries haven't been tested or optimized for it yet. For now, you still work around this with multiprocessing, which brings its own complexity and memory overhead.
 
 **Type safety is optional and incomplete.** Type hints help, but they're not enforced at runtime. The tooling has improved, but it still lags behind languages designed with types from the start.
 
@@ -68,18 +68,7 @@ But there are also good reasons to question Python's dominance:
 
 ### Stack Comparison at a Glance
 
-| Criteria | Python | Go | Rust | Java/Kotlin | TypeScript |
-|---|---|---|---|---|---|
-| **AI/ML Libraries** | ★★★★★ | ★★ | ★★ | ★★★ | ★★ |
-| **Prototyping Speed** | ★★★★★ | ★★★★ | ★★★ | ★★★ | ★★★★ |
-| **Execution Speed** | ★★ | ★★★★★ | ★★★★★ | ★★★★ | ★★★ |
-| **Concurrency** | ★★ | ★★★★★ | ★★★★★ | ★★★★ | ★★★ |
-| **Type Safety** | ★★ | ★★★★ | ★★★★★ | ★★★★★ | ★★★★ |
-| **Dependency Mgmt** | ★★★ | ★★★★ | ★★★★★ | ★★★★ | ★★★ |
-| **Deploy Simplicity** | ★★ | ★★★★★ | ★★★★ | ★★★ | ★★★ |
-| **Community Size** | ★★★★★ | ★★★★ | ★★★ | ★★★★★ | ★★★★★ |
-| **AI Agent Support** | ★★★★★ | ★★★★ | ★★★ | ★★★★ | ★★★★ |
-| **Day 2 Maintenance** | ★★★ | ★★★★★ | ★★★★ | ★★★★ | ★★★ |
+![Pytho, Go, Rust, Java/Kotlin, TypeScript stack comparison table](images/stack-comparison-table.png)
 
 *Ratings reflect my experience and are intentionally opinionated. Your mileage may vary based on team and domain.*
 
@@ -105,9 +94,35 @@ AI coding assistants are changing the stack selection calculus in interesting wa
 
 **Documentation quality becomes more important.** AI assistants work better with well-documented APIs and clear conventions. Languages and frameworks with excellent documentation become more attractive.
 
+**Type safety matters more, not less.** Strong type systems help AI agents reason about code correctly—types constrain the solution space and catch errors that would otherwise surface only at runtime. In an AI-assisted workflow, typed languages like Go, Rust, and TypeScript give agents (and humans reviewing agent output) better guardrails. This is one more reason to think carefully before defaulting to a dynamically-typed language for production systems.
+
 **But architecture still requires human judgment.** AI can write code in any language. It can't tell you whether your fundamental architecture is appropriate for your problem. The Twitter-Rails mismatch would still happen today—an AI assistant would happily help you build the wrong thing faster.
 
 **AI agents can mask problems.** When fixing bugs becomes trivially easy, you might not notice that you're fixing the same class of bugs repeatedly. AI makes it easier to patch over architectural problems rather than fix them. The pain that would have forced a rethink gets distributed into a thousand small fixes.
+
+## AI Agents as Stack Advisors
+
+There's a workflow shift happening that most developers haven't internalized yet: AI coding agents aren't just tools for writing code in your chosen stack. They're tools for *choosing the stack in the first place.*
+
+Consider what happens when you describe your requirements in plain language to a capable AI agent:
+
+> **Prompt:** "I want to develop a highly memory-efficient system with low latency for large-scale enterprise workloads. What coding language is appropriate?"
+
+The agent will evaluate the landscape—Rust for zero-cost abstractions and compile-time memory safety, Go for pragmatic concurrency, C++ for proven scale—and make a defensible recommendation with tradeoffs laid out. It can do this because it has broad knowledge of language ecosystems, benchmarks, and production track records. Ask it to be concise and it'll give you a one-word answer: *Rust.*
+
+This is a fundamentally different workflow from the one most of us follow. Today, even developers who use AI agents extensively tend to choose a stack first—usually the one they know—and then use the agent to code in it. Flipping that order changes everything:
+
+1. **Start with requirements, not languages.** Instead of "I'll use Python because I know it," you articulate: "I need high concurrency, low memory footprint, simple deployment, and strong type safety." The agent maps requirements to languages.
+
+2. **Challenge the recommendation.** This is where *your* stack knowledge matters. The comparison table earlier in this post isn't here so you can pick a stack yourself—it's here so you can evaluate whether the agent picked the right one. Can it justify why it recommended Go over Rust for your use case? Does its reasoning account for your team's experience, your deployment constraints, your maintenance timeline?
+
+3. **Iterate before writing code.** Have the agent sketch the architecture in the recommended stack. Ask it to identify the biggest risks. Ask what would change if you chose a different language. This conversation costs minutes; a wrong stack choice costs months.
+
+The implication is striking: your job is shifting from "pick the right stack" to "describe what you need clearly enough that an agent can pick the right stack, and know enough to verify the choice." That's the shift from developer to technical decision-maker—and it's where the industry is heading.
+
+A friend put it bluntly: "Any stakeholder who determines the stack on behalf of the agent is in the wrong business." That's provocative and probably premature for most teams today. But the direction is clear. Programming languages are beginning to hold the same relationship to natural language requirements that assembly holds to high-level code—still essential under the hood, increasingly invisible to the person directing the work.
+
+We're not fully there yet. You still need to understand stack tradeoffs to catch the agent's blind spots—agents default to Python for AI work just like developers do, and for some of the same lazy reasons. But the gap between "agent-recommended" and "expert-recommended" is closing fast.
 
 ## Lessons from Experience
 
@@ -147,15 +162,19 @@ The Python wave in AI is producing thousands of prototypes. Many will never need
 
 This isn't Python's fault. It's the natural consequence of optimizing for time-to-first-demo without thinking about time-to-production-scale.
 
-AI coding agents make this both better and worse. Better because switching stacks is easier than ever. Worse because they make it easier to avoid confronting the problem until it's acute.
+But here's the shift I want to leave you with: the solution isn't to become an expert in every language's tradeoffs. It's to get better at articulating what your system actually needs—performance constraints, scale requirements, team capabilities, deployment realities, maintenance horizons—and then use an AI coding agent to evaluate your options *before you write a single line of code.*
 
-The best AI practitioners don't just default—they choose deliberately. Before starting a new project, ask: What are the non-negotiable requirements? What does production look like? Who maintains this in 5 years? Where are the libraries? What's the deployment story?
+The stack knowledge in this post isn't here so you can pick the right language. It's here so you can verify that the agent did. Know enough about concurrency models to push back when the agent recommends Python for a high-throughput service. Know enough about type systems to question a dynamically-typed choice for a large team project. Know enough about deployment to ask whether a 2GB container image is acceptable for your infrastructure.
+
+The old advice was: "Use the right tool for the job." The new advice is: describe the job precisely, let the agent recommend the tool, and verify the reasoning. Your role is shifting from stack selector to requirements articulator and decision verifier. The developers who thrive will be the ones who get good at that—not the ones who memorize language benchmarks.
+
+Before your next project, try this: open a conversation with your AI coding assistant. Describe your requirements—not the solution, the *requirements*. Ask it to recommend a stack and justify the choice. Challenge the reasoning. Then decide.
+
+You might be surprised how often it picks something you wouldn't have.
 
 ![Stack Selection Decision Flowchart](images/stack-decision-flowchart.svg)
 
-A few quick heuristics: if it's a prototype that might become production, start with the production stack if possible. If it's AI/ML-heavy, use Python for the ML but consider other languages for the surrounding infrastructure. If it's high-concurrency, Go or Rust deserve serious consideration. If the whole team knows one language well, factor that in—but don't let it be the only factor.
-
-The advice is boring but true: think before you start. Especially before you move beyond a prototype. The stack you choose will shape what's easy and what's hard for the life of the project. Choose deliberately.
+*The flowchart starts where it should: with your requirements and an AI agent, not with a language.*
 
 ---
 
@@ -181,3 +200,8 @@ The advice is boring but true: think before you start. Especially before you mov
 - Rust: "The Rust Programming Language" (doc.rust-lang.org)
 - Kotlin: "Kotlin in Action" — Jemerov & Isakova
 
+**Acknowledgments:**
+- Nima Kaviani (AWS) and Dmitriy Kalinin (Broadcom) — conversations with the author on the first draft. Nima's insight on agent-driven stack selection and the analogy to assembly languages, and DK's push for deeper insight and notes on Python's evolving GIL and the increasing importance of type safety, significantly shaped the final version of this post.
+
+**Photos**
+- All photos original by the author
