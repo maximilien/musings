@@ -19,7 +19,7 @@
 - The Bay Area alone has dozens every week: AI agents, climate tech, fintech, healthcare, you name it
 - The rise of AI tools has changed the game — you can now build real products in 24–48 hours that would have taken weeks before
 - Personal angle: what drew me in, how I got hooked after the first one, why I kept going back
-- The thing nobody told me: hackathons aren't just about building — they're about learning how people build, and that's where it gets interesting
+- The thing nobody told me: hackathons aren't just about building — they're about learning how people build, what tools they used, what services are new and useful, and that's where it gets interesting
 
 ---
 
@@ -31,7 +31,7 @@
 - Emerging view: they're controlled environments for studying innovation and tool usage
 - Why hackathons create uniquely useful research conditions:
   - **Time compression** — 24–48 hours forces decisions that might take weeks in normal development; you see people's real instincts
-  - **Diverse participants** — varied skill levels, backgrounds, and approaches all tackling the same problem
+  - **Diverse participants** — varied skill levels, backgrounds, and approaches all tackling the same problems
   - **Observable behavior** — teams work in concentrated settings, easy to watch and learn from
   - **Real motivation** — prizes and competition drive authentic engagement, not lab-study compliance
   - **Low-stakes experimentation** — participants try things they'd never risk in production
@@ -59,6 +59,8 @@
 - Brief anecdote from a hackathon where I saw a company visibly surprised by how people used (or ignored) their product
 - Example: Anthropic and OpenAI hackathons — watching LLM adoption patterns in real time; what prompting strategies emerge organically, what features get used vs. ignored under pressure
 
+TODO: add anecdocte and example(s) here from interviews or myself.
+
 ---
 
 ## 4. What *I* Get Out of Hackathons
@@ -68,10 +70,11 @@
 - **Focused exploration time** — permission to go deep on one idea without distractions
 - **Networking that actually sticks** — you bond with people when you're building together under pressure, not just swapping LinkedIn profiles
 - **Keeping up with fast-moving tech** — especially AI, where the landscape shifts monthly; hackathons are the fastest way to pressure-test what's real
+- **Inspiration from other builders** — you might be caught in a local minima and other builders (from different background) might bring perspective and half-baked ideas that inspire you (and vice versa) for your next hack and maybe winning idea
 - **Testing feasibility** — can this idea actually work? A hackathon gives you a rapid, honest answer
-- **The AI agent moment** — 2025 was the year AI agents became hackathon-viable; what used to require a team of 5 now takes 1-2 people with the right tools (and that itself is a research insight worth paying attention to)
+- **The AI agent moment** — 2025 was the year AI agents became hackathon-viable and accessible to all; what used to require a team of 5 now takes 1-2 people with the right tools (and that itself is a research insight worth paying attention to)
 - **Testing tools like weave-cli** — hackathons are my go-to environment for stress-testing dev tools I'm building or evaluating; if it works under hackathon pressure, it'll work anywhere
-- Anecdote: a specific hackathon moment that was a turning point or surprise
+- Anecdote: I won Github Hack Night showing Vectras (multiagent platform) that I used internally to build and maintain my projects. This was a surprise win since I did not intend to submit it but the excitement and feedback help me keep the focus which has led to better version. I will discuss Vectras and it's recent incarnation in a future post.
 
 ---
 
@@ -82,15 +85,15 @@
 ### Before the Hackathon
 
 - **Come in with ONE idea** — don't show up blank, but don't overcommit to a rigid plan either
-  - Have a thesis, not a spec
-  - Be ready to pivot if you learn something on day one
+  - Have a thesis, not a spec. Have some ideas, not dogmas. Have an area of focus, not a religion.
+  - Be ready to pivot if you learn something on day one but also don't discard your ideas and plans with zero conviction.
 - **Understand the rules and judging criteria** — read them carefully, tailor your project accordingly
   - What are sponsors looking for? Creativity? Technical depth? Business viability?
 - **Talk to sponsors early** — before or at the start of the event
   - They'll tell you what they actually care about (often different from what's written)
   - This gives you an unfair advantage in framing your project
 - **Pre-build your toolkit** — have your dev environment, templates, and boilerplate ready
-  - Know which AI tools you'll lean on (Cursor, Lovable, v0, Replit, etc.)
+  - Know which AI tools you'll lean on (Claude, Codex, Cursor, Lovable, Replit, etc.)
   - Don't waste hackathon hours on setup
 
 ### During the Hackathon
@@ -103,10 +106,13 @@
 - **Build an MVP, not a polished product** — just enough to demo convincingly
   - Use AI-assisted tools like Lovable, Bolt, or Replit Agent to move fast
   - Focus on the "wow" moment, not edge cases
+  - Do have a working system but it does not need to solve all the use cases
 - **Write basic integration tests early** — just enough to catch breaking changes
   - Run them after every major change so you don't have a broken demo at pitch time
+  - Having good tests (integtration) is now a breeze with AI coding assistants so I think this is a MUST now
 - **Include a business case** — judges love a TAM (Total Addressable Market) slide
   - Even a rough market sizing shows you're thinking beyond the code
+  - Give some indication of your background in the space or why you care (make it personal rather than about money)
 - **Aim for the stars, reach for the sky** — be ambitious in vision, pragmatic in execution
   - Judges reward ambition paired with a working demo
 
@@ -119,21 +125,27 @@
 
 ---
 
-## 6. Perspectives from the Hackathon Scene
+## 6. Perspectives from the Hackathon Scene in Bay Area
 
 *(Voices beyond my own — adds credibility and texture)*
 
 ### Dave Nielsen
 - One of the oldest community managers in the Bay Area
 - Background: Mashup Camps, Cloud Camps — pioneered the unconference/hackathon format before it was mainstream
-- His perspective on how hackathons have gone global and how the culture has evolved
-- What he sees differently about the AI-era hackathon scene
+- Dave's perspective on how hackathons have gone global and how the culture has evolved
+- What Dave sees differently about the AI-era hackathon scene
 
 ### Adam Chan
 - Prolific hackathon organizer, AI-focused
 - Runs events through hackdev.io
-- His take on what makes a great hackathon vs. a forgettable one
-- How organizers think about the balance between entertainment and generating useful outcomes
+- Adam's take on what makes a great hackathon vs. a forgettable one
+- How Adam's think about the balance between entertainment and generating useful outcomes
+
+### Allie Jones
+- Hacker and multi-hackathon winner in Bay Area
+- Full time engineer but hacking inside company and in the wild
+- Allie's perspective on how AI Coding assistants have changed hacking? Her process and tips?
+- Allie's views on how to encourage diversity in hackathons and how diverse (age, gender, etc) have changed hackathons?
 
 ---
 
@@ -142,10 +154,10 @@
 *(Honest reflection — complements the strategy section)*
 
 - **Plan ahead, but not too far ahead** — over-planning kills the creative energy of a hackathon
-  - Anecdote: a time I over-planned and felt boxed in
+  - TODO: Anecdote: a time I over-planned and felt boxed in
 - **Your first idea is rarely your best execution** — be willing to simplify ruthlessly
 - **Solo vs. team trade-offs** — AI tools make solo hackathons viable, but you miss the team dynamic and diverse perspectives
-  - Anecdote: what I missed working alone vs. what I gained in speed
+  - TODO: Anecdote: what I missed working alone vs. what I gained in speed
 - **Don't underestimate the social component** — some of my best professional connections came from hackathons, not conferences
 - **Burnout is real** — doing a dozen in a year taught me to be selective; quality > quantity
 - **The tech you learn sticks** — hackathon learning is hands-on and stays with you in a way tutorials don't
@@ -170,11 +182,16 @@
 ## Notes for Drafting
 
 - **Anecdotes needed:** Flag 3-4 specific hackathon stories to weave throughout (a win, a failure, a surprising connection, a research insight)
+    DONE: include inline
 - **Interviews:** Schedule or draft Q&A with Dave Nielsen and Adam Chan; even 3-4 pull quotes each would add a lot
+    DONE: contacted Dave and Adam and Allie Jones. Will include responses to the two questions to each as I get reply.
 - **weave-cli:** Decide how much detail to include — could be a brief mention or a mini case study of testing it at a hackathon
+    DONE: it's in one of anecdote
 - **References to weave in naturally:**
   - Papers: Irani 2015 (co-optation ritual), Trainer et al. 2016 (steering hackathon projects), Huppenkothen et al. 2018 (hackathons for science), Nolte et al. 2020 (collaborative innovation), arXiv 2022 (hackathon projects becoming products). Drop these casually — e.g., "researchers like Lilly Irani have argued that..." or "a 2020 study found that..."
   - Blogs/reports: Major League Hacking research reports, Devpost hackathon statistics and trends, Anthropic and OpenAI hackathon retrospectives — good for linking as "further reading" at the end
   - Books (optional depth): Fisher's "The Design of Experiments" for research design nerds, Boellstorff's "Ethnography and Virtual Worlds" for methodology — probably too deep for this post but worth mentioning if the research angle resonates with readers
 - **Potential visuals:** Photo from a hackathon, screenshot of a project, simple infographic of the strategy playbook
+    TODO: I have many need to select. Let's have three and spread accross so add placeholder
 - **Substack formatting:** Use pull quotes for key takeaways, keep paragraphs short, consider a TL;DR at the top
+    TODO: and make sure to keep the same voice of previous post as much as possible
