@@ -170,7 +170,7 @@ Just show up and start building. Let's go.
 
 ---
 
-*Next post: [Topic TBD]*
+*Next post: Experience with AI asistants*
 
 *Previous post: [Selecting the Right Software Stack](https://maximilien.substack.com/p/selecting-the-right-software-stack)*
 
@@ -190,7 +190,5 @@ Just show up and start building. Let's go.
 - [Major League Hacking](https://mlh.io) — Research reports and hackathon statistics
 
 **Further Reading:**
-- hackersquad.io — Adam Chan's AI-focused hackathon events
-- Anthropic and OpenAI hackathon retrospectives
+- [hackersquad.io](https://hackersquad.io) — Adam Chan's AI-focused hackathon events
 - Fisher, R.A. — *The Design of Experiments* (for research design enthusiasts)
-
