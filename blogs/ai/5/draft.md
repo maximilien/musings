@@ -1,0 +1,196 @@
+# Value of Hackathons: What I Learned from a Dozen+ Hackathons in 2025
+
+*The most underrated research methodology in tech—and a personal playbook for winning*
+
+**TL;DR:** I participated in over a dozen hackathons in 2025 and came away with more than projects and prizes. Hackathons are scoped, time-boxed, and force you to ship—but they're also accidental research labs where you can observe how people actually build, what tools they reach for, and what strategies work under pressure. This post shares what I learned, what worked, what didn't, and why hackathons deserve recognition as one of the most efficient ways to learn, build, and connect—especially in the age of AI.
+
+---
+
+Hackathons are one of the best ways to innovate. Period.
+
+They're scoped. They're time-boxed. They force you to ship something—anything—by a hard deadline. In a world where projects can drag on for months in planning purgatory, there's something liberating about having 24 to 48 hours to turn an idea into a working demo.
+
+But after doing over a dozen of them in 2025, I've come to see hackathons as something else entirely: accidental research labs. You don't just build things at hackathons—you learn how other people build things. You see what tools they reach for, what strategies they use, what shortcuts work and what shortcuts break. And if you're paying attention, that observational data is as valuable as anything you code.
+
+This post is everything I learned from that year of hacking. A playbook, a set of lessons, and a case for why hackathons might be the most underrated methodology in tech.
+
+<!-- PHOTO PLACEHOLDER: Wide shot of hackathon venue/teams working -->
+
+## Why Hackathons Still Matter
+
+Hackathons aren't new. The concept traces back to 1999, when OpenBSD held what's considered the first modern hackathon. But the scene has exploded—especially in the Bay Area, where you can find dozens every week covering AI agents, climate tech, fintech, healthcare, and everything in between. Lu.ma is the best way to discover what's happening, and the calendar is relentless.
+
+What *is* new is what you can build in 24 hours. The rise of AI coding assistants—Claude Code, Cursor, Lovable, Replit Agent—has fundamentally changed the game. Projects that would have taken a team of five engineers weeks to prototype can now be built by one or two people in a weekend. The barrier to shipping something real has never been lower.
+
+I got hooked after my first one. I went in expecting a coding sprint and came out with a working project, three new connections, and a completely different mental model for how fast you can move when constraints are tight. So I kept going back. And the thing nobody told me before I started is that hackathons aren't just about building—they're about learning how people build. What tools they use, what services are new and useful, what approaches work under real pressure. That's where it gets interesting.
+
+## Hackathons as Accidental Research Labs
+
+The traditional view of hackathons is straightforward: they're competitions. You show up, you code, you network, maybe you win a prize. All true.
+
+But there's an emerging view that I find more compelling: hackathons are controlled environments for studying innovation and tool usage. And the conditions are uniquely useful for exactly this kind of observation.
+
+**Time compression** forces decisions that might take weeks in normal development. You see people's real instincts—not their considered, committee-approved choices, but what they actually reach for when the clock is ticking. **Diverse participants** with varied skill levels, backgrounds, and approaches all tackle the same problems, giving you organic comparison data. **Real motivation** from prizes and competition drives authentic engagement—this isn't a lab study where participants are going through the motions. And **low-stakes experimentation** means people try things they'd never risk in production, which is where the most interesting discoveries happen.
+
+Researchers have caught on to this. Lilly Irani's work on hackathons as cultural rituals and Nolte et al.'s research on collaborative innovation at HICSS 2020 are examples of academics studying this space seriously. Universities are using hackathons for CS education research—studying how students learn under pressure and comparing teaching methodologies through hackathon outcomes.
+
+But you don't need to be an academic to benefit. Anyone paying attention at a hackathon is doing informal research. If you *wanted* to be systematic about it, you could run pre-hackathon surveys to baseline skills, establish observation protocols during the event, conduct post-hackathon interviews and code analysis—even compare control groups of teams with different toolsets. The ethical considerations matter too: informed consent, not letting data collection distort the competition, respecting privacy. And there's a longitudinal angle worth exploring—tracking hackathon participants over time to see what sticks. Do projects become products? Do skills transfer?
+
+Even without a formal study design, just watching and reflecting makes you a better builder.
+
+## What Companies Get Out of Hackathons
+
+Sponsors aren't there out of generosity. They're running product research, often more effectively than their internal teams realize.
+
+**Product-market fit testing** is the big one. Companies sponsor hackathons to see how developers actually use their tools versus how the tools are designed to be used. The gap between those two things is always revealing. **Developer feedback loops** at hackathons are real-time and unfiltered—more honest than surveys or focus groups because people are under pressure and don't have time to be diplomatic. And sponsors regularly discover **unexpected use cases** that their product teams never imagined.
+
+Hackathons also function as a **recruiting pipeline**, though companies rarely say this out loud. And they answer a question that's surprisingly hard to study otherwise: **how quickly do developers learn new tools?** A hackathon gives you that answer in 48 hours instead of months of onboarding studies.
+
+Some companies run **internal hackathons** specifically to test new tools and measure adoption. The data they get post-hackathon—what was adopted, what was ignored, what was misused—is gold for product teams.
+
+I've seen this play out in person. At one hackathon, a sponsoring company was visibly surprised by how participants used their product. The use cases people found had nothing to do with the company's primary marketing messaging. That's the kind of insight you can't get from a focus group.
+
+<!-- TODO: Max — add specific anecdote and/or example from Anthropic/OpenAI hackathons here. What prompting strategies emerged organically? What features got used vs. ignored under pressure? -->
+
+## What *I* Get Out of Hackathons
+
+Before the strategy section, it's worth explaining why I keep going back—beyond the competitive thrill.
+
+**Focused exploration time.** Hackathons give you permission to go deep on one idea without the usual distractions of email, Slack, and the twenty other things competing for your attention. That single-minded focus is rare and valuable.
+
+**Networking that actually sticks.** You bond with people when you're building together under pressure. That's fundamentally different from swapping LinkedIn profiles at a conference mixer. Some of my best professional connections came from hackathons, not conferences.
+
+**Keeping up with fast-moving tech.** Especially in AI, where the landscape shifts monthly, hackathons are the fastest way to pressure-test what's real versus what's just marketing. You find out very quickly whether a new tool actually works when you're trying to ship with it in 12 hours.
+
+**Inspiration from other builders.** You might be stuck in a local minimum—solving problems the same way because that's what you know. Other builders from different backgrounds bring perspectives and half-baked ideas that can shake you loose. And vice versa—your throwaway suggestion might be someone else's winning insight.
+
+**Testing feasibility.** Can this idea actually work? A hackathon gives you a rapid, honest answer without the overhead of a formal investigation.
+
+**The AI agent moment.** 2025 was the year AI agents became hackathon-viable and accessible to everyone. What used to require a team of five now takes one or two people with the right tools—and that shift itself is a research insight worth paying attention to.
+
+**Testing tools under pressure.** Hackathons are my go-to environment for stress-testing dev tools I'm building or evaluating. If a tool works under hackathon pressure, it'll work anywhere.
+
+One anecdote worth sharing: I won GitHub Hack Night by showing Vectras, a multiagent platform I'd been using internally to build and maintain my projects. I hadn't even intended to submit it—I was using it as infrastructure for another hack. But the excitement and feedback from judges and participants gave me the conviction to keep investing in it, which led to a significantly better version. I'll discuss Vectras and its recent incarnation in a future post.
+
+## My Hackathon Strategy Playbook
+
+This is the section I wish someone had given me before my first hackathon. It's evolved through trial, error, and a lot of 3am debugging sessions.
+
+<!-- PHOTO PLACEHOLDER: Photo of Max presenting or demoing at a hackathon -->
+
+### Before the Hackathon
+
+**Come in with ONE idea.** Don't show up blank, but don't overcommit to a rigid plan either. Have a thesis, not a spec. Have some ideas, not dogmas. Have an area of focus, not a religion. Be ready to pivot if you learn something on day one—but also don't discard your plans with zero conviction at the first sign of a shinier idea.
+
+**Understand the rules and judging criteria.** Read them carefully and tailor your project accordingly. What are sponsors looking for? Creativity? Technical depth? Business viability? These emphases vary wildly between hackathons, and ignoring them is leaving points on the table.
+
+**Talk to sponsors early.** Before or at the very start of the event. They'll tell you what they actually care about, which is often different from what's written in the official guidelines. This gives you an unfair advantage in framing your project.
+
+**Pre-build your toolkit.** Have your dev environment, templates, and boilerplate ready. Know which AI tools you'll lean on—Claude Code, Cursor, Lovable, Replit, whatever your stack is. Don't waste hackathon hours on setup.
+
+### During the Hackathon
+
+**Visualize the end product immediately.** What does the demo look like? Work backwards from the presentation, not forward from the code. This seems counterintuitive for engineers, but it's the single most important mindset shift.
+
+**Create your presentation slides early.** Not at 3am the night before. Even a rough deck forces you to clarify your story. The narrative should flow: problem, insight, solution, demo, impact.
+
+**Build an MVP, not a polished product.** Just enough to demo convincingly. Use AI-assisted tools like Lovable, Bolt, or Replit Agent to move fast. Focus on the "wow" moment, not edge cases. Have a working system, but it doesn't need to solve every use case.
+
+**Write basic integration tests early.** Just enough to catch breaking changes. Run them after every major change so you don't have a broken demo at pitch time. With AI coding assistants, writing decent integration tests is now a breeze—I think this is a must.
+
+**Include a business case.** Judges love a TAM slide. Even a rough market sizing shows you're thinking beyond the code. And give some indication of why you personally care about this problem—make it personal rather than about money.
+
+**Aim for the stars, reach for the sky.** Be ambitious in vision, pragmatic in execution. Judges reward ambition paired with a working demo. Not ambition alone.
+
+### At Presentation Time
+
+**Be ready for a live demo.** Practice it, have a backup plan, know your failure modes. Record a backup video just in case—Murphy's Law is never more active than during hackathon demos.
+
+**Tell a story, don't list features.** What problem did you solve, and for whom? Features are forgettable. Stories stick.
+
+**Keep it tight.** Respect the time limit. Leave room for questions. Going over time is the fastest way to lose judge goodwill.
+
+## Perspectives from the Hackathon Scene
+
+My perspective is one data point. Here are three others from people who've shaped the Bay Area hackathon ecosystem.
+
+### Dave Nielsen — The Community Builder's Community Builder
+
+I've known Dave for over 20 years. He pioneered the unconference and hackathon format with MashupCamp and CloudCamp before "hackathon" was even a buzzword. He's watched the scene go global and evolve through multiple technology waves.
+
+<!-- TODO: Insert Dave's responses to: (1) How has the hackathon culture evolved from the early MashupCamp days to the AI era? (2) What does he see differently about AI-era hackathons? -->
+
+### Adam Chan — The Prolific Organizer
+
+Adam runs events through hackersquad.io and has become one of the most prolific AI-focused hackathon organizers in the Bay Area. He's thought deeply about what makes a great hackathon versus a forgettable one.
+
+<!-- TODO: Insert Adam's responses to: (1) What makes a great hackathon vs. a forgettable one? (2) How does he think about the balance between entertainment and generating useful outcomes? -->
+
+### Allie Jones — The Hacker's Hacker
+
+Allie is a full-time engineer and multi-hackathon winner in the Bay Area—hacking both inside her company and in the wild. She brings a perspective on how AI coding assistants have changed the game and how diversity has shaped the scene.
+
+<!-- TODO: Insert Allie's responses to: (1) How have AI coding assistants changed her hacking process? Tips? (2) How has diversity (age, gender, etc.) changed hackathons, and how to encourage more? -->
+
+## Lessons Learned (The Hard Way)
+
+A dozen hackathons in a year teaches you things that no blog post can fully convey. But here's my attempt.
+
+**Plan ahead, but not too far ahead.** Over-planning kills the creative energy that makes hackathons work. I learned this the hard way—at one hackathon early in 2025, I showed up with a detailed technical spec and felt completely boxed in when the actual environment and available APIs didn't match my assumptions. The teams that won were the ones that planned loosely and adapted fast.
+
+<!-- TODO: Max — flesh out this anecdote with specific details if you have a better one -->
+
+**Your first idea is rarely your best execution.** Be willing to simplify ruthlessly. The version of your idea that wins is almost always smaller and tighter than what you originally imagined.
+
+**Solo vs. team trade-offs.** AI tools make solo hackathons viable in a way they never were before—I've done several successfully. But you miss the team dynamic and diverse perspectives. Working alone, I gained speed but lost the creative collisions that come from someone saying "wait, what if we tried it this way instead?"
+
+<!-- TODO: Max — add specific solo vs. team anecdote if you have one -->
+
+**Don't underestimate the social component.** I've said it already, but it bears repeating: some of my most valuable professional relationships started at hackathons, not conferences. Building under pressure bonds people.
+
+**Burnout is real.** Doing a dozen in a year taught me to be selective. Quality over quantity. By the end of 2025, I was choosing hackathons based on the specific sponsors, themes, and communities rather than just showing up to everything.
+
+**The tech you learn sticks.** Hackathon learning is hands-on, and it stays with you in a way tutorials and documentation never do. I've retained more from weekend hacks than from months of reading docs.
+
+**Hackathon conditions aren't real-world conditions.** This is important to be honest about. What works under time pressure doesn't always translate. There's self-selection bias in who participates, a Hawthorne effect from being observed and judged, and fatigue-driven shortcuts that wouldn't fly in production code. The insights are real, but they need calibration.
+
+<!-- PHOTO PLACEHOLDER: Hackathon team photo or post-event group shot -->
+
+## Why You Should Try One
+
+Hackathons are a uniquely efficient way to learn, build, connect, and—yes—do informal research on how people actually innovate. They deserve recognition as something more than competitions. They're research platforms that reveal how builders make decisions under constraints.
+
+The Bay Area scene is thriving, and Lu.ma is the best way to discover what's happening near you. But hackathons are everywhere—online and in-person, across every domain and skill level.
+
+In the age of AI, the barrier to building something real in 24 hours has never been lower. For tool builders: hackathons reveal real UX issues faster than any focus group. For developers: there's no better forcing function for staying sharp and expanding your range.
+
+My advice: find a hackathon this month and just show up. You don't need a team. You don't need a polished idea. You don't even need to win. You'll learn more in a weekend than in a month of tutorials.
+
+Just show up and start building. Let's go.
+
+---
+
+*Next post: [Topic TBD]*
+
+*Previous post: [Selecting the Right Software Stack](https://maximilien.substack.com/p/selecting-the-right-software-stack)*
+
+---
+
+## Recommended Resources
+
+**Academic Research:**
+- Irani, L. (2015) — "Hackathons and the Making of Entrepreneurial Citizenship" — on hackathons as cultural rituals
+- Nolte, A. et al. (2020) — "What Happens to All These Hackathon Projects?" — collaborative innovation, HICSS
+- Huppenkothen, D. et al. (2018) — "Hack Weeks as a Model for Data Science Education and Collaboration" — hackathons for science
+- Trainer, E. et al. (2016) — "How to Hackathon" — steering hackathon projects effectively
+
+**Hackathon Discovery:**
+- [Lu.ma](https://lu.ma) — Find hackathons near you
+- [Devpost](https://devpost.com) — Browse hackathon projects and upcoming events
+- [Major League Hacking](https://mlh.io) — Research reports and hackathon statistics
+
+**Further Reading:**
+- hackersquad.io — Adam Chan's AI-focused hackathon events
+- Anthropic and OpenAI hackathon retrospectives
+- Fisher, R.A. — *The Design of Experiments* (for research design enthusiasts)
+
