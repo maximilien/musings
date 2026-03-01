@@ -48,7 +48,7 @@ Hackathons also function as a **recruiting pipeline**, though companies rarely s
 
 Some companies run **internal hackathons** specifically to test new tools and measure adoption. The data they get post-hackathon—what was adopted, what was ignored, what was misused—is gold for product teams.
 
-I've seen this play out in person. At a hackathon in early fall last year focused on Lovable, I ended up using that tool to help boostrap all of my UI/UX since it's so good at exploring a quick prototype UI for an idea. This experience also informed and confirmed my decision of using TypeScript as my stack and using backend services in Golang or Rust. This combination again and again has proven most efficient and responsive and resulting in shipping prototypes after 24 or 48 hours. See my post on [choosing the right stack](https://maximilien.substack.com/p/selecting-the-right-software-stack) for details on how to make your own stack decisions.
+I've seen this play out in person. At a hackathon in early fall last year focused on Lovable, I ended up using that tool to help bootstrap all of my UI/UX since it's so good at exploring a quick prototype UI for an idea. This experience also informed and confirmed my decision of using TypeScript as my stack and using backend services in Golang or Rust. This combination again and again has proven most efficient and responsive and resulting in shipping prototypes after 24 or 48 hours. See my post on [choosing the right stack](https://maximilien.substack.com/p/selecting-the-right-software-stack) for details on how to make your own stack decisions.
 
 [Max headlining the Fudan University (https://www.fudan.edu.cn/en/) in Shanghai, China in 2016: Photo 1](images/max-leading-hack-fdu-shanghai-china-2016-2.jpg)
 [Photo 2](images/max-leading-hack-fdu-shanghai-china-2016-3.jpg)
@@ -62,7 +62,7 @@ Before the strategy section, it's worth explaining why I keep going back—beyon
 
 **Networking that actually sticks.** You bond with people when you're building together under pressure. That's fundamentally different from swapping LinkedIn profiles at a conference mixer. Some of my best professional connections came from hackathons, not conferences.
 
-**Keeping up with fast-moving tech.** Especially in AI, where the landscape shifts monthly and seemignly weekly, hackathons are the fastest way to pressure-test what's real versus what's just marketing. You find out very quickly whether a new tool actually works when you're trying to ship with it in 12 hours.
+**Keeping up with fast-moving tech.** Especially in AI, where the landscape shifts monthly and seemingly weekly, hackathons are the fastest way to pressure-test what's real versus what's just marketing. You find out very quickly whether a new tool actually works when you're trying to ship with it in 12 hours.
 
 **Inspiration from other builders.** You might be stuck in a local minimum—solving problems the same way because that's what you know. Other builders from different backgrounds bring perspectives and half-baked ideas that can shake you loose. And vice versa—your throwaway suggestion might be someone else's winning insight.
 
@@ -72,9 +72,9 @@ Before the strategy section, it's worth explaining why I keep going back—beyon
 
 **Testing tools under pressure.** Hackathons are my go-to environment for stress-testing dev tools I'm building or evaluating. If a tool works under hackathon pressure, it'll work anywhere.
 
-One anecdote worth sharing: I won a GitHub Hack Night in early winder by showing Vectras, a multiagent platform I'd been using internally to build and maintain my projects. I hadn't even intended to submit it since it had no UI/UX—I was using it as infrastructure for another hack. 
+One anecdote worth sharing: I won a GitHub Hack Night in early winter by showing Vectras, a multiagent platform I'd been using internally to build and maintain my projects. I hadn't even intended to submit it since it had no UI/UX—I was using it as infrastructure for another hack. 
 
-But using Lovable I was able to quickly build a complete UI/UX, connect it to my backend agents, and use Weaviate as the common knowledge based for the agents. The excitement and feedback from judges and participants gave me the conviction to keep investing in it, which led to a significantly better version. I'll discuss Vectras and its recent incarnation in a future post.
+But using Lovable I was able to quickly build a complete UI/UX, connect it to my backend agents, and use Weaviate as the common knowledge base for the agents. The excitement and feedback from judges and participants gave me the conviction to keep investing in it, which led to a significantly better version. I'll discuss Vectras and its recent incarnation in a future post.
 
 ## My Hackathon Strategy Playbook
 
@@ -124,19 +124,25 @@ My perspective is one data point. Here are three others from people who've shape
 
 I've known Dave for over 20 years. He pioneered the unconference and hackathon format with MashupCamp and CloudCamp before "hackathon" was even a buzzword. He's watched the scene go global and evolve through multiple technology waves.
 
-<!-- TODO: Insert Dave's responses to: (1) How has the hackathon culture evolved from the early MashupCamp days to the AI era? (2) What does he see differently about AI-era hackathons? -->
+I asked Dave how hackathon culture has evolved from the early MashupCamp days to the AI era, and what he sees differently about AI-era hackathons.
+
+> [Dave's response here]
 
 ### Adam Chan — The Prolific Organizer
 
 Adam runs events through [hackersquad.io](https://hackersquad.io) and has become one of the most prolific AI-focused hackathon organizers in the Bay Area. He's thought deeply about what makes a great hackathon versus a forgettable one.
 
-<!-- TODO: Insert Adam's responses to: (1) What makes a great hackathon vs. a forgettable one? (2) How does he think about the balance between entertainment and generating useful outcomes? -->
+I asked Adam what separates a great hackathon from a forgettable one, and how he thinks about the balance between entertainment and generating useful outcomes.
+
+> [Adam's response here]
 
 ### Allie Jones — The Hacker's Hacker
 
 Allie is a full-time engineer and multi-hackathon winner in the Bay Area—hacking both inside her company and in the wild. She brings a perspective on how AI coding assistants have changed the game and how diversity has shaped the scene.
 
-<!-- TODO: Insert Allie's responses to: (1) How have AI coding assistants changed her hacking process? Tips? (2) How has diversity (age, gender, etc.) changed hackathons, and how to encourage more? -->
+I asked Allie how AI coding assistants have changed her hacking process, and her views on how diversity—in age, gender, and background—has shaped the hackathon scene.
+
+> [Allie's response here]
 
 ## Lessons Learned (The Hard Way)
 
@@ -144,13 +150,9 @@ A dozen hackathons in a year teaches you things that no blog post can fully conv
 
 **Plan ahead, but not too far ahead.** Over-planning kills the creative energy that makes hackathons work. I learned this the hard way—at one hackathon early in 2025, I showed up with a detailed technical spec and felt completely boxed in when the actual environment and available APIs didn't match my assumptions. The teams that won were the ones that planned loosely and adapted fast.
 
-<!-- TODO: Max — flesh out this anecdote with specific details if you have a better one -->
-
 **Your first idea is rarely your best execution.** Be willing to simplify ruthlessly. The version of your idea that wins is almost always smaller and tighter than what you originally imagined.
 
 **Solo vs. team trade-offs.** AI tools make solo hackathons viable in a way they never were before—I've done several successfully. But you miss the team dynamic and diverse perspectives. Working alone, I gained speed but lost the creative collisions that come from someone saying "wait, what if we tried it this way instead?"
-
-<!-- TODO: Max — add specific solo vs. team anecdote if you have one -->
 
 **Don't underestimate the social component.** I've said it already, but it bears repeating: some of my most valuable professional relationships started at hackathons, not conferences. Building under pressure bonds people.
 
@@ -160,7 +162,7 @@ A dozen hackathons in a year teaches you things that no blog post can fully conv
 
 **Hackathon conditions aren't real-world conditions.** This is important to be honest about. What works under time pressure doesn't always translate. There's self-selection bias in who participates, a Hawthorne effect from being observed and judged, and fatigue-driven shortcuts that wouldn't fly in production code. The insights are real, but they need calibration.
 
-[Group shot by the auhthor at Hugging Face Smol agents hackathon in April 2025](images/smol-hackathon-sf-april-2025.jpg)
+[Group shot by the author at Hugging Face Smol agents hackathon in April 2025](images/smol-hackathon-sf-april-2025.jpg)
 
 ## Why You Should Try One
 
@@ -176,7 +178,7 @@ Just show up and start building. Let's go.
 
 ---
 
-*Next post: Experience with AI asistants*
+*Next post: Experience with AI Assistants*
 
 *Previous post: [Selecting the Right Software Stack](https://maximilien.substack.com/p/selecting-the-right-software-stack)*
 
@@ -196,5 +198,5 @@ Just show up and start building. Let's go.
 - [Major League Hacking](https://mlh.io) — Research reports and hackathon statistics
 
 **Further Reading:**
-- [hackersquad.io](hackersquad.io) — Adam Chan's AI-focused hackathon events
+- [hackersquad.io](https://hackersquad.io) — Adam Chan's AI-focused hackathon events
 - Fisher, R.A. — *The Design of Experiments* (for research design enthusiasts)
