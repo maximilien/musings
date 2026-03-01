@@ -142,7 +142,23 @@ Allie is a full-time engineer and multi-hackathon winner in the Bay Area—hacki
 
 I asked Allie how AI coding assistants have changed her hacking process, and her views on how diversity—in age, gender, and background—has shaped the hackathon scene.
 
-> [Allie's response here]
+> **How have AI coding assistants changed hacking for you? Your process and tips?**
+
+I love hackathons because they strip everything away. No GTM strategy, no onboarding forms, no growth plans. Just: what would you build if you knew you couldn't fail? Hackathons feel that way because the stakes are low and the permission is high. You have a few hours, a room full of people building, and nobody asking for a roadmap. The worst thing that happens is you learn something. That's freeing in a way that regular work rarely is.
+
+I've placed at four different hackathons because I don't go in trying to win. I go in with an idea that could really help people and help me.
+
+The thing that changed everything was treating Claude like a coworker instead of a tool. We collaborate. I make it push back on my ideas. I give it context about why I'm making decisions, not just what I want built. That back and forth is where the good ideas come from.
+
+The other thing nobody talks about is the community. I've never felt like hackathons were a competition. People are genuinely excited to see what others are building. I love seeing familiar faces show up at different events now. You build friendships at these things that last way beyond the day.
+
+> **What are your views on encouraging diversity in hackathons, and how have diverse teams changed them?**
+
+AI coding agents are changing who shows up. It used to be that you needed years of experience just to keep up. Now all you need is a moment and the willingness to try and fail.
+
+I've watched people from nursing, teaching, finance show up and ship something real in seven hours. They're solving problems they actually lived. When the floor drops, the room changes. More ages, more backgrounds, more ideas that don't come from the same CS curriculum.
+
+The entry point moved from "can you code fast enough" to "do you care enough to try."
 
 ## Lessons Learned (The Hard Way)
 
