@@ -14,7 +14,7 @@ But after doing over a dozen of them in 2025, I've come to see hackathons as som
 
 This post is everything I learned from that year of hacking. A playbook, a set of lessons, and a case for why hackathons might be one of the most underrated methodology in tech.
 
-<!-- PHOTO PLACEHOLDER: Wide shot of hackathon venue/teams working -->
+[The author headlining CF Summit 2019 hackathon which he did for five years in late 2010s](images/max-headlining-cf-summit-2018-hackathon.jpg)
 
 ## Why Hackathons Still Matter
 
@@ -50,6 +50,10 @@ Some companies run **internal hackathons** specifically to test new tools and me
 
 I've seen this play out in person. At a hackathon in early fall last year focused on Lovable, I ended up using that tool to help boostrap all of my UI/UX since it's so good at exploring a quick prototype UI for an idea. This experience also informed and confirmed my decision of using TypeScript as my stack and using backend services in Golang or Rust. This combination again and again has proven most efficient and responsive and resulting in shipping prototypes after 24 or 48 hours. See my post on [choosing the right stack](https://maximilien.substack.com/p/selecting-the-right-software-stack) for details on how to make your own stack decisions.
 
+[Max headlining the Fudan University (https://www.fudan.edu.cn/en/) in Shanghai, China in 2016: Photo 1](images/max-leading-hack-fdu-shanghai-china-2016-2.jpg)
+[Photo 2](images/max-leading-hack-fdu-shanghai-china-2016-3.jpg)
+[Photo 3](images/max-leading-hack-fdu-shanghai-china-2016.jpg)
+
 ## What *I* Get Out of Hackathons
 
 Before the strategy section, it's worth explaining why I keep going back—beyond the competitive thrill.
@@ -76,7 +80,7 @@ But using Lovable I was able to quickly build a complete UI/UX, connect it to my
 
 This is the section I wish someone had given me before my first hackathon. It's evolved through trial, error, and a lot of 3am debugging sessions.
 
-<!-- PHOTO PLACEHOLDER: Photo of Max presenting or demoing at a hackathon -->
+[CF Summit hackathon participants in 2019](images/cf-summit-2019-hackathon-philadelphia.jpg)
 
 ### Before the Hackathon
 
@@ -156,7 +160,7 @@ A dozen hackathons in a year teaches you things that no blog post can fully conv
 
 **Hackathon conditions aren't real-world conditions.** This is important to be honest about. What works under time pressure doesn't always translate. There's self-selection bias in who participates, a Hawthorne effect from being observed and judged, and fatigue-driven shortcuts that wouldn't fly in production code. The insights are real, but they need calibration.
 
-<!-- PHOTO PLACEHOLDER: Hackathon team photo or post-event group shot -->
+[Group shot by the auhthor at Hugging Face Smol agents hackathon in April 2025](images/smol-hackathon-sf-april-2025.jpg)
 
 ## Why You Should Try One
 
