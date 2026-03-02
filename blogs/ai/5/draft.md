@@ -134,27 +134,32 @@ Adam runs events through [hackersquad.io](https://hackersquad.io) and has become
 
 I asked Adam what separates a great hackathon from a forgettable one, and how he thinks about the balance between entertainment and generating useful outcomes.
 
-> Adam's take on whaqt makes a great hackathon vs. a forgettable one
+**Q: Adam's take on whaqt makes a great hackathon vs. a forgettable one**
 
-1.Shipped projects, not pitched ideas
+1. Shipped projects, not pitched ideas
 Every event must produce working demos. 3-minute technical demos showing code, not slides. For the OpenClaw Hack Day, every project had to publish a working, publishable skill. The measure of success is "code written, APIs integrated, and projects shipped" — not attendance.
+
 2. Builders, not attendees
 The word choice is deliberate. The community is called “The Builders Collective” because we bring together Builders to do their best and most creative work. 
+
 3. Sponsors as tool providers, not marketers, limit sponsorship space
 Sponsors are constrained to brief technical intros. Their value comes from putting APIs in builders' hands during the event, not from booth visibility. Success is measured by recruiting conversations, real API usage, and product feedback — not impressions. We also avoid over sponsorships in events because over sponsorships create confusion and reduce value for both the community and sponsors.
+
 4. Operational rigor as a form of respect
 The event philosophy: "Nothing should be remembered — everything should be operationalized." Minute-by-minute run-of-show. Specific volunteer roles, not vague responsibilities. Hard-out times respected. When the logistics disappear, builders can focus on building.
-5. Protected building momentum
+
+6. Protected building momentum
 We play music during build time as a signal: work mode is on. The host's primary job is protecting building time from creeping distractions. We try to account for buffer time in every event but it’s not always possible because we jam pack a lot into a single evening. 
 
-Forgetable ones
+**Q: Forgetable ones**
+
 * Too much talking — the #1 feedback trigger for format changes.
 * Sponsor talks running over — disrespects time and kills building momentum.
 * Measuring by attendance — vanity metric that incentivizes the wrong behavior
 * Taking sponsors who don't fit — sacrifices community trust for revenue.
 * Generic templates — community feels like you don't care about them specifically
 
-> How Adam's think about the balance between entertainment and generating useful outcomes
+**Q: How Adam's think about the balance between entertainment and generating useful outcomes**
 
 I don't treat fun and outcomes as a trade-off. I treat the atmosphere as an operational input that enables shipping. 
 
@@ -172,7 +177,7 @@ Allie is a full-time engineer and multi-hackathon winner in the Bay Area—hacki
 
 I asked Allie how AI coding assistants have changed her hacking process, and her views on how diversity—in age, gender, and background—has shaped the hackathon scene.
 
-> **How have AI coding assistants changed hacking for you? Your process and tips?**
+**Q: How have AI coding assistants changed hacking for you? Your process and tips?**
 
 I love hackathons because they strip everything away. No GTM strategy, no onboarding forms, no growth plans. Just: what would you build if you knew you couldn't fail? Hackathons feel that way because the stakes are low and the permission is high. You have a few hours, a room full of people building, and nobody asking for a roadmap. The worst thing that happens is you learn something. That's freeing in a way that regular work rarely is.
 
@@ -182,7 +187,7 @@ The thing that changed everything was treating Claude like a coworker instead of
 
 The other thing nobody talks about is the community. I've never felt like hackathons were a competition. People are genuinely excited to see what others are building. I love seeing familiar faces show up at different events now. You build friendships at these things that last way beyond the day.
 
-> **What are your views on encouraging diversity in hackathons, and how have diverse teams changed them?**
+**Q: What are your views on encouraging diversity in hackathons, and how have diverse teams changed them?**
 
 AI coding agents are changing who shows up. It used to be that you needed years of experience just to keep up. Now all you need is a moment and the willingness to try and fail.
 
