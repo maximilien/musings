@@ -126,7 +126,27 @@ I've known Dave for over 20 years. He pioneered the unconference and hackathon f
 
 I asked Dave how hackathon culture has evolved from the early MashupCamp days to the AI era, and what he sees differently about AI-era hackathons.
 
-> [Dave's response here]
+As PayPal’s first Developer Advocate (2003), Dave helped pioneer modern developer relations before it was mainstream. During this time, he produced 1000+ events with innovative formats such as Unconferences, workshops and hackathons for companies such as The AI Alliance, Redis Labs, MongoDB, Toyota, Heroku, HP and PayPal. 
+
+> **Q: Dave’s perspective on how hackathons have gone global and how the culture has evolved**
+
+Software developers have always enjoyed getting together to code and push new features out the door. But around 2006 something changed when web giant Yahoo opened its internal Hack Day to the public.  With a festival-like atmosphere, and prizes for demos, hundreds of developers showed up to hack on Yahoo’s public APIs. There was even a rock concert with Beck as surprise guest. In the end, developers had a good time while learning how to use new APIs. Yahoo learned what developers could do with them while spreading the news about its developer tools. This event and others like it had such an impact on Silicon Valley culture that it became the basis of many community events such as the TechCrunch Hackathon.
+
+But innovation and talent can come from anywhere. Soon cities vying to be the next ‘Silicon Valley’ began running hackathons: places like Silicon Mountain, Silicon Beach, Silicon Alley, Silicon Hills, etc. London, Singapore and Bangalore soon followed. 
+
+However, early hackathons were expensive. They required a lot of effort, and the demo quality varied widely. It was common for a hackathon to take months to plan and cost $100,000. Many companies didn’t have the expertise or talent to run their own. Thankfully, hackathon service companies like BeMyApp, DevPost, AngelHack, Major League Hacking and DeveloperWeek sprung up to take the hackathon phenomenon global. 
+
+Hackathons have become so popular in San Francisco, that it is common for friends to meet every weekend at a different hackathon. I personally have 2 friends who participated in 50 hackathons last year. Globally there are hundreds of hackathons every month. Whenever a new technology trend catches on, you will find companies sponsoring hackathons to get early traction while trying to rise above the noise. Hackathon companies like LabLab rode the Web3 and now GenAI waves. 
+
+> **Q: What Dave sees differently about the AI-era hackathon scene**
+
+This latest wave of hackathons has brought the hackathon event format to a whole new level.  Not only has this AI wave grown bigger and faster than all others before it, but developers using AI tools are building AI applications much faster than before. The result is shorter time to demo and innovation on steroids. What used to take a full weekend can now be accomplished in just a few hours. I’ve seen startup quality demos emerge from just one 10 hour long hackathon at places like AGI House and Cerebral Valley. It is not heard of for a developer to be offered funding on the spot, after just one hackathon session. Furthermore, valuations for critical AI tech or large market ideas can be astronomical. And this time around, the hackathon scene is already established, so the wave of innovation has spread much, much faster. The old saying “The future is hear, it’s just not evenly distributed is still true, but the time it takes to even out has reduced significantly
+
+https://www.hackerearth.com/challenges/hackathon/
+these hackathons were to but it wasn’t until the mid 2000’s that these events included prizes.  hackathons he organized (e.g. DeveloperWeek SF 2013) he has seen significant improvement in the ability for developers to innovate and share their demos. Early hackathons used tools like Excel spreadsheets and  Hackathons have always been 
+ used platforms such as BeMyApp and Devpost, while also building tools to scale developer programs globally.
+
+Hackathons have rightfully earned a reputation for engaging developers in meaningful discovery of new trends. But they didn’t start off that way. Early hackathons required a lot of effort to organize. Developers weren’t sure what they would bet out of it, sponsors didn’t know if their products would get used, event organizers didn’t know if they’d get enough teams to participate.
 
 ### Adam Chan — The Prolific Organizer
 
