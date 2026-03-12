@@ -1,6 +1,6 @@
 # ClawMax: OpenClaw to the Max! 🚀
 
-*Building the orchestration layer OpenClaw needed—and what I learned managing 100s AI agents*
+*Building the orchestration layer OpenClaw needed—and what I learned managing 100s of AI agents*
 
 **Published**: March 13, 2026
 **Author**: Maximilien (max@clawmax.ai)
@@ -8,13 +8,13 @@
 
 ---
 
-**TL;DR:** OpenClaw is a powerful framework for building autonomous AI agents. But managing 10, 50, or 100s agents? That's where things get messy. I built [ClawMax](https://clawmax.ai) to solve this—adding visual management, organizational structure, workflow automation, and templates on top of OpenClaw's foundation. This post explains what it is, why I built it, how I am using it, and what I learned.
+**TL;DR:** OpenClaw is a powerful framework for building autonomous AI agents. But managing 10, 50, or 100s of agents? That's where things get messy. I built [ClawMax](https://clawmax.ai) to solve this—adding visual management, organizational structure, workflow automation, and templates on top of OpenClaw's foundation. This post explains what it is, why I built it, how I am using it, and what I learned.
 
 ---
 
-Managing 100s AI agents isn't like managing a team of 10 people. It's worse.
+Managing 100s of AI agents isn't like managing a team of 10 people. It's worse.
 
-Individual agents are easy. You give them an identity, some skills, a workspace. They do their job. But when you scale to dozens or hundreds? Chaos. Which agents are online? Who's working on what? Who's performing well? Who needs to be updated (additional prompts, context, etc)? How do you coordinate them? Where's the execution history? 
+Individual agents are easy. You give them an identity, some skills, a workspace. They do their job. But when you scale to dozens or hundreds? Chaos. Which agents are online? Who's working on what? Who's performing well? Who needs to be updated (additional prompts, context, etc.)? How do you coordinate them? Where's the execution history? 
 
 I've been using OpenClaw for weeks now—managing agent teams for research, development workflows, and community coordination. OpenClaw is an incredible foundation: file-based workspaces, extensible skills, WebSocket communication, persistent memory. But it's mainly built for individual agents, not teams.
 
@@ -209,7 +209,7 @@ Workflows follow OpenClaw's file-based approach—written in plain English like 
 - **Completion Toasts**: Get notified when workflows finish with success/failure counts
 - **Smart Sorting**: Running executions always appear first in the list
 - **Auto-refresh**: Selected workflow details refresh when execution completes
-- **Archive**: archive and access old execution
+- **Archive**: archive and access old executions
 
 **Value**: Coordinate 50 agents with a single click. No manual message sending required.
 
@@ -217,7 +217,7 @@ Workflows follow OpenClaw's file-based approach—written in plain English like 
 
 ### 4. Template Library 📚
 
-**Pre-built workflows, agent, and orgs templates for common scenarios**
+**Pre-built workflow, agent, and org templates for common scenarios**
 
 ![ClawMax - template library with cards](images/image4-template-library.png)
 
@@ -279,7 +279,7 @@ Workflows follow OpenClaw's file-based approach—written in plain English like 
 
 ### 5. Execution Tracking 📊
 
-**Real-time visibility into agents activities and workflows execution**
+**Real-time visibility into agent activities and workflow execution**
 
 <video width="800" controls>
   <source src="videos/video1-workflow-execution.mov" type="video/quicktime">
@@ -446,7 +446,7 @@ Workflows follow OpenClaw's file-based approach—written in plain English like 
 
 📚 **Documentation**: Feature guides, API reference, architecture deep-dives
 
-💬 **Dicussions**: Join our Github community for support and discussions
+💬 **Discussions**: Join our Github community for support and discussions
 
 🐛 **Issues**: Report bugs or request features on GitHub
 
