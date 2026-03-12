@@ -481,4 +481,4 @@ We're excited to see what you build with ClawMax. Whether you're managing 5 agen
 **Built with ❤️ by the Maximilien.ai Team**
 **Powered by OpenClaw**
 
-*ClawMax v0.9.2 • OpenClaw v2.8.0+*
+*ClawMax v0.9.3 • OpenClaw v2.8.0+*
