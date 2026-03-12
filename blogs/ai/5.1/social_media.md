@@ -26,7 +26,7 @@ The lesson that keeps coming back: managing AI agent teams isn't a technical pro
 
 ClawMax is open source. Try it today at clawmax.ai.
 
-Read the full post: [SUBSTACK_URL]
+Read the full post: https://open.substack.com/pub/maximilien/p/clawmax-openclaw-to-the-max
 
 #AIAgents #OpenClaw #ClawMax #MultiAgentSystems #AI #OpenSource #AgentOrchestration
 
@@ -43,7 +43,7 @@ I built ClawMax to solve this—visual management, workflow automation, and exec
 
 Open source. Try it at clawmax.ai
 
-[SUBSTACK_URL]
+https://open.substack.com/pub/maximilien/p/clawmax-openclaw-to-the-max
 
 **Tweet 2 (Reply):**
 The problems I hit running 15+ agents:
@@ -95,4 +95,4 @@ Built ClawMax: visual dashboard, workflow automation, org structure, templates, 
 
 clawmax.ai
 
-[SUBSTACK_URL]
+https://open.substack.com/pub/maximilien/p/clawmax-openclaw-to-the-max
